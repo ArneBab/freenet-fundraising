@@ -1,5 +1,13 @@
 #+title: Freenet Fundraising Proposal
-#+options: num:nil
+#+options: num:nil toc:nil
+
+#+BEGIN_ABSTRACT
+#+BEGIN_QUOTE
+This is no longer just about Syria or Iran. If Journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
+#+END_QUOTE
+#+END_ABSTRACT
+
+#+toc: headlines 1
 
 * What Freenet can do
 
@@ -10,68 +18,64 @@ They are the ones who are in dire need of features like the ones provided by Fre
 
 - The journalist in a countrywide newspaper, maintaining a point-of-contact to anonymous sources without requiring lots of infrastructure on the side of the journalist or the source.
 
-- The whistleblower in a medium-sized state-contractor, sending documents to a journalist and being avaible for questions to verify their origin without disclosing the whistleblower's real identity to the Journalist.
-
-#+BEGIN_QUOTE
-This is no longer just about Syria or Iran. If Journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
-#+END_QUOTE
+- The whistleblower in a medium-sized state-contractor, sending documents to a journalist and being available for questions to verify their origin without disclosing the whistleblower's real identity to the Journalist.
 
 * Why we need you
 
-Making these usecases actually accessible will be a lot of work. Freenet can already be used for them today, if you know what you are doing. But doing that requires time, patience and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul-Henning Kamp pointed out at Fosdem2014:
+Making these usecases actually accessible will be a lot of work. Freenet can already be used for them today, if you know what you are doing. Even then, setup requires time, patience and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul-Henning Kamp pointed out at Fosdem2014:
 
 #+BEGIN_QUOTE
 „Are you sure you know what you are doing? Do you have a PhD in this?“
 #+END_QUOTE
 
-While Freenet is at the point where it actually works well on the technical side - including crucial features like exchanging files invisibly with only a password, spam-resistant anonymous comments and email without the possibility to spy on metadata - freenet always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database-corruption, and complex multi-step workflows for basic usecases like posting to a forum, as well as lots of unrealized potential from existing features and actual unmerged features due to lacking programmer-hours to review and polish contributed code.
+While Freenet is at the point where it actually works well on the technical side - including crucial features like exchanging files invisibly with only a password, spam-resistant anonymous comments and email without the possibility to spy on metadata - Freenet always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database corruption, and complex multi-step workflows for basic usecases like posting to a forum, as well as lots of unrealized potential from existing features and actual unmerged features due to lacking programmer hours to review and polish contributed code.
 
 * What we want to do
 
-We want to change this, one usecase at a time. We want to allow ordinary users to tap into all the features in freenet and realize the goal of true censorship resistance which is the core of the mission of freenet. But that will require concentrated effort and lots of solid legwork - the kind of work which has to be done but does not give the coding-credibility or fame which draws many volunteers.
+We want to change this, one usecase at a time. We want to allow ordinary users to tap into all the features in Freenet and realize the goal of true censorship resistance which is the core of the mission of Freenet. But that will require concentrated effort and lots of solid legwork - the kind of work which has to be done but does not give the coding-credibility or fame which draws many volunteers.
 
-For this we need your help. To realize the potential of Freenet, we want to finance 2 or more full-time developers who work very focussed on a specific use case at a time and polish the user experience to make each use case easily accessible to its target group.
+For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on one specific use case at a time and polish the user experience to make each use case easily accessible to its target group.
 
 Our ideal group would look like the following:
 
-- 3 Programmers: One dedicated to core development, one for plugins and one who ties both spaces together so we can ensure code-review of all the different parts. The core-developer needs serious skills in working with legacy Java-code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
+- Three Programmers: One dedicated to core development, one for plugins and one who ties both spaces together so we can ensure code review of all the different parts. The core developer needs serious skills in working with legacy Java code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
 
-- 2 UI/UX designers who can code front-end. At least one of them with solid prior experience on making complex decisions easy to take. Usable privacy tools are one of the big usability challenges out there.
+- Two UI/UX designers who can code front end. At least one of them with solid prior experience on making complex decisions easy to take. Usable privacy tools are one of the big usability challenges out there.
 
-- 1 product manager who has experience managing free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of the product, develop apps and plugins, etc. 
+- One product manager who has experience managing free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of the product, develop apps and plugins, etc. 
 
-- 1 community manager -- the "go-to person" for users in the field. e.g., the person that journalists can contact to get set up using Freenet. The community manager is also responsible for  managing social media, esp. Twitter, Facebook, blog. Has to be able to work with the current very diverse userbase. Keeping contact to journalists is essential for spreading freenet - and as such to realize its mission.
+- One community manager -- the "go-to person" for users in the field, e.g., the person whom journalists can contact to get set up using Freenet. The community manager is also responsible for  managing social media, especially Twitter, Facebook, blog. Has to be able to work with the current very diverse userbase. Keeping contact with journalists is essential for spreading Freenet -- and as such to realize its mission.
 
-- 1 fundraising coordinator and director -- in charge of fundraising, as well as all of those other managerial tasks that have to get done. e.g., dealing with the accounts, payroll. 
+- One fundraising coordinator and director -- in charge of fundraising, as well as all of those other managerial tasks that have to get done. e.g., dealing with the accounts, payroll. 
 
-TODO: Add cost estimates. This much money → we can do this in this amount of time. 8 people require at least 500k per year, and we should ensure that we have ensured funding for at least 2 years, so developers can get fully invested.
+TODO: Add cost estimates. This much money → we can do this in this amount of time. 8 people require at least 500k per year, and we should ensure that we have ensured funding for at least two years, so developers can get fully invested.
 
 * Our two year vision
 
-With this team, we should be able within at most two years to get Freenet into a state, where it makes whistleblowing safe and easy - for example like the following. Everything written below is already possible with the current capabilities of freenet, but much less convenient than described here.
+With this team, we should be able within at most two years to get Freenet into a state, where it makes whistleblowing safe and easy, as in the following example. Everything written below is already possible with the current capabilities of Freenet, but much less convenient than described here.
 
 #+BEGIN_QUOTE
 ------
 
-Nick is a Journalist. He has been active in Freenet for a few months, using a small plug-computer running in his office. He maintains a website in Freenet which he links from his site in the clearnet, and he republishes some of his articles to Freenet to spread information about his work to anonymous people. On this website he publishes an email-address for contacting him over Freenet, and he regularly gets feedback to his articles from anonymous and non-anonymous people alike. On his business-card he publishes the link to this website as well as a link to Freenet, so potential sources can get information about him without exposing their identity.
+Nick is a Journalist. He has been active in Freenet for a few months, using a small plug-computer running in his office. He maintains a website in Freenet which he links from his site in the clearnet, and he republishes some of his articles to Freenet to spread information about his work to anonymous people. On this website he publishes an email address for contacting him over Freenet, and he regularly gets feedback to his articles from anonymous and non-anonymous people alike. On his business card he publishes the link to this website as well as a link to Freenet, so potential sources can get information about him without exposing their identity.
 
-Janice is working for a medium-sized military contractor. She has been questioning the effect of her work for years, and last year she got information about a secret project she cannot reconcile with her conscience. One week ago she talked to a friend about this, and the friend passed her the business-card of Nick, along with a USB-stick with a Linux Live System which can connect them over Freenet.
+Janice is working for a medium-sized military contractor. She has been questioning the effect of her work for years, and last year she got information about a secret project she cannot reconcile with her conscience. One week ago she talked to a friend about this, and the friend passed her Nick’s business card, along with a USB stick with a Linux Live System which can connect them over Freenet.
 
-Janice now goes to a bar with internet access, puts the USB-stick into her laptop and starts Freenet. She types the link to Nicks site into her browser, and after she is certain that Nick is the right person to contact, she clicks the anonymous email link.
+Janice now goes to a bar with internet access, puts the USB stick into her laptop and starts Freenet. She types the link to Nicks site into her browser, and after she is certain that Nick is the right person to contact, she clicks the anonymous email link.
 
 The link brings her to a textfield for entering the mail along with the note “will be sent after creation of a new Web of Trust ID”. She types her message and sends it. Freenet shows her the confirmation message “mail sent. Your new anonymous ID is Koyah_McLaughlin_Everest. Please write down the following key. You can use that key to connect with your ID from any Freenet installation.”
 
 Janice writes the key SSK@Y~zhpj9hXhnwp52NI4owiY~KVPb73zgXVEYnr~LAzgc,fnmGDfSGU5GZq8Iha8WdTICb5etw6Mj0vcZAb64Y5Lw,AQECAAE into her notebook.
 
-Then she orders a coffee and reads on: “Your message will be delivered after you solve about 10 captchas to prove that you are human. If you see no captchas yet, please give Freenet at least 15 minutes to collect the captchas. You will only have to solve captchas once per ID.”
+Then she orders a coffee and reads on: “Your message will be delivered after you solve about ten captchas to prove that you are human. If you see no captchas yet, please give Freenet at least fifteen minutes to collect the captchas. You will only have to solve captchas once per ID.”
 
-After 10 minutes Freenet shows her 20 captchas. She solves them and sees the message “captchas are being inserted. This will take about 10 minutes.” Then she watches a progressbar count up. 8 minutes later, after the second coffee, the progressbar finishes. Janice shuts down her laptop, pays in cash and leaves the bar. Since she only ran a Live Linux, no trace of what she did is left on her stick.
+After ten minutes Freenet shows her twenty captchas. She solves them and sees the message “captchas are being inserted. This will take about ten minutes.” Then she watches a progressbar count up. eight minutes later, after the second coffee, the progress bar finishes. Janice shuts down her laptop, pays in cash and leaves the bar. Since she only ran a Live Linux, no trace of what she did is left on her stick.
 
-One day later Nick comes home and checks his E-Mail. He instantly sees the new email sent via Freenet. While reading the information from Janice he feels a familiar jolt of excitement. This could be big. He crosschecks what he can, then answers Janice.
+One day later Nick comes home and checks his email. He instantly sees the new email sent via Freenet. While reading the information from Janice he feels a familiar jolt of excitement. This could be big. He crosschecks what he can, then answers Janice.
 
-The next week, Janice goes into another bar with internet access. She orders a coffee and plugs in the USB-stick. After starting the system, she goes to the email plugin and enters the key she wrote down to check her inbox. A message asks her to wait a few minutes while her ID is being restored. Just as she finishes her coffee, she sees the new email in her inbox: Nick answered.
+The next week, Janice goes into another bar with internet access. She orders a coffee and plugs in the USB stick. After starting the system, she goes to the email plugin and enters the key she wrote down to check her inbox. A message asks her to wait a few minutes while her ID is being restored. Just as she finishes her coffee, she sees the new email in her inbox: Nick answered.
 
-Over the next few weeks Nick and Janice keep in contact. Nick gives Janice advise how she can keep a low profile, then he runs his story.
+Over the next few weeks Nick and Janice keep in contact. Nick gives Janice advice on how she can keep a low profile, then he runs his story.
 
 A few years later Nick gets another email from Janice. His news story shook up the company, but Janice was able to keep clear of major problems. Freenet helped her to keep her name out of trouble despite complete email metadata surveillance on the clearnet. Now she has gotten wind of another unethical project, and she wants to ensure that it does not stay hidden from the public.
 
@@ -85,7 +89,7 @@ There are some projects which try to provide support for this usecase:
 
 - tor: Via hidden services it can provide anonymous access, but they require strong infrastructure for the journalist to keep them active when the journalist becomes inconvenient to someone in power. When the main hoster of tor sites was busted some time ago, half the hidden services went offline.
 
-- i2p: Similar to tor, but with decentral forums which can be migrated to other services.
+- i2p: Similar to tor, but with decentralized forums which can be migrated to other services.
 
 - SecureDrop: Allows two-way communication, but must be maiintained by the journalist, so it is again a single point of failure.
 
@@ -105,11 +109,11 @@ All the  foundations are laid, but most of them are inaccessible for general use
 
 Hi profile use cases could be easier publication and collaboration:
 
--  The activists in Syria publishing their experiences for journalists in  other countries to take up - maybe connecting darknets with USB-sticks. Most Facebook pages from Syria are gone.  “Facebook pages are the only outlet that allows Syrians and media  activists to convey the events and atrocities in Syria to the world”²  which means that right now, conveying events from Syria to the world  means disclosing your identity. And this has dire consequences: “On  December 9, five men stormed her organization’s office in the Damascus  suburb of Douma and kidnapped her, along with her husband and two  colleagues”. With freenet a news site can be published anonymously  without requiring lots of resources and especially without requiring any  constantly available hardware. And anyone can copy a site in freenet to keep it alive.
+-  The activists in Syria publishing their experiences for journalists in  other countries to take up - maybe connecting darknets with USB-sticks. Most Facebook pages from Syria are gone.  “Facebook pages are the only outlet that allows Syrians and media  activists to convey the events and atrocities in Syria to the world”²  which means that right now, conveying events from Syria to the world  means disclosing your identity. And this has dire consequences: “On  December 9, five men stormed her organization’s office in the Damascus  suburb of Douma and kidnapped her, along with her husband and two  colleagues”. With Freenet a news site can be published anonymously  without requiring lots of resources and especially without requiring any  constantly available hardware. And anyone can copy a site in Freenet to keep it alive.
 
 ²: http://www.theatlantic.com/international/archive/2014/02/the-syrian-opposition-is-disappearing-from-facebook/283562/
 
--  Political activists in the UK keeping in contact and working together  without revealing their group structures. Just 3 years ago the Guardian  reported about complaints from activists that “dozens of politically  linked Facebook accounts have been removed or suspended”.¹ This easily  disrupts group-structures and can as such be an efficient way to silence  the opposition. Due to complete surveillance of communications, it is  possible to determine essential people in a group and dissolve the group  with minimal effort and backlash. Freenet can hide these structures and  thus stop part of the network analysis.
+-  Political activists in the UK keeping in contact and working together  without revealing their group structures. Just three years ago the Guardian  reported about complaints from activists that “dozens of politically  linked Facebook accounts have been removed or suspended”.¹ This easily  disrupts group structures and can as such be an efficient way to silence  the opposition. Due to complete surveillance of communications, it is  possible to determine essential people in a group and dissolve the group  with minimal effort and backlash. Freenet can hide these structures and  thus stop part of the network analysis.
 
 ¹: http://www.theguardian.com/uk/2011/apr/29/facebook-activist-pages-purged
 
