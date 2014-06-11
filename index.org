@@ -13,7 +13,7 @@ They are the ones who are in dire need of features like the ones provided by Fre
 This is no longer just about Syria or Iran. If Journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
 #+END_QUOTE
 
-Making these usecases accessible will be a lot of work. Freenet can already be used for them today, if you know what you are doing. But doing that requires time, patience and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul Henning-Kamp pointed out at Fosdem2014:
+Making these usecases accessible will be a lot of work. Freenet can already be used for them today, if you know what you are doing. But doing that requires time, patience and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul-Henning Kamp pointed out at Fosdem2014:
 
 #+BEGIN_QUOTE
 „Are you sure you know what you are doing? Do you have a PhD in this?“
