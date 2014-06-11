@@ -10,12 +10,16 @@ They are the ones who are in dire need of features like the ones provided by Fre
 - The whistleblower in a medium-sized state-contractor, sending documents to a journalist and being avaible for questions to verify their origin without disclosing the whistleblower's real identity to the Journalist.
 
 #+BEGIN_QUOTE
-“This is no longer just about Syria or Iran. If Journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.”
+This is no longer just about Syria or Iran. If Journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
 #+END_QUOTE
 
-Making these usecases accessible will be a lot of work. Freenet can already be used for them today. But doing that requires time, patience and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer.
+Making these usecases accessible will be a lot of work. Freenet can already be used for them today, if you know what you are doing. But doing that requires time, patience and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul Henning-Kamp pointed out at Fosdem2014:
 
-While Freenet provides practical solutions to these technically very challenging problems and is at the point where it actually works well on the technical side - including crucial features like exchanging files invisibly with only a password, spam-resistant anonymous comments and email without the possibility to spy on metadata - freenet always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database-corruption and complex multi-step workflows for basic usecases like posting to a forum, as well as lots of unrealized potential from existing features and actual unmerged features due to lacking programmer-hours to review and polish contributed code.
+#+BEGIN_QUOTE
+„Are you sure you know what you are doing? Do you have a PhD in this?“
+#+END_QUOTE
+
+While Freenet is at the point where it actually works well on the technical side - including crucial features like exchanging files invisibly with only a password, spam-resistant anonymous comments and email without the possibility to spy on metadata - freenet always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database-corruption and complex multi-step workflows for basic usecases like posting to a forum, as well as lots of unrealized potential from existing features and actual unmerged features due to lacking programmer-hours to review and polish contributed code.
 
 We want to change this, one usecase at a time. We want to allow ordinary users to tap into all the features in freenet and realize the goal of true censorship resistance which is the core of the mission of freenet. But that will require concentrated effort and lots of solid legwork - the kind of work which has to be done but does not give the coding-cred or fame which draws many volunteers.
 
