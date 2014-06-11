@@ -3,7 +3,7 @@
 
 #+BEGIN_ABSTRACT
 #+BEGIN_QUOTE
-This is no longer just about Syria or Iran. If Journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
+This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
 #+END_QUOTE
 #+END_ABSTRACT
 
@@ -65,7 +65,16 @@ Janice now goes to a bar with internet access, puts the USB stick into her lapto
 
 The link brings her to a textfield for entering the mail along with the note “will be sent after creation of a new Web of Trust ID”. She types her message and sends it. Freenet shows her the confirmation message “mail sent. Your new anonymous ID is Koyah_McLaughlin_Everest. Please write down the following key. You can use that key to connect with your ID from any Freenet installation.”
 
-Janice writes the key SSK@Y~zhpj9hXhnwp52NI4owiY~KVPb73zgXVEYnr~LAzgc,fnmGDfSGU5GZq8Iha8WdTICb5etw6Mj0vcZAb64Y5Lw,AQECAAE into her notebook.
+Janice writes the key into her notebook:
+
+#+BEGIN_VERBATIM
+YeMemh edj9h XheRe2 ed52N 
+eW4e0e2 efYeMK eKPb7 3emeNX 
+eKEYeR reMLA emeNe1e3 feRmG
+erfSG eS5GZ eT8eWh a8Wd 
+TeWCb 50te2 6MjeY eZe1ZA 
+b64Y 5Le2 YedXed ereSeTa
+#+END_VERBATIM
 
 Then she orders a coffee and reads on: “Your message will be delivered after you solve about ten captchas to prove that you are human. If you see no captchas yet, please give Freenet at least fifteen minutes to collect the captchas. You will only have to solve captchas once per ID.”
 
