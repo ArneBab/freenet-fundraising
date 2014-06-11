@@ -23,7 +23,7 @@ For this we need your help. To realize the potential of Freenet, we want to fina
 
 Our ideal group would look like the following:
 
-- 3 Programmers: One dedicated to core development, one for plugins and one who ties both spaces together so we can ensure code-review of all the different parts. The core-developer needs serious skills in working with legacy Java-code and improving it iteratively, as well as in security.
+- 3 Programmers: One dedicated to core development, one for plugins and one who ties both spaces together so we can ensure code-review of all the different parts. The core-developer needs serious skills in working with legacy Java-code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
 
 - 2 UI/UX designers who can code front-end. At least one of them with solid prior experience on making complex decisions easy to take. Usable privacy tools are one of the big usability challenges out there.
 
