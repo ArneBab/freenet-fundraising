@@ -97,6 +97,8 @@ There are some projects which try to provide support for this usecase:
 
 - XMPP with OTR provides encrypted communication, but does not hide the identities of the discussing parties. It cannot provide anonymity to sources.
 
+- qabel: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
+
 * Future Usecases
 
 After we get Freenet into a state where it is the definite tool for journalists and whistleblowers, we can turn to other usecases to make easy:
