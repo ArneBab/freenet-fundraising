@@ -11,7 +11,7 @@ This is no longer just about Syria or Iran. If journalists cannot talk confident
 
 * What Freenet can do
 
-Freenet enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. We provide anonymity with reliable pseudonyms and decentralized publishing without single points of of failure; we also provide a darknet-mode with secure connections between friends. To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structure, as well as spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
+Freenet enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. We provide anonymity with reliable pseudonyms and decentralized publishing without single points of of failure. We also provide a darknet-mode with secure connections between friends. To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structure, as well as spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
 
 They are the ones who are in dire need of features like the ones provided by Freenet:
 
@@ -28,28 +28,29 @@ Making these use cases accessible will be a lot of work. Freenet can already be 
 „Are you sure you know what you are doing? Do you have a PhD in this?“
 #+END_QUOTE
 
-While Freenet is at the point where it actually works well on the technical side - including crucial features like exchanging files invisibly with only a password, spam-resistant anonymous comments and email without the possibility to spy on metadata - Freenet always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database corruption, and complex multi-step workflows for basic use cases like posting to a forum, as well as lots of unrealized potential from existing features and actual unmerged features due to lacking programmer hours to review and polish contributed code.
+Freenet is at the point where it actually works well on the technical side. It features exchanging files invisibly with only a password, spam-resistant anonymous comments, and email that does not provide metadata that can be spied on. However, Freenet has always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database corruption, and complex multi-step workflows for basic use cases like posting to a forum. Much of its potential is unrealized: existing features are often unpolished, and some features have been written but are not yet included because of a lack of developer hours to review and merge code.
 
 * What we want to do
 
-We want to change this, one use case at a time. We want to allow ordinary users to tap into all the features in Freenet and realize the goal of true censorship resistance which is the core of the mission of Freenet. But that will require concentrated effort and lots of solid legwork - the kind of work which has to be done but does not give the coding-credibility or fame which draws many volunteers.
+We want to change this, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of solid legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
 
-For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on one specific use case at a time and polish the user experience to make each use case easily accessible to its target group.
-
+For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to  polish the user experience and make them easily accessible to their target groups.
 
 Our ideal group would look like the following:
 
-- Three Programmers: One dedicated to core development, one for plugins and one who ties both spaces together so we can ensure code review of all the different parts. The core developer needs serious skill in working with legacy Java code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
+- Three programmers -- one dedicated to core development, one for plugins, and one who ties both sides together. With this coverage we can ensure code review of all the different parts. The core developer needs serious skill in working with legacy Java code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
 
-- Two UI/UX designers who can code front end. At least one of them with solid prior experience on making complex decisions easy to take. Usable privacy tools are one of the big usability challenges out there.
+- Two UI/UX designers who can code front end. At least one of them with solid prior experience on clearly presenting complex security decisions so that they are easier to make. Usable privacy tools are one of the big usability challenges out there.
 
-- One product manager who has experience managing free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of Freenet, develop apps and plugins, etc. (We need that because we suck at this.)
+- One product manager who has experience managing free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of Freenet, develop apps and plugins, etc. (We need it because we suck at this.)
 
-- One community manager -- the "go-to person" for users in the field, e.g. the person whom journalists can contact to get set up using Freenet. The community manager is also responsible for managing social media, especially Twitter, Facebook, blog. Has to be able to work with the current very diverse userbase. (We need that because we suck at this, and keeping contact with journalists is essential for spreading Freenet -- and as such to realize its mission.)
+- One community manager -- the "go-to" person for users in the field. This is someone  whom journalists can contact to get set up using Freenet. The community manager is also responsible for managing social media, such as Twitter, Facebook, and a blog. Has to be able to work with the current very diverse userbase. (We need that because we suck at this, and keeping contact with journalists is essential for spreading Freenet -- and as such to realize its mission.)
 
 - One fundraising coordinator and director -- in charge of fundraising, as well as all of those other managerial tasks that have to get done, e.g. dealing with the accounts, taxes and payroll.
 
 TODO: Add cost estimates. This much money → we can do this in this amount of time. Eight people require at least 500k per year, and we need ensured funding for at least two years, so developers can get fully invested.
+
+TODO: Shorter-term estimates of progress
 
 
 * Our two year vision
@@ -99,10 +100,11 @@ There are some projects which try to provide support for this usecase:
 
 - qabel: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
 
-* Future Usecases
+* Future use cases
 
 After we get Freenet into a state where it is the definite tool for journalists and whistleblowers, we can turn to other usecases to make easy:
 
+- the platform for political bloggers,
 - the social network which respects privacy by design, 
 - a comment system for static websites, 
 - a decentral, anonymous programming platform, 
