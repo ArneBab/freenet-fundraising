@@ -11,7 +11,7 @@ This is no longer just about Syria or Iran. If journalists cannot talk confident
 
 * What Freenet can do
 
-Freenet enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. We provide anonymity with reliable pseudonyms and decentralized publishing without single points of of failure; we also provide a darknet-mode which guarantees secure connections between friends. To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structure, as well as spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
+Freenet enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. We provide anonymity with reliable pseudonyms and decentralized publishing without single points of of failure; we also provide a darknet-mode with secure connections between friends. To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structure, as well as spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
 
 They are the ones who are in dire need of features like the ones provided by Freenet:
 
