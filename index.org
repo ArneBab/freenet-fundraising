@@ -52,22 +52,48 @@ We make freenet the definite tool for privacy and free speech, one use case at a
 
 For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to  polish the user experience and make them easily accessible to their target groups.
 
+** The ideal group
+
 Our ideal group would look like the following:
 
 - Three programmers -- one dedicated to core development, one for plugins, and one who ties both sides together. With this coverage we can ensure code review of all the different parts. The core developer needs serious skill in working with legacy Java code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
 
 - Two UI/UX designers who can code front end. At least one of them with solid prior experience on clearly presenting complex security decisions so that they are easier to make. Usable privacy tools are one of the big usability challenges out there.
 
-- One product manager who has experience managing free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of Freenet, develop apps and plugins, etc. (We need it because we suck at this.)
+- One product manager and community coordinator who has experience with free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of Freenet, develop apps and plugins, etc. (We need it because we suck at this.)
 
-- One community manager -- the "go-to" person for users in the field. This is someone  whom journalists can contact to get set up using Freenet. The community manager is also responsible for managing social media, such as Twitter, Facebook, and a blog. Has to be able to work with the current very diverse userbase. (We need that because we suck at this, and keeping contact with journalists is essential for spreading Freenet -- and as such to realize its mission.)
+- One person for outreach and training -- the "go-to" person for users in the field. This is someone  whom journalists can contact to get set up using Freenet. He or she is also responsible for managing events and social media, such as Twitter, Facebook and a blog. Has to be able to work with the current, very diverse userbase. (We need that because we suck at this, and keeping contact with journalists is essential for spreading Freenet -- and as such to realize its mission.)
 
 - One fundraising coordinator and director -- in charge of fundraising, as well as all of those other managerial tasks that have to get done, e.g. dealing with the accounts, taxes and payroll.
 
 TODO: Add cost estimates. This much money → we can do this in this amount of time. Eight people require at least 500k per year, and we need ensured funding for at least two years, so developers can get fully invested.
 
-TODO: Shorter-term estimates of progress
 
+** The minimal group
+
+The minimal group with which we could do the required work would look like the following:
+
+- Two programmers, one for the core, one for plugins and usability.
+
+- One community coordinator and trainer.
+
+- One fundraising coordinator, director and developer.
+
+TODO: Cost
+
+** The good group
+
+The group with which we should be able to do effective work without having to fill multiple roles per person.
+
+- Two programmers, one for the core, one for plugins.
+
+- One user experience designer with programming experience.
+
+- One community coordinator and trainer.
+
+- One fundraising coordinator and director.
+
+TODO: Cost
 
 * Our two year vision
 
@@ -100,6 +126,22 @@ Now she has gotten wind of another unethical project, and she wants to ensure th
 
 ------
 #+END_QUOTE
+
+* Work items (first year deliverables)
+
+TODO: Shorter-term estimates of progress
+
+The following lists the tasks we can finish within one year to move towards our vision, marked by the group with which it should be possible to finish them in the first year. The items link to bugtracker entries with additional details.
+
+TODO: Complete writing down the plan
+
+| task             | ideal group | good group | minimal group |
+|------------------+-------------+------------+---------------|
+| darknet invites  | √           | √          | √             |
+| FOAF-connections |             |            |               |
+|                  |             |            |               |
+|                  |             |            |               |
+
 
 
 * Other projects
