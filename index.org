@@ -131,6 +131,15 @@ Now she has gotten wind of another unethical project, and she wants to ensure th
 
 TODO: Shorter-term estimates of progress
 
+workflow items (these have to be easy and convenient):
+
+- maintain journalist site
+- pseudonymous email with address from a freenet site
+- traceless persistent pseudonym (QR or written key)
+- freenet-stick
+- invisible darknet (steganography)
+- android-based darknet growing
+
 The following lists the tasks we can finish within one year to move towards our vision, marked by the group with which it should be possible to finish them in the first year. The items link to bugtracker entries with additional details.
 
 TODO: Complete writing down the plan
@@ -142,6 +151,10 @@ TODO: Complete writing down the plan
 |                  |             |            |               |
 |                  |             |            |               |
 
+- connect seen Pseudonyms
+  - semantic WoT API
+- delayed WoT with automatic pseudonym creation
+- preseeded WoT introduction
 
 
 * Other projects
