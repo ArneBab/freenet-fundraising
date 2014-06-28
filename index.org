@@ -140,6 +140,8 @@ workflow items (these have to be easy and convenient):
 - invisible darknet (steganography)
 - android-based darknet growing
 
+** Technical
+
 The following lists the tasks we can finish within one year to move towards our vision, marked by the group with which it should be possible to finish them in the first year. The items link to bugtracker entries with additional details.
 
 TODO: Complete writing down the plan
@@ -156,22 +158,7 @@ TODO: Complete writing down the plan
 - delayed WoT with automatic pseudonym creation
 - preseeded WoT introduction
 
-
-* Other projects
-
-There are some projects which try to provide support for this usecase:
-
-- tor: Via hidden services it can provide anonymous access, but they require strong infrastructure for the journalist to keep them active when the journalist becomes inconvenient to someone in power. When the main hoster of tor sites was busted some time ago, half the hidden services went offline.
-
-- i2p: Similar to tor, but with decentralized forums which can be migrated to other services.
-
-- SecureDrop: Allows two-way communication, but must be maintained by the journalist, so it is again a single point of failure.
-
-- XMPP with OTR provides encrypted communication, but does not hide the identities of the discussing parties. It cannot provide anonymity to sources.
-
-- qabel: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
-
-* Future use cases
+* stretch goals: Future use cases
 
 After we get Freenet into a state where it is the definite tool for journalists and whistleblowers, we can turn to other usecases to make easy:
 
@@ -193,3 +180,25 @@ High profile use cases could be easier anonymous publication and collaboration:
 -  Political activists in the UK keeping in contact and working together without revealing their group structures. Just three years ago the Guardian reported about complaints from activists that “dozens of politically linked Facebook accounts have been removed or suspended”.¹ This easily disrupts group structures and can as such be an efficient way to silence the opposition. Due to complete surveillance of communications, it is possible to determine essential people in a group and dissolve the group  with minimal effort and backlash. Freenet can hide these structures and thus stop part of the network analysis.
 
 ¹: http://www.theguardian.com/uk/2011/apr/29/facebook-activist-pages-purged
+
+** technical stuff
+
+- optimization for video sites
+- integration with jitsi or other XMPP programs and/or free games to simplify invisible freenet usage piggibacking on existing services
+
+
+* Other projects
+
+There are some projects which try to provide support for this usecase:
+
+- tor: Via hidden services it can provide anonymous access, but they require strong infrastructure for the journalist to keep them active when the journalist becomes inconvenient to someone in power. When the main hoster of tor sites was busted some time ago, half the hidden services went offline.
+
+- i2p: Similar to tor, but with decentralized forums which can be migrated to other services.
+
+- SecureDrop: Allows two-way communication, but must be maintained by the journalist, so it is again a single point of failure.
+
+- XMPP with OTR provides encrypted communication, but does not hide the identities of the discussing parties. It cannot provide anonymity to sources.
+
+- qabel: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
+
+Freenet is unique in that it has been providing anonymous communication and publication without the need to maintain a powerful server for years.
