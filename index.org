@@ -29,11 +29,13 @@ They are the ones who are in dire need of features like the ones provided by Fre
 
 * Why we need you
 
+The current state of most cryptographic tools was demonstrated excellently by Glenn Greenwald at 30c3: 
+
 #+BEGIN_QUOTE
 “I announced myself this cryptographic master that I was really becoming advanced and I looked at both of them and I didn’t see any return pride coming my way. Actually I saw them trying very hard to avoid rolling their eyes out of their head at me to one another and I said why are you reacting that way and why is this why isn’t that a great accomplishment? And they let some moments and no one wanted to break it to me and finally Snowden piped in and said «Truecrypt is really meant for your little brother to master, it’s not all that impressive.«” --[[http://media.ccc.de/browse/congress/2013/30C3_-_5622_-_en_-_saal_1_-_201312271930_-_30c3_keynote_-_glenn_greenwald_-_frank.html][Glenn Greenwald at 30c3]]
 #+END_QUOTE
 
-The issue described in the story above is not the fault of Journalists. We have lots of solutions, but our best tools are much too complicated. And freenet is kind of the poster-child of this problem.
+The issue described in this story is not the fault of journalists. We have lots of solutions, but our best tools are much too complicated. And freenet is kind of the poster-child of this problem.
 
 Making the most important use cases of freenet accessible to journalists will be a lot of work. Freenet can already be used for them today, if you know what you are doing. Even then, setup requires time, patience, and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul Henning-Kamp pointed out at Fosdem2014:
 
