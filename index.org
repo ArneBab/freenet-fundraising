@@ -7,9 +7,8 @@
 --Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
 #+END_QUOTE
 
-
 #+BEGIN_QUOTE
-This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake.
+“There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
 #+END_ABSTRACT
 
@@ -17,7 +16,9 @@ This is no longer just about Syria or Iran. If journalists cannot talk confident
 
 * What Freenet can do
 
-Freenet enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. We provide anonymity with reliable pseudonyms and decentralized publishing without single points of of failure. We also provide a darknet-mode with secure connections between friends. To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structure, as well as spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
+Freenet provides email without exposing metadata. It enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. It provides anonymity with reliable pseudonyms and decentralized publishing without single points of of failure, as well as a darknet-mode with secure connections between friends.
+
+To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structure, as well as spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
 
 They are the ones who are in dire need of features like the ones provided by Freenet:
 
@@ -42,13 +43,23 @@ Making the most important use cases of freenet accessible to journalists will be
 
 Freenet is at the point where it actually works well on the technical side. It features exchanging files invisibly with only a password, spam-resistant anonymous comments, and email that does not provide metadata that can be spied on. However, Freenet has always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database corruption, and complex multi-step workflows for basic use cases like posting to a forum. Much of its potential is unrealized: existing features are often unpolished, and some features have been written but are not yet included because of a lack of developer hours to review and merge code.
 
+* How to test Freenet
+
+#+BEGIN_QUOTE
+This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake. This is why nowadays Freenet is more important than ever: email over freenet hides metadata.
+#+END_QUOTE
+
+To test what Freenet already provides, go to [[https://freenetproject.org][freenetproject.org]] and download and run the installer. As soon as freenet has started, you should see its web interface with default bookmarks. To see what you can do besides browsing and [[/USK@940RYvj1-aowEHGsb5HeMTigq8gnV14pbKNsIvUO~-0,FdTbR3gIz21QNfDtnK~MiWgAf2kfwHe-cpyJXuLHdOE,AQACAAE/publish/3/][publishing]] anonymous sites and exchanging hidden files with just a password (used as “KSK”-key), have a look at the [[USK@t5zaONbYd5DvGNNSokVnDCdrIEytn9U5SSD~pYF0RTE,guWyS9aCMcywU5PFBrKsMiXs7LzwKfQlGSRi17fpffc,AQACAAE/fsng/58/][Freenet Social Networking Guide]].
+
+Currently creating a *pseudonym* and setting up *anonymous email*, *microblogging* and *forums* takes some time and effort (up to an hour). That’s part of what we want to change.
+
 * What we want to do
 
 #+BEGIN_QUOTE
 In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time and backing to turn back the wheel and take the road towards freedom.
 #+END_QUOTE
 
-We make freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of solid legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
+We want to make freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of solid legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
 
 For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to  polish the user experience and make them easily accessible to their target groups.
 
