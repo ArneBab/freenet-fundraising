@@ -49,7 +49,8 @@ Freenet is at the point where it actually works well on the technical side. It f
 This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake. This is why nowadays Freenet is more important than ever: email over freenet hides metadata.
 #+END_QUOTE
 
-To test what Freenet already provides, go to [[https://freenetproject.org][freenetproject.org]] and download and run the installer. As soon as freenet has started, you should see its web interface with default bookmarks. To see what you can do besides browsing and [[/USK@940RYvj1-aowEHGsb5HeMTigq8gnV14pbKNsIvUO~-0,FdTbR3gIz21QNfDtnK~MiWgAf2kfwHe-cpyJXuLHdOE,AQACAAE/publish/3/][publishing]] anonymous sites and exchanging hidden files with just a password (used as “KSK”-key), have a look at the [[USK@t5zaONbYd5DvGNNSokVnDCdrIEytn9U5SSD~pYF0RTE,guWyS9aCMcywU5PFBrKsMiXs7LzwKfQlGSRi17fpffc,AQACAAE/fsng/58/][Freenet Social Networking Guide]].
+To test what Freenet already provides, go to [[https://freenetproject.org][freenetproject.org]] and download and run the installer. As soon as freenet has started, you 
+should see its web interface with default bookmarks. To see what you can do besides browsing and [[/USK@940RYvj1-aowEHGsb5HeMTigq8gnV14pbKNsIvUO~-0,FdTbR3gIz21QNfDtnK~MiWgAf2kfwHe-cpyJXuLHdOE,AQACAAE/publish/3/][publishing]] anonymous sites and exchanging hidden files with just a password (used as “KSK”-key), have a look at the [[/USK@t5zaONbYd5DvGNNSokVnDCdrIEytn9U5SSD~pYF0RTE,guWyS9aCMcywU5PFBrKsMiXs7LzwKfQlGSRi17fpffc,AQACAAE/fsng/58/][Freenet Social Networking Guide]].
 
 Currently creating a *pseudonym* and setting up *anonymous email*, *microblogging* and *forums* takes some time and effort (up to an hour). That’s part of what we want to change.
 
