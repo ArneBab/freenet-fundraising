@@ -213,15 +213,7 @@ All the  foundations are laid, but most of them are inaccessible for general use
 
 ** Longer use-cases
 
-High profile use cases could be easier anonymous publication and collaboration:
-
--  The activists in Syria publishing their experiences for journalists in other countries to take up. Most Facebook pages from Syria are gone. “Facebook pages are the only outlet that allows Syrians and media activists to convey the events and atrocities in Syria to the world”² which means that right now, conveying events from Syria to the world means disclosing your identity. And this has dire consequences: “On December 9, five men stormed her organization’s office in the Damascus suburb of Douma and kidnapped her, along with her husband and two colleagues”. With Freenet a news site can be published anonymously without requiring lots of resources and especially without requiring any constantly available hardware. And everyone can copy a site in Freenet 
-
-²: http://www.theatlantic.com/international/archive/2014/02/the-syrian-opposition-is-disappearing-from-facebook/283562/
-
--  Political activists in the UK keeping in contact and working together without revealing their group structures. Just three years ago the Guardian reported about complaints from activists that “dozens of politically linked Facebook accounts have been removed or suspended”.¹ This easily disrupts group structures and can as such be an efficient way to silence the opposition. Due to complete surveillance of communications, it is possible to determine essential people in a group and dissolve the group  with minimal effort and backlash. Freenet can hide these structures and thus stop part of the network analysis.
-
-¹: http://www.theguardian.com/uk/2011/apr/29/facebook-activist-pages-purged
+High profile use cases could be easier anonymous publication and collaboration.
 
 *** “make your own freesite with 3 clicks”
 
@@ -232,6 +224,18 @@ High profile use cases could be easier anonymous publication and collaboration:
 - “Pseudonym to use for publishing [create new with name TEXTFIELD, <chat ID>]
 
 http://127.0.0.1:8888/Sone/viewPost.html?post=4b134fc5-6947-49b6-ab41-a85d3ceddb2a
+
+*** Publishing in Syria
+
+-  The activists in Syria publishing their experiences for journalists in other countries to take up. Most Facebook pages from Syria are gone. “Facebook pages are the only outlet that allows Syrians and media activists to convey the events and atrocities in Syria to the world”² which means that right now, conveying events from Syria to the world means disclosing your identity. And this has dire consequences: “On December 9, five men stormed her organization’s office in the Damascus suburb of Douma and kidnapped her, along with her husband and two colleagues”. With Freenet a news site can be published anonymously without requiring lots of resources and especially without requiring any constantly available hardware. And everyone can copy a site in Freenet 
+
+²: http://www.theatlantic.com/international/archive/2014/02/the-syrian-opposition-is-disappearing-from-facebook/283562/
+
+*** Communicating in the UK
+
+-  Political activists in the UK keeping in contact and working together without revealing their group structures. Just three years ago the Guardian reported about complaints from activists that “dozens of politically linked Facebook accounts have been removed or suspended”.¹ This easily disrupts group structures and can as such be an efficient way to silence the opposition. Due to complete surveillance of communications, it is possible to determine essential people in a group and dissolve the group  with minimal effort and backlash. Freenet can hide these structures and thus stop part of the network analysis.
+
+¹: http://www.theguardian.com/uk/2011/apr/29/facebook-activist-pages-purged
 
 ** technical stuff
 
