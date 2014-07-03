@@ -82,7 +82,7 @@ Our ideal group would be a team of 8 people funded for 5 years (so people can la
 
 *** Cost estimate
 
-- Salaries: 3.2 million € (80k€ real cost per person per year)
+- Salaries: 3.2 million € (80k€ real cost per person per year - that’s what the University of Karlsruhe (KIT) estimates)
 - Office space: 60,000 € (about 1000€ per month in Technologiepark Bruchsal)
 - Computers and servers: 20,000 €
 - Other Office Equipment: 10,000 €
@@ -103,14 +103,14 @@ The minimal group with which we could finish the basic functionality would be a 
 
 *** Cost estimate
 
-- Salaries: 560,000 € (80k€ real cost per person per year)
+- Salaries: 490,000 € (70k€ real cost per person per year)
 - Office space: 12,000 € (about 500€ per month in Technologiepark Bruchsal)
 - Computers: 5,000 €
 - Other Office Equipment: 5,000 €
 - Running Expenses: 3,600 € (about 150€ per month)
 - Presence at journalist and privacy fairs (2 per year): still to be estimated (I asked Sandra from OpenITP)
 
-= 585,600 Euro + presence at fairs + taxes to pay upfront on the funding money
+= 515,600 Euro + presence at fairs + taxes to pay upfront on the funding money
 
 ** The good group
 
