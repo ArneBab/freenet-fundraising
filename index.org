@@ -215,7 +215,7 @@ All the  foundations are laid, but most of them are inaccessible for general use
 
 High profile use cases could be easier anonymous publication and collaboration.
 
-*** “make your own freesite with 3 clicks”
+*** “Make your own freesite with 3 clicks”
 
 - start my freesite (click) → paste the first article (click) → publish (click). 
 - Optionally set a name, a description and a logo (image). 
@@ -225,7 +225,7 @@ High profile use cases could be easier anonymous publication and collaboration.
 
 http://127.0.0.1:8888/Sone/viewPost.html?post=4b134fc5-6947-49b6-ab41-a85d3ceddb2a
 
-*** Publishing in Syria
+*** Publish in Syria
 
 -  The activists in Syria publishing their experiences for journalists in other countries to take up. Most Facebook pages from Syria are gone. “Facebook pages are the only outlet that allows Syrians and media activists to convey the events and atrocities in Syria to the world”² which means that right now, conveying events from Syria to the world means disclosing your identity. And this has dire consequences: “On December 9, five men stormed her organization’s office in the Damascus suburb of Douma and kidnapped her, along with her husband and two colleagues”. With Freenet a news site can be published anonymously without requiring lots of resources and especially without requiring any constantly available hardware. And everyone can copy a site in Freenet 
 
