@@ -231,7 +231,7 @@ http://127.0.0.1:8888/Sone/viewPost.html?post=4b134fc5-6947-49b6-ab41-a85d3ceddb
 
 ²: http://www.theatlantic.com/international/archive/2014/02/the-syrian-opposition-is-disappearing-from-facebook/283562/
 
-*** Communicating in the UK
+*** Communicate in the UK
 
 -  Political activists in the UK keeping in contact and working together without revealing their group structures. Just three years ago the Guardian reported about complaints from activists that “dozens of politically linked Facebook accounts have been removed or suspended”.¹ This easily disrupts group structures and can as such be an efficient way to silence the opposition. Due to complete surveillance of communications, it is possible to determine essential people in a group and dissolve the group  with minimal effort and backlash. Freenet can hide these structures and thus stop part of the network analysis.
 
