@@ -935,7 +935,7 @@ content: "*** "
 
     #postamble {
 	font-size: 75%;
-	min-width: 700px;
+	min-width: 300px;
 	max-width: 80%;
 	margin-left: 20px;
 	margin-top: 10px;
