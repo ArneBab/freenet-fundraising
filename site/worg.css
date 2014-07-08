@@ -21,8 +21,8 @@
     }
     body #content {
 	padding-top: 0px;
-	max-width: 80%;
-	min-width: 700px;
+	max-width: 90%;
+	min-width: 400px;
 	margin-left: 20px;
 	background-color: white;
 	padding: 2em;
