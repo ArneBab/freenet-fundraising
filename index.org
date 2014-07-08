@@ -5,12 +5,7 @@
 
 #+BEGIN_ABSTRACT
 #+BEGIN_QUOTE
-"I worry about my child and the Internet all the time, even though she's too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?'"
---Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
-#+END_QUOTE
-
-#+BEGIN_QUOTE
-“There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
+/“There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over”/ --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
 #+END_ABSTRACT
 
@@ -30,10 +25,15 @@ They are the ones who are in dire need of features like the ones provided by Fre
 
 * Why we need you
 
-The current state of most cryptographic tools was demonstrated excellently by Glenn Greenwald at 30c3: 
+#+BEGIN_QUOTE
+/"I worry about my child and the Internet all the time, even though she's too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?'"/
+--Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
+#+END_QUOTE
+
+Sadly this fear is now closer to reality than it was since the invention of the internet. The main reason is that the current state of most cryptographic tools is represented excellently by the following quote from Glenn Greenwald: 
 
 #+BEGIN_QUOTE
-“I announced myself this cryptographic master that I was really becoming advanced and I looked at both of them and I didn’t see any return pride coming my way. Actually I saw them trying very hard to avoid rolling their eyes out of their head at me to one another and I said why are you reacting that way and why is this why isn’t that a great accomplishment? And they let some moments and no one wanted to break it to me and finally Snowden piped in and said «Truecrypt is really meant for your little brother to master, it’s not all that impressive.«” --[[http://media.ccc.de/browse/congress/2013/30C3_-_5622_-_en_-_saal_1_-_201312271930_-_30c3_keynote_-_glenn_greenwald_-_frank.html][Glenn Greenwald at 30c3]]
+/“I announced myself this cryptographic master that I was really becoming advanced and I looked at both of them and I didn’t see any return pride coming my way. Actually I saw them trying very hard to avoid rolling their eyes out of their head at me to one another and I said why are you reacting that way and why is this why isn’t that a great accomplishment? And they let some moments and no one wanted to break it to me and finally Snowden piped in and said «Truecrypt is really meant for your little brother to master, it’s not all that impressive.«”/ --[[http://media.ccc.de/browse/congress/2013/30C3_-_5622_-_en_-_saal_1_-_201312271930_-_30c3_keynote_-_glenn_greenwald_-_frank.html][Glenn Greenwald at 30c3]]
 #+END_QUOTE
 
 The issue described in this story is not the fault of journalists. We have lots of solutions, but our best tools are much too complicated. And freenet is kind of the poster-child of this problem.
@@ -41,7 +41,7 @@ The issue described in this story is not the fault of journalists. We have lots 
 Making the most important use cases of freenet accessible to journalists will be a lot of work. Freenet can already be used for them today, if you know what you are doing. Even then, setup requires time, patience, and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul Henning-Kamp pointed out at Fosdem2014:
 
 #+BEGIN_QUOTE
-“Are you sure you know what you are doing? Do you have a PhD in this?” --Poul-Henning Kamp ([[http://phk.freebsd.dk/_downloads/FOSDEM_2014.pdf][slides]], [[http://mirrors.dotsrc.org/fosdem/2014/Janson/Sunday/NSA_operation_ORCHESTRA_Annual_Status_Report.webm][video]])
+/“Are you sure you know what you are doing? Do you have a PhD in this?”/ --Poul-Henning Kamp ([[http://phk.freebsd.dk/_downloads/FOSDEM_2014.pdf][slides]], [[http://mirrors.dotsrc.org/fosdem/2014/Janson/Sunday/NSA_operation_ORCHESTRA_Annual_Status_Report.webm][video]])
 #+END_QUOTE
 
 Freenet is at the point where it actually works well on the technical side. It features exchanging files invisibly with only a password, spam-resistant anonymous comments, and email that does not provide metadata that can be spied on. However, Freenet has always suffered from mediocre to bad user interfaces and rough edges like high delays on simple tasks, database corruption, and complex multi-step workflows for basic use cases like posting to a forum. Much of its potential is unrealized: existing features are often unpolished, and some features have been written but are not yet included because of a lack of developer hours to review and merge code.
@@ -49,7 +49,7 @@ Freenet is at the point where it actually works well on the technical side. It f
 * How to test Freenet
 
 #+BEGIN_QUOTE
-This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake. This is why nowadays Freenet is more important than ever: email over freenet hides metadata.
+/This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake. This is why nowadays Freenet is more important than ever: email over freenet hides metadata./
 #+END_QUOTE
 
 To test what Freenet already provides, go to [[https://freenetproject.org][freenetproject.org]] and download and run the installer. As soon as freenet has started, you 
@@ -60,7 +60,7 @@ Currently creating a *pseudonym* and setting up *anonymous email*, *microbloggin
 * What we want to do
 
 #+BEGIN_QUOTE
-In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time and backing to turn back the wheel and take the road towards freedom.
+/In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time and backing to turn back the wheel and take the road towards freedom./
 #+END_QUOTE
 
 We want to make freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of solid legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
