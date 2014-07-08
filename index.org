@@ -30,7 +30,7 @@ They are the ones who are in dire need of features like the ones provided by Fre
 --Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
 #+END_QUOTE
 
-Sadly this fear is now closer to reality than it was since the invention of the internet. The main reason is that the current state of most cryptographic tools is represented excellently by the following quote from Glenn Greenwald: 
+Sadly this fear is now closer to reality than it ever was since the invention of the internet. The main reason is that the current state of most cryptographic tools is represented excellently by the following quote from Glenn Greenwald: 
 
 #+BEGIN_QUOTE
 /“I announced myself this cryptographic master that I was really becoming advanced and I looked at both of them and I didn’t see any return pride coming my way. Actually I saw them trying very hard to avoid rolling their eyes out of their head at me to one another and I said why are you reacting that way and why is this why isn’t that a great accomplishment? And they let some moments and no one wanted to break it to me and finally Snowden piped in and said «Truecrypt is really meant for your little brother to master, it’s not all that impressive.«”/ --[[http://media.ccc.de/browse/congress/2013/30C3_-_5622_-_en_-_saal_1_-_201312271930_-_30c3_keynote_-_glenn_greenwald_-_frank.html][Glenn Greenwald at 30c3]]
