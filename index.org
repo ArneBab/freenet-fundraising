@@ -170,51 +170,106 @@ Now she has gotten wind of another unethical project, and she wants to ensure th
 
 * Work items (first year deliverables)
 
-TODO: Shorter-term estimates of progress
-
 workflow items (these have to be easy and convenient):
 
 - maintain journalist site
-- pseudonymous email with address from a freenet site
-- traceless persistent pseudonym (QR or written key)
+- contact a journalist via the site
+- use a traceless persistent pseudonym (QR or written key)
 - freenet-stick
 - invisible darknet (steganography)
-- android-based darknet growing
+- grow the darknet over android
 
-** Technical
+** Technical Tasks
 
 The following lists the tasks we can finish within one year to move towards our vision, marked by the group with which it should be possible to finish them in the first year. The items link to bugtracker entries with additional details.
 
-TODO: Complete writing down the plan
+| task                             | ideal group | good group | minimal group |
+|----------------------------------+-------------+------------+---------------|
+| easy site creation               | √           | √          | √             |
+| site: RSS import                 | √           | √          |               |
+| site: twitter, FB, ...           | √           |            |               |
+| site: authenticated list         | √           | √          |               |
+| site: comments                   | √           | √          |               |
+| site: solid, secure backups      | √           |            |               |
+| email a journalist from the site | √           | √          | √             |
+| email: connect seen pseudonyms   | √           | √          |               |
+| email: really solid installers   | √           | √          | √             |
+| delayed WoT                      | √           | √          |               |
+| faster WoT                       | √           |            |               |
+| traceless persistent pseudonym   | √           | √          | √             |
+| freenet-stick                    | √           | √          | √             |
+| darknet invites                  | √           | √          | √             |
+| FOAF-connections                 | √           | √          |               |
+| preseeded WoT introduction       | √           | √          |               |
+| blinded sponsored WoT            | √           |            |               |
+| merge transport plugin framework | √           | √          | √             |
+| several transport plugins        | √           |            |               |
+| android-based darknet connection | √           | √          | √             |
+| andriod-based invitation         | √           |            |               |
+| use home-node over android       | √           | √          |               |
 
-| task             | ideal group | good group | minimal group |
-|------------------+-------------+------------+---------------|
-| darknet invites  | √           | √          | √             |
-| FOAF-connections |             |            |               |
-|                  |             |            |               |
-|                  |             |            |               |
+** Task notes and grouping
 
-- connect seen Pseudonyms
-  - semantic WoT API
-- delayed WoT with automatic pseudonym creation
-- preseeded WoT introduction
+- maintain journalist site
+  - easy site creation
+    - blog-like functionality for simple sites (polish or integrate flog helper)
+    - manage site uploading via the web-interface for more complex sites (automatic or scheduled updates)
+  - integrate different data-sources
+    - polished freereader-like functionality (RSS)
+    - import tweets
+  - comments via Sone, FMS, ...
+  - really solid installers
+  - prevent any chance of data-loss
+    - solid backups!
+    - encrypted backups with WoT ID as key
+- contact a journalist
+  - email a journalist from the site
+  - list authenticated journalist sites
+  - pseudonymous email with address from a freenet site
+  - connect seen Pseudonyms
+    - integrate WoT in Winterface
+    - semantic WoT API
+  - delayed WoT with automatic pseudonym creation
+  - faster WoT
+- use a traceless persistent pseudonym
+  - easier to write key encoding (think Windows Activation Key)
+  - QR encoding and decoding of the insert key (print or take a photo)
+- share a freenet-stick
+  - darknet invites
+  - FOAF connections
+  - preseeded WoT introduction
+    - create via GUI
+  - blinded sponsored WoT trust for introducing a few WoT IDs without the sponsor being able to know the ID
+- connect over invisible darknet (steganography)
+  - transport plugins
+- grow the darknet over android
+  - merge android app backend code
+  - fix and polish android refnode exchange
+  - share invitation bundles over android (alternative to the freenet stick)
 
 * stretch goals: Future use cases
 
-After we get Freenet into a state where it is the definite tool for journalists and whistleblowers, we can turn to other usecases to make easy:
+After we get Freenet into a state where it is the definite tool for journalists and whistleblowers, we can turn to other usecases to make easy. High profile use cases could be easier anonymous publication and collaboration:
 
-- the platform for political bloggers,
-- the social network which respects privacy by design, 
-- a comment system for static websites, 
-- a decentral, anonymous programming platform, 
-- a core utility for exchanging files with your friends,
-- … and so on.
+- the platform for political bloggers (with a transient browser-based mode for easier anonymous access),
+- the social network which respects privacy by design, and
+- a decentral, anonymous programming platform.
 
-All the  foundations are laid, but most of them are inaccessible for general users and inconvenient even for advanced users.
+Also a distributed anonymous datastore like freenet can make use-cases easy which are hard in the current internet:
 
-** Longer use-cases
+- a spam-resistent, pseudonymous comment system for static websites, and
+- a core utility for exchanging files with your friends.
 
-High profile use cases could be easier anonymous publication and collaboration.
+And once we have transport plugins, there are many possibilities for making freenet harder to detect and block:
+
+- integrating a VoIP client and hiding data in the noise of the video- and audio-stream,
+- hiding data in image-attachments of emails,
+- pre-filling USB-sticks over night which you exchange with friends and collegues during the day,
+- … and many more - see [[https://wiki.freenetproject.org/Steganography][Steganography]].
+
+All the foundations for these are laid, but most of them are inaccessible for general users and inconvenient even for advanced users.
+
+** More detailed descriptions of possible use-cases
 
 *** “Make your own freesite with 3 clicks”
 
