@@ -88,9 +88,10 @@ Our ideal group would be a team of 8 people funded for 5 years (so people can la
 - Computers and servers: 20,000 €
 - Other Office Equipment: 10,000 €
 - Running Expenses: 18,000 € (about 300€ per month)
+- External Security Audit: 500,000 € (one basic audit after the first year, then regular targeted audits)
 - Presence at journalist and privacy fairs (4 per year): still to be estimated (I asked Sandra from OpenITP)
 
-= 3,3 million Euro + presence at fairs + taxes to pay upfront on the funding money
+= 3,8 million Euro + presence at fairs + taxes to pay upfront on the funding money
 
 ** The minimal group
 
@@ -109,9 +110,10 @@ The minimal group with which we could finish the basic functionality would be a 
 - Computers: 5,000 €
 - Other Office Equipment: 5,000 €
 - Running Expenses: 3,600 € (about 150€ per month)
+- External Security Audit: 100,000 € (minimal: about 2 weeks of audit after one year)
 - Presence at journalist and privacy fairs (2 per year): still to be estimated (I asked Sandra from OpenITP)
 
-= 515,600 Euro + presence at fairs + taxes to pay upfront on the funding money
+= 615,600 Euro + presence at fairs + taxes to pay upfront on the funding money
 
 ** The good group
 
@@ -132,9 +134,10 @@ The group with which we should be able to do effective work without having to fi
 - Computers: 10,000 €
 - Other Office Equipment: 10,000 €
 - Running Expenses: 7,200 € (about 200€ per month)
+- External Security Audit: 200,000 € (basic: content sanitizers and crypto)
 - Presence at journalist and privacy fairs (2 per year): still to be estimated (I asked Sandra from OpenITP)
 
-= 1.3 million Euro + presence at fairs + taxes to pay upfront on the funding money
+= 1.5 million Euro + presence at fairs + taxes to pay upfront on the funding money
 
 * Our two year vision
 
