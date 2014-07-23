@@ -301,7 +301,6 @@ http://127.0.0.1:8888/Sone/viewPost.html?post=4b134fc5-6947-49b6-ab41-a85d3ceddb
 - optimization for video sites
 - integration with jitsi or other XMPP programs and/or free games to simplify invisible freenet usage piggibacking on existing services
 
-
 * Other projects
 
 There are some projects which try to provide support for this usecase:
