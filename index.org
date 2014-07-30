@@ -1,6 +1,6 @@
 #+title: Freenet for Journalists
 #+LANGUAGE:   en
-#+options: num:nil toc:nil tags:not-in-toc html-postamble:nil
+#+options: num:nil toc:nil tags:not-in-toc html-postamble:nil _:nil
 #+html_head: <link rel="stylesheet" title="Standard" href="./worg.css" type="text/css" />
 
 #+BEGIN_ABSTRACT
