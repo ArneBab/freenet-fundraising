@@ -42,7 +42,7 @@
     /* TOC inspired by http://jashkenas.github.com/coffee-script */
     #table-of-contents {
 	font-size: 10pt;
-    position: absolute; /* fixed is killed by the content filter, so this rule will win in freenet. */
+	position: absolute; /* fixed is killed by the content filter, so this rule will win in freenet. */
 	position: fixed;
 	right: 0em;
 	top: 0em;
