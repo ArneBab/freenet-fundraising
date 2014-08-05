@@ -305,16 +305,20 @@ http://127.0.0.1:8888/Sone/viewPost.html?post=4b134fc5-6947-49b6-ab41-a85d3ceddb
 
 There are some projects which try to provide support for this usecase:
 
-- tor: Via hidden services it can provide anonymous access, but they require strong infrastructure for the journalist to keep them active when the journalist becomes inconvenient to someone in power. When the main hoster of tor sites was busted some time ago, half the hidden services went offline.
+- [[http://torproject.org][tor]]: Via hidden services it can provide anonymous access, but they require strong infrastructure for the journalist to keep them active when the journalist becomes inconvenient to someone in power. When the main hoster of tor sites was busted some time ago, half the hidden services went offline.
 
-- i2p: Similar to tor, but with decentralized forums which can be migrated to other services.
+- [[http://geti2p.net][i2p]]: Similar to tor, but with decentralized forums which can be migrated to other services. It provides the decentral storage solution TAHOE-LAFS. 
 
-- SecureDrop: Allows two-way communication, but must be maintained by the journalist, so it is again a single point of failure.
+- [[https://tahoe-lafs.org/trac/tahoe-lafs][TAHOE-LAFS]] offers limited hosting space and privacy. Different from Freenet it does not provide decaying storage with access-dependent lifetimes which is required to provide free publishing for people who might not be able to afford maintaining huge infrastructure. Instead the availability depends on whether the publishers want to keep investing in the content (see [[https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/garbage-collection.rst][garbage collection]].
 
-- XMPP with OTR provides encrypted communication, but does not hide the identities of the discussing parties. It cannot provide anonymity to sources.
+- [[http://maidsafe.net/][MaidSafe]] seems to be a decentralized hosting solution with some scarcity built in to give fairness between publishers. It does not provide usage-dependent availability like freenet and lacks darknet options. Freenet has a decaying store to provide freedom of the press by ensuring that content which users access stays available. MaidSafe gives limited storage which provides hosting for those which support the network. As such it does not equalize publishing among publishers. Due to that MaidSafe competes in the space TAHOE-LAFS and not in the space of Freenet. Like Freenet MaidSafe is free licensed but requires a [[http://maidsafe.net/licenses/CONTRIBUTOR.txt][contributor agreement]]. That agreement promises that the contributed code will always be available under free licenses. So its company can pull off a proprietarization of new code, but not of contributions. The contributor agreement effectively strips away the copyleft from the contributions but only for the MaidSafe developers.
 
-- qabel: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
+- [[https://pressfreedomfoundation.org/securedrop][SecureDrop]]: Allows two-way communication, but must be maintained by the journalist, so it is again a single point of failure.
 
-- invisible.im: This combines Tor with XMPP and OTR. Like Tor it requires powerful infrastructure from journalists. Also different from Freenet it has no solution to limit spam.
+- [[http://wiki.xmpp.org/web/OTR][XMPP with OTR]] provides encrypted communication, but does not hide the identities of the discussing parties. It cannot provide anonymity to sources.
 
-Freenet is unique in that it already provides spam-resistant, anonymous communication and publication without the need to maintain a powerful server - and has been providing it for years - so it just needs to be made easier to use.
+- [[http://invisible.im/][invisible.im]]: This combines Tor with XMPP and OTR. Like Tor it requires powerful infrastructure from journalists. Also different from Freenet it has no solution to limit spam.
+
+- [[https://qabel.de/][qabel]]: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
+
+Freenet is unique in that it *already provides* spam-resistant, anonymous communication and publication without the need to maintain a powerful server and with availability for stuff users access - and it has a proven track record of providing this since 2000. It just needs to be made easier to use to restore privacy in online communication and publishing.
