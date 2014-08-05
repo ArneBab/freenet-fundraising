@@ -321,4 +321,4 @@ There are some projects which try to provide support for this usecase:
 
 - [[https://qabel.de/][qabel]]: Server-based, tries to cash in by making the parent company the only one which is allowed to make money with it, which [[http://draketo.de/light/english/politics/free-culture-danger-noncommercial][is a big problem for a community]]. Not GPL-compatible.
 
-Freenet is unique in that it *already provides* spam-resistant, anonymous communication and publication without the need to maintain a powerful server and with availability for stuff users access - and it has a proven track record of providing this since 2000. It just needs to be made easier to use to restore privacy in online communication and publishing.
+Freenet is unique in that it /already provides/ spam-resistant, anonymous communication and publication without the need to maintain a powerful server and with availability for stuff users access. It has a proven track record of providing censorship resistant publishing and communication since 2000. It just needs to be made easier to use to restore privacy in online communication and publishing.
