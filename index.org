@@ -63,7 +63,7 @@ Currently creating a *pseudonym* and setting up *anonymous email*, *microbloggin
 /In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time and backing to turn back the wheel and take the road towards freedom./
 #+END_QUOTE
 
-We want to make freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of solid legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
+We want to make freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of good legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
 
 For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to  polish the user experience and make them easily accessible to their target groups.
 
@@ -73,7 +73,7 @@ Our ideal group would be a team of 8 people funded for 5 years (so people can la
 
 - Three programmers -- one dedicated to core development, one for plugins, and one who ties both sides together. With this coverage we can ensure code review of all the different parts. The core developer needs serious skill in working with legacy Java code and improving it iteratively, as well as in security. At least one of the developers needs serious experience with Windows.
 
-- Two UI/UX designers who can code front end. At least one of them with solid prior experience on clearly presenting complex security decisions so that they are easier to make. Usable privacy tools are one of the big usability challenges out there.
+- Two UI/UX designers who can code front end. At least one of them with robust prior experience on clearly presenting complex security decisions so that they are easier to make. Usable privacy tools are one of the big usability challenges out there.
 
 - One product manager and community coordinator who has experience with free software projects.  The task is to pique the enthusiasm of the development community, and get volunteers to improve the core functionality of Freenet, develop apps and plugins, etc. (We need it because we suck at this.)
 
@@ -193,10 +193,10 @@ The following lists the tasks we can finish within one year to move towards our 
 | site: twitter, FB, ...           | √           |            |               |
 | site: authenticated list         | √           | √          |               |
 | site: comments                   | √           | √          |               |
-| site: solid, secure backups      | √           |            |               |
+| site: robust, secure backups     | √           |            |               |
 | email a journalist from the site | √           | √          | √             |
 | email: connect seen pseudonyms   | √           | √          |               |
-| email: really solid installers   | √           | √          | √             |
+| email: really robust installers  | √           | √          | √             |
 | delayed WoT                      | √           | √          |               |
 | faster WoT                       | √           |            |               |
 | traceless persistent pseudonym   | √           | √          | √             |
@@ -221,9 +221,9 @@ The following lists the tasks we can finish within one year to move towards our 
     - polished freereader-like functionality (RSS)
     - import tweets
   - comments via Sone, FMS, ...
-  - really solid installers
+  - really robust installers
   - prevent any chance of data-loss
-    - solid backups!
+    - robust backups!
     - encrypted backups with WoT ID as key
 - contact a journalist
   - email a journalist from the site
