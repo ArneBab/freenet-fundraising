@@ -55,7 +55,7 @@ Currently creating a *pseudonym* and setting up *anonymous email*, *microbloggin
 
 * Who we are
 
-We are a diverse team of about a dozen developers around the world. While we all have different goals, we all subscribe to the common mission of providing the technical foundation for freedom of the press in the internet. Our focus is best captured in the following quote from Mike Godwin:
+We are a team of about a dozen developers around the world. While we all have different goals, we all subscribe to the common mission of providing the technical foundation for freedom of the press in the internet. Our focus is best captured in the following quote from Mike Godwin:
 
 #+BEGIN_QUOTE
 "/I worry about my child and the Internet all the time, even though she' too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?/'"
