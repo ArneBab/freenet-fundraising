@@ -278,140 +278,157 @@ Privacy technology provides the background on which politics can work: Making su
 [[./size-1000-hash-5713902561315010956-meanlen-15-smallworld.png]]
 
 #+BEGIN_SRC python :tangle randomroute.py :exports none :results output
-    import numpy
-    import pylab
-    import math
-    import matplotlib.cm
-    size = 1000
-    locs = numpy.random.random(size)
-    outdegree = int(math.log(size, 2))
-    def plotring(locs, paths, title, filepath=None):
-      pylab.clf()
-      ringx = numpy.sin(locs*math.pi*2)
-      ringy = numpy.cos(locs*math.pi*2)
-      pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
-      for path in paths:
-          path = numpy.array(path)
-          pathx = numpy.sin(path*math.pi*2)
-          pathy = numpy.cos(path*math.pi*2)
-          for n,x in enumerate(pathx):
-            try:
-              xp1 = pathx[n+1]
-              y = pathy[n]
-              yp1 = pathy[n+1]
-              # color = matplotlib.cm.spectral(locs[n])
-            except:
-              break
-            # pylab.plot([x, xp1], [y, yp1])# , color=color)
-          pylab.plot(pathx, pathy)# , color=color)
-      pylab.title(title)
-      if filepath:
-        pylab.savefig(filepath)
-      else:
-        pylab.show()
+  import numpy
+  import pylab
+  import math
+  import matplotlib.cm
+  size = 1000
+  locs = numpy.random.random(size)
+  outdegree = int(math.log(size, 2))
+  def plotring(locs, paths, title, filepath=None):
+    pylab.clf()
+    ringx = numpy.sin(locs*math.pi*2)
+    ringy = numpy.cos(locs*math.pi*2)
+    pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
+    for path in paths:
+        path = numpy.array(path)
+        pathx = numpy.sin(path*math.pi*2)
+        pathy = numpy.cos(path*math.pi*2)
+        for n,x in enumerate(pathx):
+          try:
+            xp1 = pathx[n+1]
+            y = pathy[n]
+            yp1 = pathy[n+1]
+            # color = matplotlib.cm.spectral(locs[n])
+          except:
+            break
+          # pylab.plot([x, xp1], [y, yp1])# , color=color)
+        pylab.plot(pathx, pathy)# , color=color)
+    pylab.title(title)
+    if filepath:
+      pylab.savefig(filepath)
+    else:
+      pylab.show()
 
-    def step(path, node, peers, target):
-      # depth first traversal
-      p = set(path)
-      untested = [peer for peer in list(peers)
-                  if not peer in p]
-      if not untested:
-        if not path[:-1]:
-           raise ValueError("No nodes to test and cannot step back: Cannot find a route to the target in this network.")
-        # step back
-        return path[-2]
-      best = sorted(untested, key=lambda peer: abs(peer - target))[0]
-      if best == node:
-        if not path[:-1]:
-           raise ValueError("Cannot find a route to the target in this network.")
-        best = path[-2]
-      return best
+  def step(path, node, peers, target):
+    # depth first traversal
+    p = set(path)
+    untested = [peer for peer in list(peers)
+                if not peer in p]
+    if not untested:
+      if not path[:-1]:
+         raise ValueError("No nodes to test and cannot step back: Cannot find a route to the target in this network.")
+      # step back
+      return path[-2]
+    best = sorted(untested, key=lambda peer: abs(peer - target))[0]
+    if best == node:
+      if not path[:-1]:
+         raise ValueError("Cannot find a route to the target in this network.")
+      best = path[-2]
+    return best
 
-    def randomrouting(locs, start, target, filepath=None):
-        path = [start]
-        randomnet = {}
-        for i in locs:
-          peers = numpy.random.choice(locs, size=outdegree, replace=False)
-          randomnet[i] = peers
-        # show random net
-        links = []
-        for i in randomnet:
-          links.append(randomnet[i])
-        # route on random net
-        while path[-1] != target:
-          node = path[-1]
-          peers = randomnet[node]
-          path.append(step(path, node, peers, target))
-        return links, path
+  def randomrouting(locs, start, target, filepath=None):
+      path = [start]
+      randomnet = {}
+      for i in locs:
+        peers = numpy.random.choice(locs, size=outdegree, replace=False)
+        randomnet[i] = peers
+      # show random net
+      links = []
+      for i in randomnet:
+        links.append(randomnet[i])
+      # route on random net
+      while path[-1] != target:
+        node = path[-1]
+        peers = randomnet[node]
+        path.append(step(path, node, peers, target))
+      return links, path
 
-    def smallworldrouting(locs, start, target, filepath=None):
-        path = [start]
-        # small world routing
-        smallworldnet = {}
-        sortedlocs = sorted(list(locs))
-        lensortedlocs = len(sortedlocs)
-        # know your neighbors
-        linksperhop = max(1, outdegree//3)
-        halfnumshortlinks = max(1, linksperhop/2)
-        for n, i in enumerate(sortedlocs):
+  def smallworldrouting(locs, start, target, filepath=None):
+      path = [start]
+      # small world routing
+      smallworldnet = {}
+      sortedlocs = sorted(list(locs))
+      lensortedlocs = len(sortedlocs)
+      linksperhop = max(1, outdegree//3)
+      for i in sortedlocs:
           smallworldnet[i] = []
-          if n-halfnumshortlinks < 0:
-            smallworldnet[i].extend(sortedlocs[n-halfnumshortlinks:])
-          if n+halfnumshortlinks > lensortedlocs:
-            smallworldnet[i].extend(sortedlocs[:(n+halfnumshortlinks)%lensortedlocs])
-          smallworldnet[i] = sortedlocs[max(0, n-halfnumshortlinks):min(lensortedlocs, n+halfnumshortlinks)]
-        numlonglinks = linksperhop
+      # know your neighbors
+      halfnumshortlinks = max(1, linksperhop/2)
+      maxshortdistance = outdegree/2
+      for dist in range(halfnumshortlinks):
         for n, i in enumerate(sortedlocs):
-          smallworldnet[i].extend(list(numpy.random.choice(sortedlocs, size=numlonglinks, replace=False)))
-        # as many medium size links as left after substracting the long and short links
-        nummediumlinks = outdegree-(linksperhop*2)
-        maxmediumdistance = max(lensortedlocs/10, 4)
-        for i in range(nummediumlinks):
-          for n, i in enumerate(sortedlocs):
-            down = numpy.random.choice(maxmediumdistance)
-            up = numpy.random.choice(maxmediumdistance)
-            lower = (n-down)%lensortedlocs
-            upper = (n+up)%lensortedlocs
-            smallworldnet[i].append(sortedlocs[lower])
-            smallworldnet[i].append(sortedlocs[upper])
-        # show small world net
-        links = []
-        for i in smallworldnet:
-          links.append(smallworldnet[i])
-        # route on small world net
-        while path[-1] != target:
-          node = path[-1]
-          peers = smallworldnet[node]
-          path.append(step(path, node, peers, target))
-        return links, path
+          down = min(numpy.random.choice(maxshortdistance, 3)) + 1
+          up = min(numpy.random.choice(maxshortdistance, 3)) + 1
+          lower = sortedlocs[(n-down)%lensortedlocs]
+          while lower in smallworldnet[i]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = sortedlocs[(n+up)%lensortedlocs]
+          while upper in smallworldnet[i]:
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[i].append(lower)
+          smallworldnet[i].append(upper)
+      # for n, i in enumerate(sortedlocs):
+      #   smallworldnet[i] = []
+      #   if n-halfnumshortlinks < 0:
+      #     smallworldnet[i].extend(sortedlocs[n-halfnumshortlinks:])
+      #   if n+halfnumshortlinks > lensortedlocs:
+      #     smallworldnet[i].extend(sortedlocs[:(n+halfnumshortlinks)%lensortedlocs])
+      #   smallworldnet[i] = sortedlocs[max(0, n-halfnumshortlinks):min(lensortedlocs, n+halfnumshortlinks)]
+      numlonglinks = linksperhop
+      for n, i in enumerate(sortedlocs):
+        smallworldnet[i].extend(list(numpy.random.choice(sortedlocs, size=numlonglinks, replace=False)))
+      # as many medium size links as left after substracting the long and short links
+      nummediumlinks = outdegree-(linksperhop*2)
+      maxmediumdistance = max(lensortedlocs/10, 4)
+      for i in range(nummediumlinks):
+        for n, i in enumerate(sortedlocs):
+          down = numpy.random.choice(maxmediumdistance) + 1
+          up = numpy.random.choice(maxmediumdistance) + 1
+          lower = (n-down)%lensortedlocs
+          upper = (n+up)%lensortedlocs
+          smallworldnet[i].append(sortedlocs[lower])
+          smallworldnet[i].append(sortedlocs[upper])
+      # show small world net
+      links = []
+      for i in smallworldnet:
+        links.append(smallworldnet[i])
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = smallworldnet[node]
+        path.append(step(path, node, peers, target))
+      return links, path
 
-    randompaths = []
-    smallworldpaths = []
-    for i in range(10):
-        target = numpy.random.choice(locs)
-        start = numpy.random.choice(locs)
-        randomlinks, randompath = randomrouting(locs, start, target)
-        smallworldlinks, smallworldpath = smallworldrouting(locs, start, target)
-        randompaths.append(randompath)
-        smallworldpaths.append(smallworldpath)
+  randompaths = []
+  smallworldpaths = []
+  for i in range(10):
+      target = numpy.random.choice(locs)
+      start = numpy.random.choice(locs)
+      randomlinks, randompath = randomrouting(locs, start, target)
+      smallworldlinks, smallworldpath = smallworldrouting(locs, start, target)
+      randompaths.append(randompath)
+      smallworldpaths.append(smallworldpath)
 
-    randompathlens = [len(p) for p in randompaths]
-    plotring(locs, randompaths, "random paths", 
-             filepath="size-{}-hash-{}-meanlen-{}-random.png".format(
-               len(locs), hash(tuple(locs)), int(numpy.mean(randompathlens))))
-        
-    smallworldpathlens = [len(p) for p in smallworldpaths]
-    plotring(locs, smallworldpaths, "small world paths", 
-             filepath="size-{}-hash-{}-meanlen-{}-smallworld.png".format(
-               len(locs), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
-    print "random:", randompathlens
-    print "small world:", smallworldpathlens
+  randompathlens = [len(p) for p in randompaths]
+  plotring(locs, randompaths, "random paths", 
+           filepath="size-{}-hash-{}-meanlen-{}-random.png".format(
+             len(locs), hash(tuple(locs)), int(numpy.mean(randompathlens))))
+      
+  smallworldpathlens = [len(p) for p in smallworldpaths]
+  plotring(locs, smallworldpaths, "small world paths", 
+           filepath="size-{}-hash-{}-meanlen-{}-smallworld.png".format(
+             len(locs), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
+  print "random:", randompathlens
+  print "small world:", smallworldpathlens
 
 #+END_SRC
 
 #+RESULTS:
-: random: [26, 18, 193, 18, 55, 39, 66, 28, 9, 75]
-: small world: [4, 6, 8, 5, 5, 7, 3, 5, 4, 5]
+: random: [203, 151, 50, 84, 27, 169, 258, 265, 18, 232]
+: small world: [5, 3, 6, 9, 4, 11, 7, 8, 5, 4]
 
 
 
