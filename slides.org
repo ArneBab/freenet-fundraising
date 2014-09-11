@@ -179,7 +179,7 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_col: 0.35
     :END:
 
-#+caption: Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
+#+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
 
