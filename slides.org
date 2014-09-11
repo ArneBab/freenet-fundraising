@@ -240,7 +240,7 @@ Privacy technology provides the background on which politics can work: Making su
     :END:
 
 - *Optimize peer-connections* \\ via success-metric
-- *Distance Constraint* \\ Maximum number of long connections
+- *Distance Constraint* \\ maximum number of long connections
 
 *** Darknet (friend-to-friend)                                :B_block:BMCOL:
     :PROPERTIES:
@@ -248,7 +248,7 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_col: 0.45
     :END:
 
-- *Assume small world* \\ Connections to people known in real life
+- *Assume small world* \\ connections to people known in real life
 - *Reconstruct* \\ the structure by swapping locations
 
 ** Measured Network Structure
