@@ -377,21 +377,23 @@ Privacy technology provides the background on which politics can work: Making su
         randompaths.append(randompath)
         smallworldpaths.append(smallworldpath)
 
+    randompathlens = [len(p) for p in randompaths]
     plotring(locs, randompaths, "random path", 
-             filepath="size-{}-hash-{}-random.png".format(
-               len(locs), hash(tuple(locs))))
+             filepath="size-{}-hash-{}-meanlen-{}-random.png".format(
+               len(locs), hash(tuple(locs)), numpy.mean(randompathlens)))
         
+    smallworldpathlens = [len(p) for p in smallworldpaths]
     plotring(locs, smallworldpaths, "small world path", 
-             filepath="size-{}-hash-{}-smallworld.png".format(
-               len(locs), hash(tuple(locs))))
-    print "random:", [len(p) for p in randompaths]
-    print "small world:", [len(p) for p in smallworldpaths]
+             filepath="size-{}-hash-{}-meanlen-{}-smallworld.png".format(
+               len(locs), hash(tuple(locs)), numpy.mean(smallworldpathlens)))
+    print "random:", randompathlens
+    print "small world:", smallworldpathlens
 
 #+END_SRC
 
 #+RESULTS:
-: random: [2, 1, 7, 20, 5, 63, 25, 14, 27, 31]
-: small world: [7, 1, 6, 5, 10, 5, 6, 4, 11, 8]
+: random: [26, 18, 193, 18, 55, 39, 66, 28, 9, 75]
+: small world: [4, 6, 8, 5, 5, 7, 3, 5, 4, 5]
 
 
 
