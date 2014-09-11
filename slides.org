@@ -121,7 +121,7 @@ Good, but more filesharing than publishing.
     :END:
 
 - *offline hosting* \\ Join, drop content, leave.
-- *decaying storage* \\ lifetime depends on demand
+- *decaying storage* \\ lifetime depends on user demand
 
 ***                                                                 :B_block:
     :PROPERTIES:
