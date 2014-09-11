@@ -25,20 +25,15 @@ They are the ones who are in dire need of features like the ones provided by Fre
 
 * Why we need you
 
-#+BEGIN_QUOTE
-"/I worry about my child and the Internet all the time, even though she' too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?/'"
---Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
-#+END_QUOTE
-
-Sadly this fear is now closer to reality than it ever was since the invention of the internet. The main reason is that the current state of most cryptographic tools is represented excellently by the following quote from Glenn Greenwald: 
+Sadly most whistleblowers and journalists are unable to communicate securely in the current state of the internet. The main reason is that the current state of the usability of most cryptographic tools is horrible - represented excellently by the following quote from Glenn Greenwald: 
 
 #+BEGIN_QUOTE
-/“I announced myself this cryptographic master that I was really becoming advanced and I looked at both of them and I didn’t see any return pride coming my way. Actually I saw them trying very hard to avoid rolling their eyes out of their head at me to one another and I said why are you reacting that way and why is this why isn’t that a great accomplishment? And they let some moments and no one wanted to break it to me and finally Snowden piped in and said «Truecrypt is really meant for your little brother to master, it’s not all that impressive.«”/ --[[http://media.ccc.de/browse/congress/2013/30C3_-_5622_-_en_-_saal_1_-_201312271930_-_30c3_keynote_-_glenn_greenwald_-_frank.html][Glenn Greenwald at 30c3]]
+/“I announced myself this cryptographic master that I was really becoming advanced and I looked at both of them and I didn’t see any return pride coming my way. Actually I saw them trying very hard to avoid rolling their eyes out of their head at me to one another. I said «why are you reacting that way and why is this why isn’t that a great accomplishment?» They let some moments and no one wanted to break it to me. Finally Snowden piped in and said «Truecrypt is really meant for your little brother to master, it’s not all that impressive.»”/ --[[http://media.ccc.de/browse/congress/2013/30C3_-_5622_-_en_-_saal_1_-_201312271930_-_30c3_keynote_-_glenn_greenwald_-_frank.html][Glenn Greenwald at 30c3]]
 #+END_QUOTE
 
-The issue described in this story is not the fault of journalists. We have lots of solutions, but our best tools are much too complicated. And freenet is kind of the poster-child of this problem.
+The issue described in this story is not the fault of journalists. We have lots of solutions, but our best tools are much too complicated. And Freenet is kind of the poster-child of this problem.
 
-Making the most important use cases of freenet accessible to journalists will be a lot of work. Freenet can already be used for them today, if you know what you are doing. Even then, setup requires time, patience, and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul Henning-Kamp pointed out at Fosdem2014:
+Making the most important use cases of Freenet accessible to journalists will be a lot of work. Freenet can already be used for them today, if you know what you are doing. Even then, setup requires time, patience, and experience with security tools. Journalists are always lacking the first, whistleblowers should not need the third and the second should be required by no one who uses a computer. It has all the problems, Poul Henning-Kamp pointed out at Fosdem2014:
 
 #+BEGIN_QUOTE
 /“Are you sure you know what you are doing? Do you have a PhD in this?”/ --Poul-Henning Kamp ([[http://phk.freebsd.dk/_downloads/FOSDEM_2014.pdf][slides]], [[http://mirrors.dotsrc.org/fosdem/2014/Janson/Sunday/NSA_operation_ORCHESTRA_Annual_Status_Report.webm][video]])
@@ -49,13 +44,24 @@ Freenet is at the point where it actually works well on the technical side. It f
 * How to test Freenet
 
 #+BEGIN_QUOTE
-/This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake. This is why nowadays Freenet is more important than ever: email over freenet hides metadata./
+/This is no longer just about Syria or Iran. If journalists cannot talk confidentially to anonymous sources, all of investigative journalism is at stake. This is why nowadays Freenet is more important than ever: email over Freenet hides metadata./
 #+END_QUOTE
 
-To test what Freenet already provides, go to [[https://freenetproject.org][freenetproject.org]] and download and run the installer. As soon as freenet has started, you 
+To test what Freenet already provides, go to [[https://freenetproject.org][freenetproject.org]] and download and run the installer. As soon as Freenet has started, you 
 should see its web interface with default bookmarks. To see what you can do besides browsing and [[/USK@940RYvj1-aowEHGsb5HeMTigq8gnV14pbKNsIvUO~-0,FdTbR3gIz21QNfDtnK~MiWgAf2kfwHe-cpyJXuLHdOE,AQACAAE/publish/3/][publishing]] anonymous sites and exchanging hidden files with just a password (used as “KSK”-key), have a look at the [[/USK@t5zaONbYd5DvGNNSokVnDCdrIEytn9U5SSD~pYF0RTE,guWyS9aCMcywU5PFBrKsMiXs7LzwKfQlGSRi17fpffc,AQACAAE/fsng/58/][Freenet Social Networking Guide]].
 
 Currently creating a *pseudonym* and setting up *anonymous email*, *microblogging* and *forums* takes some time and effort (up to an hour). That’s part of what we want to change.
+
+* Who we are
+
+We are a diverse team of about a dozen developers around the world. While we all have different goals, we all subscribe to the common mission of providing the technical foundation for freedom of the press in the internet. Our focus is best captured in the following quote from Mike Godwin:
+
+#+BEGIN_QUOTE
+"/I worry about my child and the Internet all the time, even though she' too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?/'"
+--Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
+#+END_QUOTE
+
+This is the goal we all subscribe to, but the last 14 years showed that with the current pace of development we cannot achieve it fast enough to make a difference before control by of the web by a few big actors gets so strong that people cannot even spread the word about Freenet anymore. And this is why we ask you for your help.
 
 * What we want to do
 
@@ -63,7 +69,7 @@ Currently creating a *pseudonym* and setting up *anonymous email*, *microbloggin
 /In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time and backing to turn back the wheel and take the road towards freedom./
 #+END_QUOTE
 
-We want to make freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of good legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
+We want to make Freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of good legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
 
 For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to  polish the user experience and make them easily accessible to their target groups.
 
@@ -178,7 +184,7 @@ workflow items (these have to be easy and convenient):
 - maintain journalist site
 - contact a journalist via the site
 - use a traceless persistent pseudonym (QR or written key)
-- freenet-stick
+- Freenet-stick
 - invisible darknet (steganography)
 - grow the darknet over android
 
@@ -200,7 +206,7 @@ The following lists the tasks we can finish within one year to move towards our 
 | delayed WoT                      | √           | √          |               |
 | faster WoT                       | √           |            |               |
 | traceless persistent pseudonym   | √           | √          | √             |
-| freenet-stick                    | √           | √          | √             |
+| Freenet-stick                    | √           | √          | √             |
 | darknet invites                  | √           | √          | √             |
 | FOAF-connections                 | √           | √          |               |
 | preseeded WoT introduction       | √           | √          |               |
@@ -228,7 +234,7 @@ The following lists the tasks we can finish within one year to move towards our 
 - contact a journalist
   - email a journalist from the site
   - list authenticated journalist sites
-  - pseudonymous email with address from a freenet site
+  - pseudonymous email with address from a Freenet site
   - connect seen Pseudonyms
     - integrate WoT in Winterface
     - semantic WoT API
@@ -237,7 +243,7 @@ The following lists the tasks we can finish within one year to move towards our 
 - use a traceless persistent pseudonym
   - easier to write key encoding (think Windows Activation Key)
   - QR encoding and decoding of the insert key (print or take a photo)
-- share a freenet-stick
+- share a Freenet-stick
   - darknet invites
   - FOAF connections
   - preseeded WoT introduction
@@ -248,7 +254,7 @@ The following lists the tasks we can finish within one year to move towards our 
 - grow the darknet over android
   - merge android app backend code
   - fix and polish android refnode exchange
-  - share invitation bundles over android (alternative to the freenet stick)
+  - share invitation bundles over android (alternative to the Freenet stick)
 
 * stretch goals: Future use cases
 
@@ -258,12 +264,12 @@ After we get Freenet into a state where it is the definite tool for journalists 
 - the social network which respects privacy by design, and
 - a decentral, anonymous programming platform.
 
-Also a distributed anonymous datastore like freenet can make use-cases easy which are hard in the current internet:
+Also a distributed anonymous datastore like Freenet can make use-cases easy which are hard in the current internet:
 
 - a spam-resistent, pseudonymous comment system for static websites, and
 - a core utility for exchanging files with your friends.
 
-And once we have transport plugins, there are many possibilities for making freenet harder to detect and block:
+And once we have transport plugins, there are many possibilities for making Freenet harder to detect and block:
 
 - integrating a VoIP client and hiding data in the noise of the video- and audio-stream,
 - hiding data in image-attachments of emails,
@@ -299,7 +305,7 @@ http://127.0.0.1:8888/Sone/viewPost.html?post=4b134fc5-6947-49b6-ab41-a85d3ceddb
 ** technical stuff
 
 - optimization for video sites
-- integration with jitsi or other XMPP programs and/or free games to simplify invisible freenet usage piggibacking on existing services
+- integration with jitsi or other XMPP programs and/or free games to simplify invisible Freenet usage piggibacking on existing services
 
 * Other projects
 
@@ -311,7 +317,7 @@ There are some projects which try to provide support for this usecase:
 
 - [[https://tahoe-lafs.org/trac/tahoe-lafs][TAHOE-LAFS]] offers limited hosting space and privacy. Different from Freenet it does not provide decaying storage with access-dependent lifetimes which is required to provide free publishing for people who might not be able to afford maintaining huge infrastructure. Instead the availability depends on whether the publishers want to keep investing in the content (see [[https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/garbage-collection.rst][garbage collection]].
 
-- [[http://maidsafe.net/][MaidSafe]] seems to be a decentralized hosting solution with some scarcity built in to give fairness between publishers. It does not provide usage-dependent availability like freenet and lacks darknet options. Freenet has a decaying store to provide freedom of the press by ensuring that content which users access stays available. MaidSafe gives limited storage which provides hosting for those which support the network. As such it does not equalize publishing among publishers. Due to that MaidSafe competes in the space TAHOE-LAFS and not in the space of Freenet. Like Freenet MaidSafe is free licensed but requires a [[http://maidsafe.net/licenses/CONTRIBUTOR.txt][contributor agreement]]. That agreement promises that the contributed code will always be available under free licenses. So its company can pull off a proprietarization of new code, but not of contributions. The contributor agreement effectively strips away the copyleft from the contributions but only for the MaidSafe developers.
+- [[http://maidsafe.net/][MaidSafe]] seems to be a decentralized hosting solution with some scarcity built in to give fairness between publishers. It does not provide usage-dependent availability like Freenet and lacks darknet options. Freenet has a decaying store to provide freedom of the press by ensuring that content which users access stays available. MaidSafe gives limited storage which provides hosting for those which support the network. As such it does not equalize publishing among publishers. Due to that MaidSafe competes in the space TAHOE-LAFS and not in the space of Freenet. Like Freenet MaidSafe is free licensed but requires a [[http://maidsafe.net/licenses/CONTRIBUTOR.txt][contributor agreement]]. That agreement promises that the contributed code will always be available under free licenses. So its company can pull off a proprietarization of new code, but not of contributions. The contributor agreement effectively strips away the copyleft from the contributions but only for the MaidSafe developers.
 
 - [[https://pressfreedomfoundation.org/securedrop][SecureDrop]]: Allows two-way communication, but must be maintained by the journalist, so it is again a single point of failure.
 
