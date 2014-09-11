@@ -1,4 +1,4 @@
-#+title: Freenet for Journalists\\ \vspace{0.5cm} \scriptsize The technical part of the solution for freedom of the press in the internet
+#+title: Freenet \\ \vspace{0.5cm} \scriptsize The technical part of the solution for freedom of the press in the internet
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+BEAMER_THEME: default
