@@ -257,9 +257,27 @@ Privacy technology provides the background on which politics can work: Making su
 [[./607-plot_link_length.png]]
 
 
-** Routing Simulation: Random Routing
+** Routing Simulation
 
-#+BEGIN_SRC python :tangle randomroute.py :exports results :results output
+*** Random routing                                            :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+#+caption: 10 paths between locations on a random network. Average path length: 143.
+[[./size-1000-hash-5713902561315010956-meanlen-143-random.png]]
+
+*** Small world routing                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+#+caption: 10 paths between locations on a small world network. Average path length: 15.
+[[./size-1000-hash-5713902561315010956-meanlen-15-smallworld.png]]
+
+#+BEGIN_SRC python :tangle randomroute.py :exports none :results output
     import numpy
     import pylab
     import math
@@ -378,14 +396,14 @@ Privacy technology provides the background on which politics can work: Making su
         smallworldpaths.append(smallworldpath)
 
     randompathlens = [len(p) for p in randompaths]
-    plotring(locs, randompaths, "random path", 
+    plotring(locs, randompaths, "random paths", 
              filepath="size-{}-hash-{}-meanlen-{}-random.png".format(
-               len(locs), hash(tuple(locs)), numpy.mean(randompathlens)))
+               len(locs), hash(tuple(locs)), int(numpy.mean(randompathlens))))
         
     smallworldpathlens = [len(p) for p in smallworldpaths]
-    plotring(locs, smallworldpaths, "small world path", 
+    plotring(locs, smallworldpaths, "small world paths", 
              filepath="size-{}-hash-{}-meanlen-{}-smallworld.png".format(
-               len(locs), hash(tuple(locs)), numpy.mean(smallworldpathlens)))
+               len(locs), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
     print "random:", randompathlens
     print "small world:", smallworldpathlens
 
