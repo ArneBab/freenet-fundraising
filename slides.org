@@ -210,7 +210,7 @@ Privacy technology provides the background on which politics can work: Making su
 - *optional friend-to-friend* (Darknet)
 - *location*: [0..1) for each file chunk and node
 - *find route*: from node to file chunk
-- *forward*: data travels along the route
+- *forward data*: travels along the route
 
 *** Applications                                                    :B_block:
     :PROPERTIES:
