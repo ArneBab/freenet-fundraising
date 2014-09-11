@@ -62,7 +62,7 @@ We are a team of about a dozen developers around the world. While we all have di
 --Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
 #+END_QUOTE
 
-This is the focus we all subscribe to, but the last 14 years showed that with the current pace of development it will be very hard to achieve it fast enough to make a difference before control by of the web by a few big actors gets so strong that people cannot even spread the word about Freenet anymore. And this is why we ask you for your help.
+Over the last years, many bright minds assembled around this focus and turned freenet into a tool which can actually provide an unmatched level of privacy. It has the potential to be the central technology for critical journalists worldwide. But experience also showed that with the current pace of development it will be very hard to reach this goal fast enough to make a difference before control by of the web by a few big actors gets so strong that people cannot even spread the word about Freenet anymore. And this is why we ask you for your help.
 
 * What we want to do
 
@@ -72,7 +72,7 @@ This is the focus we all subscribe to, but the last 14 years showed that with th
 
 We want to make Freenet the definite tool for privacy and free speech, one use case at a time. We want to allow ordinary users to tap all of Freenet's features and realize the goal of robust censorship resistance. That will require concentrated effort and lots of good legwork - the kind of work which has to be done, but does not give the coding-credibility or fame which draws many volunteers.
 
-For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to  polish the user experience and make them easily accessible to their target groups.
+For this we need your help. To realize the potential of Freenet, we want to finance two or more full-time developers who will focus on individual use cases to polish the user experience and make them easily accessible to their target groups.
 
 ** The ideal group
 
