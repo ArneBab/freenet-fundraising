@@ -1,0 +1,253 @@
+#+title: Freenet for Journalists\\ \vspace{0.5cm} \scriptsize The technical part of the solution for freedom of the press in the internet
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: default
+#+options: H:2
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
+
+* Why?
+
+** Why Freenet?
+
+#+BEGIN_QUOTE
+I worry about my child and the Internet all the time, even though she' too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?'
+--Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
+#+END_QUOTE
+
+** Why now?
+
+#+BEGIN_QUOTE
+“There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
+#+END_QUOTE
+
+* About
+** What is Freenet?
+
+#+BEGIN_QUOTE
+Freenet is the technical part of the solution for freedom of the press in the internet.
+#+END_QUOTE
+
+** THE technical part? Other projects
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :END:
+
+
+***** Pure Transport                                     :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+
+/e.g. tor, i2p/
+
+- No offline hosting
+- vulnerable to DoS
+- correlation attacks
+
+#+latex: \small
+/this killed the Black Goblin Market/
+
+***** Hosting with cost                                             :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+
+/e.g. TAHOE-LAFS, MaidSafe/
+
+- Fixed storage: When it is full, it is full
+- DoS-resistance? Spam-resistance? Cost?
+
+Good content often comes from small publishers.
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :END:
+
+***** Pure messaging                                                :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+
+/e.g. bitmessage, invisible.im/
+
+- No publishing
+- No offline hosting
+
+***** Server-based                                                  :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+
+/e.g. SecureDrop/
+
+- Requires powerful infrastructure 
+- DoS-able
+- Timing attacks (correlation)
+
+***** GNUnet?                                                       :B_block:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :END:
+
+Good, but more filesharing than publishing.
+
+** THE technical part? Freenet
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Communication                                            :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- *persistent pseudonyms*
+- *spam resistance* via WoT
+- *multiple applications* (Sone, FMS, Freemail, FlogHelper, ...)
+
+**** Publishing                                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- *offline hosting* \\ Join, drop content, leave.
+- *decaying storage* \\ lifetime depends on demand
+
+***                                                                 :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+Proven track record of providing censorship resistant publishing and communication since 2000.
+
+** The TECHNICAL part?
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Tech alone is not enough                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+Complete blocking and surveillance is possible.
+
+**** Politics alone is not enough                             :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: block
+     :END:
+
+If surveillance and censorship is trivial, it will be done.
+
+*** Tech and Politics                                               :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
+
+
+** Who are we?
+
+***                                                           :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.6
+    :END:
+
+- 2 paid part time developers: \\ toad and xor.
+- About a dozen free-time developers.
+- Some anonymous contributors.
+- Communication mostly over IRC (=#freenet @ irc.freenode.net=) and FMS
+  (in Freenet).
+
+***                                                           :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.35
+    :END:
+
+#+caption: Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
+[[file:freenet-cts4-20130930_135137.jpg]]
+
+
+* Tech
+
+** About the tech
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Datastore                                                :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- *decentralized* \\ on the computers of users
+- *encrypted chunks of files* \\ key (URL) to assemble, decrypt and identify
+- *anonymous pseudonyms* \\ public/private key publishing
+
+**** Routing                                                  :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- *small world*: scale free
+- *optional friend-to-friend* (Darknet)
+- *location*: [0..1) for each file chunk and node
+- *find route*: from node to file chunk
+- *forward*: data travels along the route
+
+*** Applications                                                    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+- *subscribe to keys*: 30s to 30 min round trip time.
+- *base for applications*: Websites, Forums, Microblogging, Chat.
+- *spam resistance*: Web of Trust (2 implementations).
+
+** Routing
+
+[[./freenet-routing.png]]
+
+** Network structure
+
+*** Opennet                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- *Optimize peer-connections* \\ via success-metric
+- *Distance Constraint* \\ Maximum number of long connections
+
+*** Darknet (friend-to-friend)                                :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- *Assume small world* \\ Connections to people known in real life
+- *Reconstruct* \\ the structure by swapping locations
+
+** Measured Network Structure
+
+#+caption: Link length distribution in Freenet. The green line would be an ideal network. Blue would be a random network. Red is the measured distribution. Randomization from local requests, churn and inhomogenity in the network skew the distribution.
+[[./607-plot_link_length.png]]
+
+
