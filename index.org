@@ -62,7 +62,7 @@ We are a team of about a dozen developers around the world. While we all have di
 --Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
 #+END_QUOTE
 
-This is the goal we all subscribe to, but the last 14 years showed that with the current pace of development we cannot achieve it fast enough to make a difference before control by of the web by a few big actors gets so strong that people cannot even spread the word about Freenet anymore. And this is why we ask you for your help.
+This is the focus we all subscribe to, but the last 14 years showed that with the current pace of development it will be very hard to achieve it fast enough to make a difference before control by of the web by a few big actors gets so strong that people cannot even spread the word about Freenet anymore. And this is why we ask you for your help.
 
 * What we want to do
 
