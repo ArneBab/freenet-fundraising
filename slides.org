@@ -267,7 +267,7 @@ Privacy technology provides the background on which politics can work: Making su
   size = 1000
   locs = numpy.random.random(size)
   outdegree = int(math.log(size, 2))
-  def plotring(locs, paths, title):
+  def plotring(locs, paths, title, filepath=None):
     pylab.clf()
     ringx = numpy.sin(locs*math.pi*2)
     ringy = numpy.cos(locs*math.pi*2)
@@ -286,7 +286,11 @@ Privacy technology provides the background on which politics can work: Making su
             break
           # pylab.plot([x, xp1], [y, yp1])# , color=color)
         pylab.plot(pathx, pathy)# , color=color)
-    pylab.show()
+    pylab.title(title)
+    if filepath:
+      pylab.savefig(filepath)
+    else:
+      pylab.show()
 
   def step(path, node, peers, target):
     # depth first traversal
@@ -304,8 +308,8 @@ Privacy technology provides the background on which politics can work: Making su
          raise ValueError("Cannot find a route to the target in this network.")
       best = path[-2]
     return best
-  
-  def randomrouting(locs, start, target):
+
+  def randomrouting(locs, start, target, filepath=None):
       path = [start]
       randomnet = {}
       for i in locs:
@@ -315,16 +319,15 @@ Privacy technology provides the background on which politics can work: Making su
       net = []
       for i in randomnet:
         net.append(randomnet[i])
-      plotring(locs, net, "random net")
+      # plotring(locs, net, "random net")
       # route on random net
       while path[-1] != target:
         node = path[-1]
         peers = randomnet[node]
         path.append(step(path, node, peers, target))
-      plotring(locs, [path], "random path")
-      return len(path)
-  
-  def smallworldrouting(locs, start, target):
+      return path
+
+  def smallworldrouting(locs, start, target, filepath=None):
       path = [start]
       # small world routing
       smallworldnet = {}
@@ -358,30 +361,37 @@ Privacy technology provides the background on which politics can work: Making su
       net = []
       for i in smallworldnet:
         net.append(smallworldnet[i])
-      plotring(locs, net, "small world net")
+      # plotring(locs, net, "small world net")
       # route on small world net
       while path[-1] != target:
         node = path[-1]
         peers = smallworldnet[node]
         path.append(step(path, node, peers, target))
-      plotring(locs, [path], "small world path")
-      return len(path)
-  
+      return path
+
   randompaths = []
   smallworldpaths = []
-  for i in range(2):
+  for i in range(10):
       target = numpy.random.choice(locs)
       start = numpy.random.choice(locs)
       randompaths.append(randomrouting(locs, start, target))
       smallworldpaths.append(smallworldrouting(locs, start, target))
-  print "random:", randompaths
-  print "small world:", smallworldpaths
+
+  plotring(locs, randompaths, "random path", 
+           filepath="size-{}-hash-{}-random.png".format(
+             len(locs), hash(tuple(locs))))
+      
+  plotring(locs, smallworldpaths, "small world path", 
+           filepath="size-{}-hash-{}-smallworld.png".format(
+             len(locs), hash(tuple(locs))))
+  print "random:", [len(p) for p in randompaths]
+  print "small world:", [len(p) for p in smallworldpaths]
 
 #+END_SRC
 
 #+RESULTS:
-: random: [22, 19]
-: small world: [13, 10]
+: random: [2, 1, 7, 20, 5, 63, 25, 14, 27, 31]
+: small world: [7, 1, 6, 5, 10, 5, 6, 4, 11, 8]
 
 
 
