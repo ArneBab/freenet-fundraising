@@ -2,6 +2,7 @@
 #+LANGUAGE:   en
 #+options: num:nil toc:nil tags:not-in-toc html-postamble:nil ^:nil
 #+html_head: <link rel="stylesheet" title="Standard" href="./worg.css" type="text/css" />
+#+LaTeX_HEADER: \DeclareUnicodeCharacter{221A}{\checkmark} % M-x describe-char -> code point in charset
 
 #+BEGIN_ABSTRACT
 #+BEGIN_QUOTE
@@ -9,7 +10,7 @@
 #+END_QUOTE
 #+END_ABSTRACT
 
-#+toc: headlines 1
+#+TOC: headlines 2
 
 * What Freenet can do
 
