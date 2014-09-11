@@ -370,13 +370,7 @@ Privacy technology provides the background on which politics can work: Making su
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[i].append(lower)
           smallworldnet[i].append(upper)
-      # for n, i in enumerate(sortedlocs):
-      #   smallworldnet[i] = []
-      #   if n-halfnumshortlinks < 0:
-      #     smallworldnet[i].extend(sortedlocs[n-halfnumshortlinks:])
-      #   if n+halfnumshortlinks > lensortedlocs:
-      #     smallworldnet[i].extend(sortedlocs[:(n+halfnumshortlinks)%lensortedlocs])
-      #   smallworldnet[i] = sortedlocs[max(0, n-halfnumshortlinks):min(lensortedlocs, n+halfnumshortlinks)]
+      # long connections
       numlonglinks = linksperhop
       for n, i in enumerate(sortedlocs):
         smallworldnet[i].extend(list(numpy.random.choice(sortedlocs, size=numlonglinks, replace=False)))
