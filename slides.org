@@ -223,6 +223,12 @@ Privacy technology provides the background on which politics can work: Making su
 
 ** Routing
 
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.62
+    :END:
+
+#+caption: Finding the route to a chunk of data.
 [[./freenet-routing.png]]
 
 ** Network structure

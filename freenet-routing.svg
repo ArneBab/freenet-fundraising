@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="freenet-routing.svgz">
+   sodipodi:docname="freenet-routing.svg"
+   inkscape:export-filename="/home/arne/freenet-funding/freenet-routing.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <marker
@@ -115,7 +118,7 @@
      fit-margin-bottom="0"
      inkscape:window-width="1429"
      inkscape:window-height="952"
-     inkscape:window-x="-2"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
@@ -126,7 +129,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -296,5 +299,55 @@
          id="tspan6605"
          x="236.82106"
          y="198.74678">Freenet Routing</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:#ffdf18;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3771-4"
+       sodipodi:sides="5"
+       sodipodi:cx="574.46808"
+       sodipodi:cy="594.91534"
+       sodipodi:r1="23.014156"
+       sodipodi:r2="11.507079"
+       sodipodi:arg1="0.5880026"
+       sodipodi:arg2="1.2163211"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 593.61701,607.6813 -15.15484,-1.97429 -10.21789,11.36495 -2.80545,-15.0232 -13.96621,-6.20583 13.42099,-7.31056 1.5863,-15.20036 11.10007,10.50502 14.94659,-3.18851 -6.56076,13.80303 z"
+       inkscape:transform-center-x="1.9232601"
+       inkscape:transform-center-y="0.28663976"
+       transform="translate(-239.93065,-108.80002)" />
+    <path
+       transform="translate(-226.91676,-106.87488)"
+       sodipodi:type="arc"
+       style="fill:#5c83ff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3775-4-2-2-8"
+       sodipodi:cx="563.82977"
+       sodipodi:cy="643.85156"
+       sodipodi:rx="14.893617"
+       sodipodi:ry="14.893617"
+       d="m 578.72339,643.85156 a 14.893617,14.893617 0 1 1 -29.78723,0 14.893617,14.893617 0 1 1 29.78723,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="364.49921"
+       y="496.7468"
+       id="text3049"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3051"
+         x="364.49921"
+         y="496.7468">target</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="365.64862"
+       y="547.32153"
+       id="text3053"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3055"
+         x="365.64862"
+         y="547.32153">nodes</tspan></text>
   </g>
 </svg>
