@@ -375,7 +375,7 @@ Privacy technology provides the background on which politics can work: Making su
         randomlinks, randompath = randomrouting(locs, start, target)
         smallworldlinks, smallworldpath = smallworldrouting(locs, start, target)
         randompaths.append(randompath)
-        smallworldpaths.append(randomlinks)
+        smallworldpaths.append(smallworldpath)
 
     plotring(locs, randompaths, "random path", 
              filepath="size-{}-hash-{}-random.png".format(
