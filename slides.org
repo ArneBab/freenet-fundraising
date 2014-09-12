@@ -314,13 +314,43 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 [[./screenshot-sone.png]]
 
-** TODO Spam resistance: Web of Trust
-
-# WoT: List of IDs
-
 ** Forums: FMS
 
 [[./screenshot-fms.png]]
+
+** TODO Spam resistance: Web of Trust
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Web of Trust                                             :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- Propagating trust
+- Generalized \\ Used by plugins (i.e. Sone)
+
+**** FMS                                                      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- Explicit Trust Lists
+- One Shot IDs
+
+*** Shared Properties                                               :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+- CAPTCHAs for introduction
+- Take a while to find existing People
+
+# WoT: List of IDs
 
 ** Language Bindings
 
@@ -567,7 +597,7 @@ Easy enough for everyday communication. Journalists need that.
     :BEAMER_col: 0.62
     :END:
 
-#+caption: Finding the route to a chunk of data.
+#+caption: Finding the route to a chunk of data. Greedy Routing on Scale Free structure.
 [[./freenet-routing.png]]
 
 ** Network structure optimization
@@ -807,5 +837,33 @@ Easy enough for everyday communication. Journalists need that.
 
 ** Measured Network Structure
 
-#+caption: Link length distribution in Freenet. The green line would be an ideal network. Blue would be a random network. Red is the measured distribution. Randomization from local requests, churn and inhomogenity in the network skew the distribution.
+#+caption: Link length distribution in Freenet. The green line would be an ideal network. Blue would be a random network. Red is the measured distribution. Randomization from local requests, churn and inhomogenity in the network skew the distribution. Average path length with 5-10k nodes: 6
 [[./607-plot_link_length.png]]
+** Additional notes
+
+*** Performance                                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- Upload 150 MiB in 1 day
+- Download 1 GiB in 1 day
+
+/With max bandwidth set to 80kBps and average bandwidth at 50-60kBps./
+
+*** Improvements                                              :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- FOAF routing
+- Caching
+- ...
+
+** Summary
+
+- Small World Structure
+- Measured fits simulated
+- It scales
