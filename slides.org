@@ -187,7 +187,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
-** Summary
+** Project Summary
 
 - Freenet provides essential features for freedom of press.
 - Tech creates the background needed to win the political battle.
@@ -381,7 +381,7 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 *: I did not test these, yet. I don’t know, if they actually work.
 
-** Summary
+** Application Summary
 
 Do you miss anything?
 
@@ -464,7 +464,6 @@ We try to get more focus and money.
 - 1 coordinator
 - 3 years
 - 1.5M Euro
-
 
 *** Ideal                                                     :B_block:BMCOL:
     :PROPERTIES:
@@ -570,6 +569,14 @@ The more people use Freenet, the safer it gets for everyone. Bigger anonymity se
     :BEAMER_env: block
     :END:
 Easy enough for everyday communication. Journalists need that.
+
+** Funding Summary
+
+- Freenet for Journalists and Whistleblowers
+- Already possible but not easy
+- Finance a group of full time Freenet hackers
+- 3-8 people, 2-5 years
+- 620k Euro to 3.8M Euro
 
 * Tech
 ** Tech
@@ -886,7 +893,7 @@ Easy enough for everyday communication. Journalists need that.
 - Caching
 - ...
 
-** Summary
+** Tech Summary
 
 - Small World Structure
 - Measured fits simulated
