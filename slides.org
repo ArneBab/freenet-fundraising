@@ -273,7 +273,7 @@ Do you miss anything?
 
 How about creating it? :)
 
-** TODO Why not as big as tor?
+** Why not as big as tor?
 ***                                                               :B_columns:
     :PROPERTIES:
     :BEAMER_env: columns
