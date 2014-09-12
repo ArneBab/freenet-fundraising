@@ -414,7 +414,7 @@ Do you miss anything?
         for node in net:
           for link in net[node]:
             lengths.append(min(abs(link - node), abs(link - node - 1), abs(link - node + 1)))
-        pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)))
+        pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)), linewidth=3)
     pylab.xscale("log")
     pylab.xlabel("link length")
     pylab.ylabel("fraction of links with this length or less")
@@ -445,7 +445,7 @@ Do you miss anything?
           except:
             break
           # pylab.plot([x, xp1], [y, yp1])# , color=color)
-        pylab.plot(pathx, pathy)# , color=color)
+        pylab.plot(pathx, pathy, linewidth=2)# , color=color)
     pylab.title(title)
     if filepath:
       pylab.savefig(filepath)
@@ -578,6 +578,10 @@ Do you miss anything?
   print "small world:", smallworldpathlens
 
 #+END_SRC
+
+#+RESULTS:
+: random: [379, 5, 296, 15, 15, 7, 356, 100, 308, 113]
+: small world: [8, 11, 12, 11, 8, 8, 8, 10, 8, 7]
 
 
 *** Random routing                                            :B_block:BMCOL:
