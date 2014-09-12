@@ -167,8 +167,8 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_col: 0.6
     :END:
 
-- 2 paid part time developers: \\ toad and xor.
-- About a dozen free-time developers.
+- 2 donation-funded part time developers: toad and xor.
+- About a dozen free time developers.
 - Some anonymous contributors.
 - Communication mostly over IRC (=#freenet @ irc.freenode.net=) and FMS
   (in Freenet).
@@ -182,8 +182,23 @@ Privacy technology provides the background on which politics can work: Making su
 #+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
-
+** TODO Summary
 * Applications
+** Applications
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+- File Hosting
+- Confidential Messaging
+- Site hosting
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+- Blogging and Microblogging
+- Spam resistance
+- Forums
 ** TODO File Hosting
 
 # Left: Upload a file: Key-selection, File-selection
@@ -192,13 +207,13 @@ Privacy technology provides the background on which politics can work: Making su
 
 # decentralized pastebin
 
-** TODO Darknet Messaging
+** TODO Confidential Messaging
 
 # Confidential messaging friend-to-friend
 
 # with file hosting: confidential pastebin
 
-** TODO Websites
+** TODO Site Hosting
 
 # nerdageddon
 
@@ -212,10 +227,6 @@ Privacy technology provides the background on which politics can work: Making su
 
 # Flog helper, Sitelink
 
-** TODO Spam resistance
-
-# WoT: List of IDs
-
 ** TODO Microblogging
 
 # Sone
@@ -224,12 +235,20 @@ Privacy technology provides the background on which politics can work: Making su
 
 # FMS
 
+** TODO Spam resistance
+
+# WoT: List of IDs
+
 ** TODO Why not as big as tor?
 
 # Focus (rabbit defocussed)
 
 # Money
 * Funding
+** Funding
+- Goal
+- What we need
+- 2 year vision
 ** TODO Goal
 
 # Journalist + Whistleblower
@@ -284,6 +303,11 @@ Privacy technology provides the background on which politics can work: Making su
 # The more people use Freenet, the safer it gets (plausible deniability + hide in the forest).
 
 * Tech
+** Tech
+
+- capabilities
+- routing
+- simulation
 
 ** About the tech
 ***                                                               :B_columns:
