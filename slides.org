@@ -196,7 +196,8 @@ Privacy technology provides the background on which politics can work: Making su
     :PROPERTIES:
     :BEAMER_col: 0.45
     :END:
-- Blogging and Microblogging
+- Blogging
+- Microblogging
 - Spam resistance
 - Forums
 ** TODO File Hosting
