@@ -212,35 +212,95 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - Microblogging
 - Spam resistance
 - Forums
-** TODO File Hosting
+** File Hosting
 
-# Left: Upload a file: Key-selection, File-selection
+[[./screenshot-upload-file.png]]
 
-# Right: Upload Queue, Download Queue
+/decentralized pastebin./
 
-# decentralized pastebin
+** Site Hosting
 
-** TODO Site Hosting
+[[./screenshot-nerdageddon.png]]
 
-# nerdageddon
+/we call them freesites./
 
-# we call them freesites
+** Site creation
 
-** TODO Site creation
+[[./screenshot-publish.png]]
 
-# Howto-screenshot + jSite + freesitemgr
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
 
-** TODO Confidential Messaging
+jSite (GUI)
 
-# Confidential messaging friend-to-friend
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
 
-# with file hosting: confidential pastebin
+freesitemgr (pyFreenet)
 
-** TODO Email with hidden metadata
+** Confidential Messaging
 
-# Freemail
+*** Darknet messaging                                         :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
 
-** TODO DVCS
+- Talk to friends who run Freenet
+- Hide metadata in Freenet traffic
+
+*** with file hosting                                         :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- confidential pastebin
+- invisible and encrypted
+
+** Email with hidden metadata
+
+[[./screenshot-freemail.png]]
+
+** DVCS
+#+latex: \scriptsize
+#+BEGIN_EXAMPLE
+$ cd /tmp
+$ hg clone freenet://USK@j2Mfv0b81MNSslh3Qg9gs1vgQj36whsuosP8ydZq158,Xb~vh8XEXmdwGFca4HAx-ILOZD6AWPVuRzIuLerl4PU,AQACAAE/infocalypse-repo.R1/17
+Current USK version: 17
+Fetching bundles...
+...
+Pulled bundle: (-1, 0, 1)
+...
+Pulled bundle: (0, 9, 0)
+...
+Pulled bundle: (9, 16, 0)
+As basic protection, infocalypse automatically set the username
+'anonymous' for commits id `clt` which commits in the local
+timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
+#+END_EXAMPLE
+
+#+latex: \normalsize
+*** Mercurial                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- [[http://mercurial.selenic.com/wiki/Infocalypse][infocalypse]]
+- [[https://github.com/freenet/pyFreenetHg][pyFreenetHg]] (old)
+
+*** Git                                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- [[http://j16sdiz.github.io/egit-freenet/][egit-freenet]]
 
 # infocalypse: freenet development over freenet
 
