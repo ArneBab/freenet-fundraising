@@ -150,7 +150,7 @@ Complete blocking and surveillance is possible.
      :BEAMER_env: block
      :END:
 
-If surveillance and censorship is trivial, it will be done.
+If surveillance and censorship are trivial, it will be done.
 
 *** Tech and Politics                                               :B_block:
     :PROPERTIES:
