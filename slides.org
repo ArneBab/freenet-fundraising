@@ -158,7 +158,6 @@ If surveillance and censorship is trivial, it will be done.
 
 Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
 
-
 ** Who are we?
 
 ***                                                           :B_block:BMCOL:
@@ -182,6 +181,73 @@ Privacy technology provides the background on which politics can work: Making su
 #+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
+
+* Applications
+** TODO File Hosting
+
+# Left: Upload a file: Key-selection, File-selection
+
+# Right: Upload Queue, Download Queue
+
+# decentralized pastebin
+
+** TODO Darknet Messaging
+
+# Confidential messaging friend-to-friend
+
+# with file hosting: confidential pastebin
+
+** TODO Websites
+
+# nerdageddon
+
+# we call them freesites
+
+** TODO Site creation
+
+# Howto-screenshot + jSite + freesitemgr
+
+** TODO Blogging
+
+# Flog helper, Sitelink
+
+** TODO Spam resistance
+
+# WoT: List of IDs
+
+** TODO μBlogging
+
+# Sone
+
+** TODO Forums
+
+# FMS
+
+** TODO Why not as big as tor?
+
+# Focus (rabbit defocussed)
+
+# Money
+* Funding
+** TODO Goal
+
+# Journalist + Whistleblower
+
+** TODO What we need
+
+# 2-8 people, 3-5 years
+
+# Minimal, Good, Ideal
+
+** TODO 2 year vision
+
+** TODO Going further
+
+** TODO What is in it for me?
+
+# If it’s safe enough for whistleblowers, it’s safe enough to give you privacy.
+
+# The more people use Freenet, the safer it gets (plausible deniability + hide in the forest).
 
 * Tech
 
@@ -424,8 +490,5 @@ Privacy technology provides the background on which politics can work: Making su
 : random: [203, 151, 50, 84, 27, 169, 258, 265, 18, 232]
 : small world: [5, 3, 6, 9, 4, 11, 7, 8, 5, 4]
 
-
-
-
-
+** TODO Link length of the Simulations
 
