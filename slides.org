@@ -260,7 +260,7 @@ freesitemgr (pyFreenet)
     :END:
 
 - confidential pastebin
-- invisible and encrypted
+- invisible and encrypted \\ like all file uploads \\ before sharing the key
 
 ** Email with hidden metadata
 
@@ -306,21 +306,21 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 # git over freenet
 
-** TODO Blogging
+** TODO Blogging: Flog Helper
 
 # Flog helper, Sitelink
 
-** TODO Microblogging
+** Microblogging: Sone
 
-# Sone
+[[./screenshot-sone.png]]
 
-** TODO Spam resistance
+** TODO Spam resistance: Web of Trust
 
 # WoT: List of IDs
 
-** TODO Forums
+** Forums: FMS
 
-# FMS
+[[./screenshot-fms.png]]
 
 ** Language Bindings
 
@@ -331,7 +331,7 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 Do you miss anything?
 
-How about creating it? :)
+Join us and create it!
 
 ** Why not as big as tor?
 ***                                                               :B_columns:
