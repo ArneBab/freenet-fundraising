@@ -359,24 +359,6 @@ Privacy technology provides the background on which politics can work: Making su
 
 ** Routing Simulation
 
-*** Random routing                                            :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.45
-    :BEAMER_env: block
-    :END:
-
-#+caption: 10 paths between locations on a random network. Average path length: 143.
-[[./size-1000-hash-5713902561315010956-meanlen-143-random.png]]
-
-*** Small world routing                                       :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-
-#+caption: 10 paths between locations on a small world network. Average path length: 15.
-[[./size-1000-hash-5713902561315010956-meanlen-15-smallworld.png]]
-
 #+BEGIN_SRC python :tangle randomroute.py :exports none :results output
   import numpy
   import pylab
@@ -519,6 +501,25 @@ Privacy technology provides the background on which politics can work: Making su
   print "small world:", smallworldpathlens
 
 #+END_SRC
+
+
+*** Random routing                                            :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+#+caption: 10 paths between locations on a random network. Average path length: 143.
+[[./size-1000-hash-5713902561315010956-meanlen-143-random.png]]
+
+*** Small world routing                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+#+caption: 10 paths between locations on a small world network. Average path length: 15.
+[[./size-1000-hash-5713902561315010956-meanlen-15-smallworld.png]]
 
 #+RESULTS:
 : random: [203, 151, 50, 84, 27, 169, 258, 265, 18, 232]
