@@ -197,6 +197,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - File Hosting
 - Site hosting
 - Confidential Messaging
+- Email
 ***                                                                   :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
@@ -229,6 +230,10 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 # with file hosting: confidential pastebin
 
+** TODO Email with hidden metadata
+
+# Freemail
+
 ** TODO Blogging
 
 # Flog helper, Sitelink
@@ -237,13 +242,22 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 # Sone
 
+** TODO Spam resistance
+
+# WoT: List of IDs
+
 ** TODO Forums
 
 # FMS
 
-** TODO Spam resistance
+** TODO Language Bindings
 
-# WoT: List of IDs
+- Java
+- Python
+
+** Summary
+
+Is anything missing?
 
 ** TODO Why not as big as tor?
 
