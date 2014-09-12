@@ -160,7 +160,7 @@ If surveillance and censorship are trivial, it will be done.
 Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
 
 #+BEGIN_QUOTE
-The NSA surveillance doesn’t scale. -- Constanze Kurz at EuroPython 2014.
+The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+END_QUOTE
 
 
