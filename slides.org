@@ -557,7 +557,7 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_col: 0.45
     :END:
 
-#+caption: 10 paths between locations on a small world network. Average path length: 6.
+#+caption: 10 paths between locations on a small world network. Avg. path length: 6.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-6-smallworld.png]]
 
 ** Link length of the Simulations
