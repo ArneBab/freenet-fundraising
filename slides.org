@@ -361,15 +361,15 @@ Privacy technology provides the background on which politics can work: Making su
 
 #+BEGIN_SRC python :tangle routingsim.py :exports none :results output
   import numpy
-  import pylab
   import math
-  import matplotlib.cm
   size = 1000
   locs = numpy.random.random(size)
   outdegree = int(math.log(size, 2))
-  
-  
+  backoffprobability = 0.0
+
+
   def plotlinklengths(nets, title, filepath=None):
+    import pylab
     pylab.clf()
     for net in nets:
         lengths = []
@@ -386,9 +386,10 @@ Privacy technology provides the background on which politics can work: Making su
       pylab.savefig(filepath)
     else:
       pylab.show()
-  
-  
+
+
   def plotring(locs, paths, title, filepath=None):
+    import pylab, numpy
     pylab.clf()
     ringx = numpy.sin(locs*math.pi*2)
     ringy = numpy.cos(locs*math.pi*2)
@@ -412,13 +413,14 @@ Privacy technology provides the background on which politics can work: Making su
       pylab.savefig(filepath)
     else:
       pylab.show()
-  
-  
+
+
   def step(path, node, peers, target):
     # depth first traversal
     p = set(path)
     untested = [peer for peer in list(peers)
-                if not peer in p]
+                if not peer in p 
+                and numpy.random.random() > backoffprobability]
     if not untested:
       if not path[:-1]:
          raise ValueError("No nodes to test and cannot step back: Cannot find a route to the target in this network.")
@@ -430,8 +432,8 @@ Privacy technology provides the background on which politics can work: Making su
          raise ValueError("Cannot find a route to the target in this network.")
       best = path[-2]
     return best
-  
-  
+
+
   def randomrouting(locs, start, target, filepath=None):
       path = [start]
       randomnet = {}
@@ -448,8 +450,8 @@ Privacy technology provides the background on which politics can work: Making su
         peers = randomnet[node]
         path.append(step(path, node, peers, target))
       return randomnet, path
-  
-  
+
+
   def smallworldrouting(locs, start, target, filepath=None):
       path = [start]
       # small world routing
@@ -507,7 +509,7 @@ Privacy technology provides the background on which politics can work: Making su
         peers = smallworldnet[node]
         path.append(step(path, node, peers, target))
       return smallworldnet, path
-  
+
   randompaths = []
   smallworldpaths = []
   randomnets = []
@@ -521,27 +523,27 @@ Privacy technology provides the background on which politics can work: Making su
       smallworldpaths.append(smallworldpath)
       randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
-  
+
   randompathlens = [len(p) for p in randompaths]
   smallworldpathlens = [len(p) for p in smallworldpaths]
-  
+
   plotlinklengths(randomnets+smallworldnets, "Link lengths", 
-           filepath="size-{}-peers-{}-hash-{}-linklengths.png".format(
-             len(locs), outdegree, hash(tuple(locs))))
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
   plotring(locs, randompaths, "random paths", 
-           filepath="size-{}-peers-{}-hash-{}-meanlen-{}-random.png".format(
-             len(locs), outdegree, hash(tuple(locs)), int(numpy.mean(randompathlens))))
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-random.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(randompathlens))))
   plotring(locs, smallworldpaths, "small world paths", 
-           filepath="size-{}-peers-{}-hash-{}-meanlen-{}-smallworld.png".format(
-             len(locs), outdegree, hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworld.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
   print "random:", randompathlens
   print "small world:", smallworldpathlens
 
 #+END_SRC
 
 #+RESULTS:
-: random: [199, 17, 138, 29, 384, 130, 108, 25, 23, 10]
-: small world: [6, 6, 7, 7, 2, 3, 8, 6, 6, 9]
+: random: [121, 70, 94, 9, 12, 52, 12, 57, 47, 58]
+: small world: [6, 16, 5, 6, 7, 9, 16, 7, 5, 5]
 
 
 *** Random routing                                            :B_block:BMCOL:
