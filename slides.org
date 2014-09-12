@@ -257,7 +257,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 ** Summary
 
-Is anything missing?
+Do you miss anything?
 
 ** TODO Why not as big as tor?
 
