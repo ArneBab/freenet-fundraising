@@ -208,12 +208,6 @@ Privacy technology provides the background on which politics can work: Making su
 
 # decentralized pastebin
 
-** TODO Confidential Messaging
-
-# Confidential messaging friend-to-friend
-
-# with file hosting: confidential pastebin
-
 ** TODO Site Hosting
 
 # nerdageddon
@@ -223,6 +217,12 @@ Privacy technology provides the background on which politics can work: Making su
 ** TODO Site creation
 
 # Howto-screenshot + jSite + freesitemgr
+
+** TODO Confidential Messaging
+
+# Confidential messaging friend-to-friend
+
+# with file hosting: confidential pastebin
 
 ** TODO Blogging
 
