@@ -542,8 +542,8 @@ Privacy technology provides the background on which politics can work: Making su
 #+END_SRC
 
 #+RESULTS:
-: random: [60, 6, 70, 9, 313, 22, 79, 5, 170, 204]
-: small world: [9, 7, 8, 6, 6, 7, 7, 5, 5, 5]
+: random: [29, 107, 251, 619, 258, 389, 493, 352, 241, 231]
+: small world: [12, 8, 9, 4, 11, 9, 10, 7, 4, 4]
 
 
 *** Random routing                                            :B_block:BMCOL:
