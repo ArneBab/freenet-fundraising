@@ -278,24 +278,33 @@ How about creating it? :)
     :PROPERTIES:
     :BEAMER_env: columns
     :END:
-**** Focus                                                            :BMCOL:
+**** Focus                                                    :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
+    :BEAMER_env: block
     :END:
 
-[[./logo-blurred.png]] -> [[./logo.png]]
+#+attr_latex: :width 0.3\textwidth
+[[./logo-blurred.png]]
+\hspace{0.1cm} \Rightarrow \hspace{0.1cm}
+#+attr_latex: :width 0.3\textwidth
+[[./logo.png]]
 
-- Large goal
+\vspace{0.2cm}
 
-**** Money                                                            :BMCOL:
+- Hard problems solved, but not polished
+- Lots of low hanging fruit
+
+**** Money                                                    :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
+    :BEAMER_env: block
     :END:
 
 - Freenet: 2 part time developers
 - Tor: 20 full time developers
 
-/Tor is a project of the military. Freenet cannot be used to hack foreign servers./
+/Tor is military funded. Freenet does not help hack foreign servers. Do the math :)/
 
 *** Funding
 
