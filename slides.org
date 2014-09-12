@@ -434,11 +434,28 @@ We try to get more focus and money.
   - pre-filled USB-sticks to exchange with collegues and friends
   - … and many more - see Steganography
 
-** TODO What is in it for me?
+** What is in it for me?
 
-# If it’s safe enough for whistleblowers, it’s safe enough to give you privacy.
+*** 
+**** Secure Environment                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+If it’s safe enough for whistleblowers, it’s safe enough to give you privacy.
 
-# The more people use Freenet, the safer it gets (plausible deniability + hide in the forest).
+**** Hide in the forest                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+The more people use Freenet, the safer it gets for everyone. Bigger anonymity set.
+
+*** Privacy by default                                              :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Easy enough for everyday communication. Journalists need that.
 
 * Tech
 ** Tech
@@ -527,6 +544,7 @@ We try to get more focus and money.
   def plotlinklengths(nets, title, filepath=None):
     import pylab
     pylab.clf()
+    pylab.figure(figsize=(16,9))
     for net in nets:
         lengths = []
         for node in net:
@@ -547,6 +565,7 @@ We try to get more focus and money.
   def plotring(locs, paths, title, filepath=None):
     import pylab, numpy
     pylab.clf()
+    pylab.figure(figsize=(12,9))
     ringx = numpy.sin(locs*math.pi*2)
     ringy = numpy.cos(locs*math.pi*2)
     pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
@@ -696,6 +715,10 @@ We try to get more focus and money.
   print "small world:", smallworldpathlens
 
 #+END_SRC
+
+#+RESULTS:
+: random: [118, 36, 113, 195, 156, 12, 21, 166, 24, 174]
+: small world: [9, 6, 7, 3, 5, 8, 10, 10, 10, 8]
 
 
 *** Random routing                                            :B_block:BMCOL:
