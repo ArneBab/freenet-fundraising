@@ -242,7 +242,40 @@ Privacy technology provides the background on which politics can work: Making su
 
 ** TODO 2 year vision
 
-** TODO Going further
+** Going further
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** publication and collaboration:          :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: block
+     :END:
+
+   - platform for political bloggers
+   - social network with privacy by design
+   - programming platform
+
+**** backend for the web:                                     :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: block
+     :END:
+
+   - comment system for websites
+   - exchanging files with friends
+
+*** harder to detect and block:                                     :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+  - hide data in VoIP stream
+  - hiding data in email attachments
+  - pre-filled USB-sticks to exchange with collegues and friends
+  - … and many more - see Steganography
 
 ** TODO What is in it for me?
 
