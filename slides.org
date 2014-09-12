@@ -187,7 +187,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
-** TODO Summary
+** Summary
 
 - Freenet provides essential features freedom of press.
 - Tech creates the background needed to win the political battle.
