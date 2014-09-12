@@ -375,12 +375,13 @@ Privacy technology provides the background on which politics can work: Making su
         lengths = []
         for node in net:
           for link in net[node]:
-            lengths.append(abs(link - node))
+            lengths.append(min(abs(link - node), abs(link - node - 1), abs(link - node + 1)))
         pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)))
     pylab.xscale("log")
     pylab.xlabel("link length")
     pylab.ylabel("fraction of links with this length or less")
     pylab.title(title)
+    pylab.xlim(1./(size**2), 0.5)
     if filepath:
       pylab.savefig(filepath)
     else:
@@ -480,14 +481,20 @@ Privacy technology provides the background on which politics can work: Making su
       for n, i in enumerate(sortedlocs):
         smallworldnet[i].extend(list(numpy.random.choice(sortedlocs, size=numlonglinks, replace=False)))
       # as many medium size links as left after substracting the long and short links
-      nummediumlinks = outdegree-(linksperhop*2)
-      maxmediumdistance = max(lensortedlocs/10, 4)
+      nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
+      maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
       for i in range(nummediumlinks):
         for n, i in enumerate(sortedlocs):
           down = numpy.random.choice(maxmediumdistance) + 1
           up = numpy.random.choice(maxmediumdistance) + 1
           lower = (n-down)%lensortedlocs
+          while lower in smallworldnet[i]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
           upper = (n+up)%lensortedlocs
+          while upper in smallworldnet[i]:
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[i].append(sortedlocs[lower])
           smallworldnet[i].append(sortedlocs[upper])
       # show small world net
@@ -533,6 +540,8 @@ Privacy technology provides the background on which politics can work: Making su
 #+END_SRC
 
 #+RESULTS:
+: random: [199, 17, 138, 29, 384, 130, 108, 25, 23, 10]
+: small world: [6, 6, 7, 7, 2, 3, 8, 6, 6, 9]
 
 
 *** Random routing                                            :B_block:BMCOL:
