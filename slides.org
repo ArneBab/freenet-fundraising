@@ -190,8 +190,8 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_col: 0.45
     :END:
 - File Hosting
-- Confidential Messaging
 - Site hosting
+- Confidential Messaging
 ***                                                                   :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
