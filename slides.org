@@ -365,7 +365,7 @@ Do you miss anything?
 - *base for applications*: Websites, Forums, Microblogging, Chat.
 - *spam resistance*: Web of Trust (2 implementations).
 
-** Routing
+** Small world Routing
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
