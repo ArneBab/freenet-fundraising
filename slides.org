@@ -550,7 +550,7 @@ Easy enough for everyday communication. Journalists need that.
         for node in net:
           for link in net[node]:
             lengths.append(min(abs(link - node), abs(link - node - 1), abs(link - node + 1)))
-        pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)))
+        pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)), linewidth=4)
     pylab.xscale("log")
     pylab.xlabel("link length")
     pylab.ylabel("fraction of links with this length or less")
@@ -582,7 +582,7 @@ Easy enough for everyday communication. Journalists need that.
           except:
             break
           # pylab.plot([x, xp1], [y, yp1])# , color=color)
-        pylab.plot(pathx, pathy)# , color=color)
+        pylab.plot(pathx, pathy, linewidth=2)# , color=color)
     pylab.title(title)
     if filepath:
       pylab.savefig(filepath)
@@ -717,8 +717,8 @@ Easy enough for everyday communication. Journalists need that.
 #+END_SRC
 
 #+RESULTS:
-: random: [118, 36, 113, 195, 156, 12, 21, 166, 24, 174]
-: small world: [9, 6, 7, 3, 5, 8, 10, 10, 10, 8]
+: random: [215, 413, 1, 71, 33, 23, 46, 258, 5, 81]
+: small world: [10, 4, 1, 6, 4, 6, 8, 8, 9, 4]
 
 
 *** Random routing                                            :B_block:BMCOL:
