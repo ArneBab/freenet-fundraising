@@ -216,7 +216,7 @@ Privacy technology provides the background on which politics can work: Making su
 
 # WoT: List of IDs
 
-** TODO μBlogging
+** TODO Microblogging
 
 # Sone
 
@@ -541,10 +541,6 @@ Privacy technology provides the background on which politics can work: Making su
 
 #+END_SRC
 
-#+RESULTS:
-: random: [29, 107, 251, 619, 258, 389, 493, 352, 241, 231]
-: small world: [12, 8, 9, 4, 11, 9, 10, 7, 4, 4]
-
 
 *** Random routing                                            :B_block:BMCOL:
     :PROPERTIES:
@@ -552,8 +548,8 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_env: block
     :END:
 
-#+caption: 10 paths between locations on a random network. Average path length: 143.
-[[./size-1000-hash-5713902561315010956-meanlen-143-random.png]]
+#+caption: 10 paths between locations on a random network. Average path length: 224.
+[[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-224-random.png]]
 
 *** Small world routing                                       :B_block:BMCOL:
     :PROPERTIES:
@@ -561,12 +557,10 @@ Privacy technology provides the background on which politics can work: Making su
     :BEAMER_col: 0.45
     :END:
 
-#+caption: 10 paths between locations on a small world network. Average path length: 15.
-[[./size-1000-hash-5713902561315010956-meanlen-15-smallworld.png]]
-
-#+RESULTS:
-: random: [203, 151, 50, 84, 27, 169, 258, 265, 18, 232]
-: small world: [5, 3, 6, 9, 4, 11, 7, 8, 5, 4]
+#+caption: 10 paths between locations on a small world network. Average path length: 6.
+[[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-6-smallworld.png]]
 
 ** Link length of the Simulations
 
+#+caption: Link length distribution in the simulated small world and random networks.
+[[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-linklengths.png]]
