@@ -575,7 +575,7 @@ Do you miss anything?
     :BEAMER_col: 0.45
     :END:
 
-#+caption: 10 paths between locations on a small world network with 1000 nodes. Avg. path length: 6.
+#+caption: 10 paths between locations on a small world network with 1000 nodes. Average path length: 6.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-6-smallworld.png]]
 
 
