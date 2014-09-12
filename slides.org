@@ -3,7 +3,7 @@
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+BEAMER_THEME: default
 #+DATE: September 11, 2014
-#+options: H:2
+#+options: H:2 ^:nil
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
 
@@ -314,11 +314,7 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 [[./screenshot-sone.png]]
 
-** Forums: FMS
-
-[[./screenshot-fms.png]]
-
-** TODO Spam resistance: Web of Trust
+** Spam resistance
 
 ***                                                               :B_columns:
     :PROPERTIES:
@@ -350,12 +346,40 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 - CAPTCHAs for introduction
 - Take a while to find existing People
 
-# WoT: List of IDs
+** Web of Trust
+
+[[./screenshot-wot.png]]
+
+\vspace{1cm}
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+
+[[./screenshot-wot-create-or-restore.png]]
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.35
+    :END:
+
+[[./screenshot-wot-summary.png]]
+
+** Forums: FMS
+
+[[./screenshot-fms.png]]
 
 ** Language Bindings
 
-- Java - in core \\ https://github.com/freenet/fred
+- Java - in core \\ https://github.com/freenet/fred \\ Plugin Writing: \\ [[https://wiki.freenetproject.org/Plugin_development_tutorial][wiki.freenetproject.org/Plugin_development_tutorial]] \\ Freenet Client Protocol: \\  [[https://wiki.freenetproject.org/FCPv2][wiki.freenetproject.org/FCPv2]]
 - Python - pyFreenet \\ https://github.com/freenet/lib-pyFreenet
+- Perl*: https://github.com/freenet/lib-perlFreenet
+- Ruby*: https://github.com/freenet/lib-rubyFreenet
+- Ada*: https://github.com/freenet/lib-AdaFN/
+
+
+*: I did not test these, yet. I don’t know if they actually work.
 
 ** Summary
 
