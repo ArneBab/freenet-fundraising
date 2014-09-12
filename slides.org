@@ -375,27 +375,6 @@ Do you miss anything?
 #+caption: Finding the route to a chunk of data.
 [[./freenet-routing.png]]
 
-** Network structure
-
-*** Opennet                                                   :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-
-- *Optimize peer-connections* \\ via success-metric
-- *Distance Constraint* \\ maximum number of long connections
-
-*** Darknet (friend-to-friend)                                :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-
-- *Assume small world* \\ connections to people known in real life
-- *Reconstruct* \\ the structure by swapping locations
-
-
 ** Routing Simulation
 
 #+BEGIN_SRC python :tangle routingsim.py :exports none :results output
@@ -599,10 +578,31 @@ Do you miss anything?
 #+caption: 10 paths between locations on a small world network. Avg. path length: 6.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-6-smallworld.png]]
 
+
 ** Link length of the Simulations
 
 #+caption: Link length distribution in the simulated small world and random networks.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-linklengths.png]]
+
+** Network structure
+
+*** Opennet                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- *Optimize peer-connections* \\ via success-metric
+- *Distance Constraint* \\ maximum number of long connections
+
+*** Darknet (friend-to-friend)                                :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- *Assume small world* \\ connections to people known in real life
+- *Reconstruct* \\ the structure by swapping locations
 
 ** Measured Network Structure
 
