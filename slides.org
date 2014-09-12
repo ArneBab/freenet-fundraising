@@ -376,11 +376,6 @@ Privacy technology provides the background on which politics can work: Making su
 - *Assume small world* \\ connections to people known in real life
 - *Reconstruct* \\ the structure by swapping locations
 
-** Measured Network Structure
-
-#+caption: Link length distribution in Freenet. The green line would be an ideal network. Blue would be a random network. Red is the measured distribution. Randomization from local requests, churn and inhomogenity in the network skew the distribution.
-[[./607-plot_link_length.png]]
-
 
 ** Routing Simulation
 
@@ -589,3 +584,8 @@ Privacy technology provides the background on which politics can work: Making su
 
 #+caption: Link length distribution in the simulated small world and random networks.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-linklengths.png]]
+
+** Measured Network Structure
+
+#+caption: Link length distribution in Freenet. The green line would be an ideal network. Blue would be a random network. Red is the measured distribution. Randomization from local requests, churn and inhomogenity in the network skew the distribution.
+[[./607-plot_link_length.png]]
