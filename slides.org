@@ -264,8 +264,8 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 ** Language Bindings
 
-- Java - in core: \\ https://github.com/freenet/fred
-- Python - pyFreenet: \\ https://github.com/freenet/lib-pyFreenet
+- Java - in core \\ https://github.com/freenet/fred
+- Python - pyFreenet \\ https://github.com/freenet/lib-pyFreenet
 
 ** Summary
 
