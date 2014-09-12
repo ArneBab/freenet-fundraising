@@ -188,6 +188,11 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 [[file:freenet-cts4-20130930_135137.jpg]]
 
 ** TODO Summary
+
+- Freenet provides essential features freedom of press.
+- Tech creates the background needed to win the political battle.
+- Freenet was created 14 years ago and improved constantly.
+
 * Applications
 ** Applications
 ***                                                                   :BMCOL:
@@ -198,6 +203,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - Site hosting
 - Confidential Messaging
 - Email
+- DVCS
 ***                                                                   :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
@@ -234,6 +240,12 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 # Freemail
 
+** TODO DVCS
+
+# infocalypse: freenet development over freenet
+
+# git over freenet
+
 ** TODO Blogging
 
 # Flog helper, Sitelink
@@ -250,20 +262,45 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 # FMS
 
-** TODO Language Bindings
+** Language Bindings
 
-- Java
-- Python
+- Java - in core: \\ https://github.com/freenet/fred
+- Python - pyFreenet: \\ https://github.com/freenet/lib-pyFreenet
 
 ** Summary
 
 Do you miss anything?
 
+How about creating it? :)
+
 ** TODO Why not as big as tor?
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Focus                                                            :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
 
-# Focus (rabbit defocussed)
+[[./logo-blurred.png]] -> [[./logo.png]]
 
-# Money
+- Large goal
+
+**** Money                                                            :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- Freenet: 2 part time developers
+- Tor: 20 full time developers
+
+/Tor is a project of the military. Freenet cannot be used to hack foreign servers./
+
+*** Funding
+
+We try to get more focus and money.
+
 * Funding
 ** Funding
 - Goal
