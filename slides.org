@@ -239,7 +239,7 @@ jSite (GUI)
     :BEAMER_col: 0.45
     :END:
 
-freesitemgr (pyFreenet)
+[[https://github.com/freenet/lib-pyfreenet][freesitemgr (pyFreenet)]]
 
 ** Easier sites: Sharewiki
 
@@ -400,9 +400,9 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 ** Application Summary
 
-Do you miss anything?
+- Do you miss anything?
 
-Join us and create it!
+- Join us and create it!
 
 ** Why not as big as tor?
 ***                                                               :B_columns:
