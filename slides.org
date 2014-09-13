@@ -616,6 +616,7 @@ Easy enough for everyday communication. Journalists need that.
 - *decentralized* \\ on the computers of users
 - *encrypted chunks of files* \\ key (URL) to assemble, decrypt and identify
 - *anonymous pseudonyms* \\ public/private key publishing
+- *lifetime by demand*
 
 **** Routing                                                  :B_block:BMCOL:
     :PROPERTIES:
