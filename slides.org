@@ -323,9 +323,9 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 # git over freenet
 
-** TODO Blogging: Flog Helper                                      :noexport:
+** Blogging: Flog Helper
 
-# Flog helper, Sharelink
+[[./screenshot-floghelper.png]]
 
 ** Microblogging: Sone
 
