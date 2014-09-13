@@ -22,6 +22,12 @@ I worry about my child and the Internet all the time, even though she's too youn
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
 
+** Why now?
+
+#+BEGIN_QUOTE
+In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time to turn back the wheel and take the road towards freedom.
+#+END_QUOTE
+
 * About
 ** What is Freenet?
 
@@ -562,7 +568,7 @@ We try to get more focus and money.
   - hide data in VoIP stream
   - hiding data in email attachments
   - pre-filled USB-sticks to exchange with collegues and friends
-  - … and many more - see Steganography
+  - … and many more - see [[https://wiki.freenetproject.org/Steganography][Steganography]]
 
 ** What is in it for me?
 
