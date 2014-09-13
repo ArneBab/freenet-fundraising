@@ -900,7 +900,7 @@ Easy enough for everyday communication. Journalists need that.
 
 /With max bandwidth set to 80kBps and average bandwidth at 50-60kBps./
 
-*** Improvements                                              :B_block:BMCOL:
+*** Optimizations                                             :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.45
