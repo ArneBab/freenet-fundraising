@@ -215,7 +215,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 [[./screenshot-upload-file.png]]
 
-/Decentralized pastebin. Decentralized file hoster./
+/decentralized pastebin, decentralized file hoster./
 
 ** Site Hosting
 
