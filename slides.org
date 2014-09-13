@@ -924,7 +924,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
 
 - Decentral, anonymous datastore.
 - Many applications.
+- Started in 2000.
 - Scales.
-- Started 14 years ago.
 
 /We want to raise money to make it perfect for Journalists./
