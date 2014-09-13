@@ -202,13 +202,12 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - File Hosting
 - Site hosting
 - Confidential Messaging
-- Email
 - DVCS
 ***                                                                   :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :END:
-- Blogging
+- Email
 - Microblogging
 - Spam resistance
 - Forums
@@ -241,6 +240,24 @@ jSite (GUI)
     :END:
 
 freesitemgr (pyFreenet)
+
+** Easier sites: Sharewiki
+
+[[./screenshot-sharewiki.png]]
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+[[./screenshot-sharewiki-list.png]]
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+[[./screenshot-sharewiki-backup-and-restore.png]]
 
 ** Confidential Messaging
 
@@ -306,9 +323,9 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 # git over freenet
 
-** TODO Blogging: Flog Helper
+** TODO Blogging: Flog Helper                                      :noexport:
 
-# Flog helper, Sitelink
+# Flog helper, Sharelink
 
 ** Microblogging: Sone
 
@@ -898,3 +915,13 @@ Easy enough for everyday communication. Journalists need that.
 - Small World Structure
 - Measured fits simulated
 - It scales
+
+** Summary
+
+#+BEGIN_QUOTE
+Freenet is the technical part of the solution for freedom of the press in the internet.
+#+END_QUOTE
+
+- Provides a decentral, anonymous datastore and many applications.
+- It scales.
+- We want to raise money to make it easy to use.
