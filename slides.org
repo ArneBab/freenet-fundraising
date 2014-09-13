@@ -922,6 +922,9 @@ Easy enough for everyday communication. Journalists need that.
 Freenet is the technical part of the solution for freedom of the press in the internet.
 #+END_QUOTE
 
-- Provides a decentral, anonymous datastore and many applications.
-- It scales.
-- We want to raise money to make it easy to use.
+- Decentral, anonymous datastore.
+- Many applications.
+- Scales.
+- Started 14 years ago.
+
+/We want to raise money to make it perfect for Journalists./
