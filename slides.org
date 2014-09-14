@@ -131,9 +131,10 @@ Good, but more filesharing than publishing.
 - *offline hosting* \\ Join, drop content, leave.
 - *decaying storage* \\ lifetime depends on user demand
 
-***                                                                 :B_block:
+***                                                           :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
+    :BEAMER_col: 0.975
     :END:
 
 Proven track record of providing censorship resistant publishing and communication since 2000.
@@ -159,9 +160,10 @@ Complete blocking and surveillance is possible.
 
 If surveillance and censorship are trivial, it will be done.
 
-*** Tech and Politics                                               :B_block:
+*** Tech and Politics                                         :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
+    :BEAMER_col: 0.975
     :END:
 
 Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
@@ -362,9 +364,10 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 - Explicit Trust Lists
 - One Shot IDs
 
-*** Shared Properties                                               :B_block:
+*** Shared Properties                                         :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
+    :BEAMER_col: 0.975
     :END:
 
 - CAPTCHAs for introduction
@@ -393,6 +396,11 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 ** Forums: FMS
 
 [[./screenshot-fms.png]]
+** Comments on the Clearweb
+
+[[./screenshot-babcom.png]]
+
+/See [[http://draketo.de/proj/freecom][draketo.de/proj/freecom]] and [[http://draketo.de/english/freenet/spam-resistant-decentral-comments][draketo.de/english/freenet/spam-resistant-decentral-comments]]/
 
 ** Language Bindings
 
@@ -444,7 +452,11 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 
 /Tor is military funded. Freenet does not help hack foreign servers. Do the math :)/
 
-*** Funding
+*** Funding                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.975
+    :BEAMER_env: block
+    :END:
 
 We try to get more focus and money.
 
@@ -532,7 +544,11 @@ We try to get more focus and money.
 - Lie Low
 - Leak again
 
-*** 
+***                                                           :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.975
+    :BEAMER_env: block
+    :END:
 
 /All already possible, but not easy./
 
@@ -561,8 +577,9 @@ We try to get more focus and money.
    - comment system for websites
    - exchanging files with friends
 
-*** harder to detect and block:                                     :B_block:
+*** harder to detect and block:                               :B_block:BMCOL:
     :PROPERTIES:
+    :BEAMER_col: 0.975
     :BEAMER_env: block
     :END:
 
@@ -573,7 +590,10 @@ We try to get more focus and money.
 
 ** What is in it for me?
 
-*** 
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
 **** Secure Environment                                       :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
@@ -588,9 +608,10 @@ If it’s safe enough for whistleblowers, it’s safe enough to give you privacy
     :END:
 The more people use Freenet, the safer it gets for everyone. Bigger anonymity set.
 
-*** Privacy by default                                              :B_block:
+*** Privacy by default                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
+    :BEAMER_col: 0.975
     :END:
 Easy enough for everyday communication. Journalists need that.
 
