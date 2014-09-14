@@ -602,14 +602,14 @@ We try to get more focus and money.
     :END:
 If it’s safe enough for whistleblowers, it’s safe enough to give you privacy.
 
-**** Hide in the forest                                       :B_block:BMCOL:
+**** Hide in the Forest                                       :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.45
     :END:
 The more people use Freenet, the safer it gets for everyone. Bigger anonymity set.
 
-*** Privacy by default                                        :B_block:BMCOL:
+*** Privacy by Default                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.975
