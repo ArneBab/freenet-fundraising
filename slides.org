@@ -995,3 +995,5 @@ We want to raise money to make Freenet perfect for Journalists.
 \scriptsize
 
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
