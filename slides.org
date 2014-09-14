@@ -672,7 +672,7 @@ Easy enough for everyday communication. Journalists need that.
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.6
+    :BEAMER_col: 0.57
     :END:
 
 #+caption: Finding the route to a chunk of data. Greedy Routing on Scale Free structure.
