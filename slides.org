@@ -983,6 +983,8 @@ We want to raise money to make Freenet perfect for Journalists.
 
 *[[https://freenetproject.org][freenetproject.org]]*
 
+\vspace{0.4cm}
+
 \scriptsize
 
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
