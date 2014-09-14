@@ -469,7 +469,7 @@ We try to get more focus and money.
 - Goal
 - What we need
 - 2 year vision
-** Goal
+** Goal: Freenet for Journalists and Whistleblowers
 
 - maintain journalist site
 - contact a journalist via the site
@@ -480,7 +480,11 @@ We try to get more focus and money.
 
 ** What we need
 
-*** Minimal                                                   :B_block:BMCOL:
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Minimal                                                  :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.3
@@ -492,7 +496,7 @@ We try to get more focus and money.
 - 2 years
 - 620k Euro
 
-*** Good                                                      :B_block:BMCOL:
+**** Good                                                     :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.3
@@ -505,7 +509,7 @@ We try to get more focus and money.
 - 3 years
 - 1.5M Euro
 
-*** Ideal                                                     :B_block:BMCOL:
+**** Ideal                                                    :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.3
@@ -517,6 +521,13 @@ We try to get more focus and money.
 - 1 coordinator
 - 5 years
 - 3.8M Euro
+
+***                                                                 :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+If you are in contact to human rights groups who might want to fund us, please get in touch!
 
 ** 2 year vision
 ***                                                               :B_columns:
@@ -995,3 +1006,5 @@ We want to raise money to make Freenet perfect for Journalists.
 \scriptsize
 
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
