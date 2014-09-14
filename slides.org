@@ -965,3 +965,5 @@ Freenet is the technical part of the solution for freedom of the press in the in
     :END:
 
 We want to raise money to make Freenet perfect for Journalists.
+
+/Info: [[http://draketo.de/proj/freenet-funding][draketo.de/proj/freenet-funding]]/
