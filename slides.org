@@ -222,7 +222,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - Forums
 ** File Hosting
 
-#+attr_latex: :width 0.8\textwidth
+#+attr_latex: :width 0.85\textwidth
 [[./screenshot-upload-file.png]]
 
 /decentralized pastebin, decentralized file hoster./
