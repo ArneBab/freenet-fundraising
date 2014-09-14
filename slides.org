@@ -1,11 +1,12 @@
-#+title: \Huge Freenet \\ \vspace{0.5cm} \scriptsize The technical part of the solution for freedom of the press in the internet
+#+title: Freenet
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [presentation]
-#+BEAMER_THEME: default
+#+LATEX_HEADER:\usepackage{beamerthemefreenet}
 #+DATE: September 11, 2014
 #+options: H:2 ^:nil
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
+#+latex_header: \subtitle[The technical part of the solution for freedom of the press in the internet]{The technical part of the solution for freedom of the press in the internet}
 
 * Why?
 
