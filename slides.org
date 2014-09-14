@@ -59,7 +59,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
 - correlation attacks
 
 #+latex: \small
-/this killed the Black Goblin Market/
+/This killed the Black Goblin Market/
 
 ***** Hosting with cost                                             :B_block:
      :PROPERTIES:
@@ -222,6 +222,7 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - Forums
 ** File Hosting
 
+#+attr_latex: :width 0.8\textwidth
 [[./screenshot-upload-file.png]]
 
 /decentralized pastebin, decentralized file hoster./
