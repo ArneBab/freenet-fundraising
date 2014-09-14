@@ -956,4 +956,12 @@ Freenet is the technical part of the solution for freedom of the press in the in
 - Started in 2000.
 - Scales.
 
-/We want to raise money to make it perfect for Journalists./
+\vspace{0.5cm}
+
+*** Fundraising                                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.975
+    :END:
+
+We want to raise money to make Freenet perfect for Journalists.
