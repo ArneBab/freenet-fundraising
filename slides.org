@@ -975,6 +975,8 @@ We want to raise money to make Freenet perfect for Journalists.
     :BEAMER_col: 0.62
     :END:
 
+\centering
+
 \Huge
 
-[[https://freenetproject.org][freenetproject.org]]
+*[[https://freenetproject.org][freenetproject.org]]*
