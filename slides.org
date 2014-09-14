@@ -668,11 +668,11 @@ Easy enough for everyday communication. Journalists need that.
 - *base for applications*: Websites, Forums, Microblogging, Chat.
 - *spam resistance*: Web of Trust (2 implementations).
 
-** Small world Routing
+** Small World Routing
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.62
+    :BEAMER_col: 0.6
     :END:
 
 #+caption: Finding the route to a chunk of data. Greedy Routing on Scale Free structure.
@@ -889,7 +889,7 @@ Easy enough for everyday communication. Journalists need that.
 : small world: [10, 4, 1, 6, 4, 6, 8, 8, 9, 4]
 
 
-*** Random routing                                            :B_block:BMCOL:
+*** Random Routing                                            :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :BEAMER_env: block
@@ -898,7 +898,7 @@ Easy enough for everyday communication. Journalists need that.
 #+caption: 10 paths between locations on a random network with 1000 nodes. Average path length: 224.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-224-random.png]]
 
-*** Small world routing                                       :B_block:BMCOL:
+*** Small World Routing                                       :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.45
@@ -908,7 +908,7 @@ Easy enough for everyday communication. Journalists need that.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-6-smallworld.png]]
 
 
-** Link length of the Simulations
+** Link lengths in the Simulations
 
 #+caption: Link length distribution in the simulated small world and random networks.
 [[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-linklengths.png]]
