@@ -1,4 +1,5 @@
 #+title: Freenet
+#+language: en
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+LATEX_HEADER:\usepackage{beamerthemefreenet}
@@ -895,8 +896,8 @@ Easy enough for everyday communication. Journalists need that.
     :BEAMER_env: block
     :END:
 
-#+caption: 10 paths between locations on a random network with 1000 nodes. Average path length: 224.
-[[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-224-random.png]]
+#+caption: 10 paths between locations on a random network with 1000 nodes. Average path length: 105.
+[[./size-1000-peers-9-backoffpercentage-000-hash-8675903025370220578-meanlen-105-random.png]]
 
 *** Small World Routing                                       :B_block:BMCOL:
     :PROPERTIES:
@@ -904,14 +905,14 @@ Easy enough for everyday communication. Journalists need that.
     :BEAMER_col: 0.45
     :END:
 
-#+caption: 10 paths between locations on a small world network with 1000 nodes. Average path length: 6.
-[[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-meanlen-6-smallworld.png]]
+#+caption: 10 paths between locations on a small world network with 1000 nodes. Average path length: 5.
+[[./size-1000-peers-9-backoffpercentage-000-hash-8675903025370220578-meanlen-5-smallworld.png]]
 
 
 ** Link lengths in the Simulations
 
 #+caption: Link length distribution in the simulated small world and random networks.
-[[./size-1000-peers-9-backoffpercentage-000-hash-2411646167976556217-linklengths.png]]
+[[./size-1000-peers-9-backoffpercentage-000-hash-8675903025370220578-linklengths.png]]
 
 ** Measured Network Structure
 
