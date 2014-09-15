@@ -715,15 +715,16 @@ Easy enough for everyday communication. Journalists need that.
 ** Routing Simulation
 
 #+BEGIN_SRC python :tangle routingsim.py :exports none :results output
-  import numpy
   import math
+  import random
   size = 1000
-  locs = numpy.random.random(size)
+  locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))
   backoffprobability = 0.0
 
 
   def plotlinklengths(nets, title, filepath=None):
+    import numpy
     import pylab
     pylab.clf()
     pylab.figure(figsize=(16,9))
@@ -748,6 +749,7 @@ Easy enough for everyday communication. Journalists need that.
     import pylab, numpy
     pylab.clf()
     pylab.figure(figsize=(12,9))
+    locs = numpy.array(locs)
     ringx = numpy.sin(locs*math.pi*2)
     ringy = numpy.cos(locs*math.pi*2)
     pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
@@ -777,7 +779,7 @@ Easy enough for everyday communication. Journalists need that.
     p = set(path)
     untested = [peer for peer in list(peers)
                 if not peer in p 
-                and numpy.random.random() > backoffprobability]
+                and random.random() > backoffprobability]
     if not untested:
       if not path[:-1]:
          raise ValueError("No nodes to test and cannot step back: Cannot find a route to the target in this network.")
@@ -795,8 +797,13 @@ Easy enough for everyday communication. Journalists need that.
       path = [start]
       randomnet = {}
       for i in locs:
-        peers = numpy.random.choice(locs, size=outdegree, replace=False)
-        randomnet[i] = peers
+        peers = set()
+        for j in range(outdegree):
+          peer = random.choice(locs)
+          while peer in peers:
+              peer = random.choice(locs)
+          peers.add(peer)
+        randomnet[i] = list(peers)
       # show random net
       links = []
       for i in randomnet:
@@ -823,8 +830,8 @@ Easy enough for everyday communication. Journalists need that.
       maxshortdistance = outdegree/2
       for dist in range(halfnumshortlinks):
         for n, i in enumerate(sortedlocs):
-          down = min(numpy.random.choice(maxshortdistance, 3)) + 1
-          up = min(numpy.random.choice(maxshortdistance, 3)) + 1
+          down = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+          up = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
           lower = sortedlocs[(n-down)%lensortedlocs]
           while lower in smallworldnet[i]:
               down += 1
@@ -838,14 +845,20 @@ Easy enough for everyday communication. Journalists need that.
       # long connections
       numlonglinks = linksperhop
       for n, i in enumerate(sortedlocs):
-        smallworldnet[i].extend(list(numpy.random.choice(sortedlocs, size=numlonglinks, replace=False)))
+        longlinks = set()
+        longlink = random.choice(sortedlocs)
+        for l in range(numlonglinks):
+          while longlink in longlinks:
+            longlink = random.choice(sortedlocs)
+          longlinks.add(longlink)
+        smallworldnet[i].extend(list(longlinks))
       # as many medium size links as left after substracting the long and short links
       nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
       maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
       for i in range(nummediumlinks):
         for n, i in enumerate(sortedlocs):
-          down = numpy.random.choice(maxmediumdistance) + 1
-          up = numpy.random.choice(maxmediumdistance) + 1
+          down = random.choice(range(maxmediumdistance)) + 1
+          up = random.choice(range(maxmediumdistance)) + 1
           lower = (n-down)%lensortedlocs
           while lower in smallworldnet[i]:
               down += 1
@@ -872,8 +885,8 @@ Easy enough for everyday communication. Journalists need that.
   randomnets = []
   smallworldnets = []
   for i in range(10):
-      target = numpy.random.choice(locs)
-      start = numpy.random.choice(locs)
+      target = random.choice(locs)
+      start = random.choice(locs)
       randomnet, randompath = randomrouting(locs, start, target)
       smallworldnet, smallworldpath = smallworldrouting(locs, start, target)
       randompaths.append(randompath)
@@ -884,6 +897,10 @@ Easy enough for everyday communication. Journalists need that.
   randompathlens = [len(p) for p in randompaths]
   smallworldpathlens = [len(p) for p in smallworldpaths]
 
+  print "random:", randompathlens
+  print "small world:", smallworldpathlens
+
+  import numpy
   plotlinklengths(randomnets+smallworldnets, "Link lengths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
@@ -893,8 +910,6 @@ Easy enough for everyday communication. Journalists need that.
   plotring(locs, smallworldpaths, "small world paths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworld.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
-  print "random:", randompathlens
-  print "small world:", smallworldpathlens
 
 #+END_SRC
 
