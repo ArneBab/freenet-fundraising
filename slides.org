@@ -527,7 +527,7 @@ We try to get more focus and money.
     :BEAMER_env: block
     :END:
 
-If you are in contact to human rights groups who might want to fund us, please get in touch!
+If you are in contact with human rights groups who might want to fund us, please get in touch!
 
 ** 2 year vision
 ***                                                               :B_columns:
