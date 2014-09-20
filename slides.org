@@ -304,13 +304,13 @@ jSite (GUI)
 
 \vspace{0.2cm}
 
-#+attr_latex: :height 0.38\textwidth
+#+attr_latex: :height 0.36\textwidth
 [[./screenshot-n2n-list-all-peers.png]]
 \hspace{0.1cm}
-#+attr_latex: :height 0.38\textwidth
+#+attr_latex: :height 0.36\textwidth
 [[./screenshot-n2n-to-multiple-peers.png]]
 \hspace{0.1cm}
-#+attr_latex: :height 0.38\textwidth
+#+attr_latex: :height 0.36\textwidth
 [[./screenshot-n2n-received.png]]
 
 \vspace{0.1cm}
