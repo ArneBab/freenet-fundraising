@@ -383,7 +383,8 @@ in the local timezone. To change this, edit
     :END:
 
 - Propagating trust
-- Generalized \\ Used by plugins (i.e. Sone)
+- Generalized
+- Used by plugins (i.e. Sone)
 
 **** FMS                                                      :B_block:BMCOL:
     :PROPERTIES:
