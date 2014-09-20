@@ -274,7 +274,12 @@ jSite (GUI)
 
 ** Confidential Messaging
 
-*** Darknet messaging                                         :B_block:BMCOL:
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+
+**** Darknet messaging                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :BEAMER_env: block
@@ -283,7 +288,7 @@ jSite (GUI)
 - Talk to friends who run Freenet
 - Hide metadata in Freenet traffic
 
-*** with file hosting                                         :B_block:BMCOL:
+**** with file hosting                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :BEAMER_env: block
@@ -291,6 +296,24 @@ jSite (GUI)
 
 - confidential pastebin
 - invisible and encrypted \\ like all file uploads \\ before sharing the key
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.975
+    :END:
+
+\vspace{0.2cm}
+
+#+attr_latex: :height 0.38\textwidth
+[[./screenshot-n2n-list-all-peers.png]]
+\hspace{0.1cm}
+#+attr_latex: :height 0.38\textwidth
+[[./screenshot-n2n-to-multiple-peers.png]]
+\hspace{0.1cm}
+#+attr_latex: :height 0.38\textwidth
+[[./screenshot-n2n-received.png]]
+
+\vspace{0.1cm}
 
 ** Email with hidden metadata
 
