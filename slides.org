@@ -442,7 +442,7 @@ in the local timezone. To change this, edit
 - Ada*: https://github.com/freenet/lib-AdaFN/
 
 
-*: I did not test these, yet. I don’t know, if they actually work.
+*: I did not test these, yet. I don’t know whether they actually work.
 
 ** Application Summary
 
