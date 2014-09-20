@@ -332,9 +332,12 @@ Pulled bundle: (-1, 0, 1)
 Pulled bundle: (0, 9, 0)
 ...
 Pulled bundle: (9, 16, 0)
+
 As basic protection, infocalypse automatically set the username
-'anonymous' for commits id `clt` which commits in the local
-timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
+'anonymous' for commits in this repo, changed the commands
+`commit` and `ci` to fake UTC time and added `clt` which commits
+in the local timezone. To change this, edit
+/tmp/freenet-funding/.hg/hgrc
 #+END_EXAMPLE
 
 #+latex: \normalsize
