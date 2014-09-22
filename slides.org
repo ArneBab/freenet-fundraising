@@ -916,7 +916,7 @@ Easy enough for everyday communication. Journalists need that.
       for i in sortedlocs:
           smallworldnet[i] = []
       # know your neighbors
-      halfnumshortlinks = max(1, linksperhop) + 1
+      halfnumshortlinks = max(1, linksperhop)
       maxshortdistance = 1
       for dist in range(halfnumshortlinks):
         for n, i in enumerate(sortedlocs):
@@ -1014,8 +1014,9 @@ Easy enough for everyday communication. Journalists need that.
 #+END_SRC
 
 #+RESULTS:
-: random: [215, 413, 1, 71, 33, 23, 46, 258, 5, 81]
-: small world: [10, 4, 1, 6, 4, 6, 8, 8, 9, 4]
+: random: [284, 140, 181, 23, 87, 241, 222, 157, 38, 128]
+: small world: [8, 5, 4, 12, 7, 5, 7, 3, 7, 5]
+: Kleinberg: [8, 4, 10, 7, 12, 11, 5, 5, 9, 6]
 
 
 *** Random Routing                                            :B_block:BMCOL:
