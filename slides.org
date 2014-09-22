@@ -3,7 +3,6 @@
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+LATEX_HEADER:\usepackage{beamerthemefreenet}
-#+DATE: September 11, 2014
 #+options: H:2 ^:nil
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
@@ -24,7 +23,7 @@ I worry about my child and the Internet all the time, even though she's too youn
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
 
-** Why now? A New Hope
+** Why now? A New Old Hope
 
 #+BEGIN_QUOTE
 In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time to turn back the wheel and take the road towards freedom.
@@ -274,7 +273,12 @@ jSite (GUI)
 
 ** Confidential Messaging
 
-*** Darknet messaging                                         :B_block:BMCOL:
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+
+**** Darknet messaging                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :BEAMER_env: block
@@ -283,7 +287,7 @@ jSite (GUI)
 - Talk to friends who run Freenet
 - Hide metadata in Freenet traffic
 
-*** with file hosting                                         :B_block:BMCOL:
+**** with file hosting                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :BEAMER_env: block
@@ -291,6 +295,24 @@ jSite (GUI)
 
 - confidential pastebin
 - invisible and encrypted \\ like all file uploads \\ before sharing the key
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.975
+    :END:
+
+\vspace{0.2cm}
+
+#+attr_latex: :height 0.36\textwidth
+[[./screenshot-n2n-list-all-peers.png]]
+\hspace{0.1cm}
+#+attr_latex: :height 0.36\textwidth
+[[./screenshot-n2n-to-multiple-peers.png]]
+\hspace{0.1cm}
+#+attr_latex: :height 0.36\textwidth
+[[./screenshot-n2n-received.png]]
+
+\vspace{0.1cm}
 
 ** Email with hidden metadata
 
@@ -309,9 +331,12 @@ Pulled bundle: (-1, 0, 1)
 Pulled bundle: (0, 9, 0)
 ...
 Pulled bundle: (9, 16, 0)
+
 As basic protection, infocalypse automatically set the username
-'anonymous' for commits id `clt` which commits in the local
-timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
+'anonymous' for commits in this repo, changed the commands
+`commit` and `ci` to fake UTC time and added `clt` which commits
+in the local timezone. To change this, edit
+/tmp/freenet-funding/.hg/hgrc
 #+END_EXAMPLE
 
 #+latex: \normalsize
@@ -357,7 +382,8 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
     :END:
 
 - Propagating trust
-- Generalized \\ Used by plugins (i.e. Sone)
+- Generalized
+- Used by plugins (i.e. Sone)
 
 **** FMS                                                      :B_block:BMCOL:
     :PROPERTIES:
@@ -415,7 +441,7 @@ timezone. To change this, edit /tmp/infocalypse-repo/.hg/hgrc
 - Ada*: https://github.com/freenet/lib-AdaFN/
 
 
-*: I did not test these, yet. I don’t know, if they actually work.
+*: I did not test these, yet. I don’t know whether they actually work.
 
 ** Application Summary
 
@@ -880,28 +906,99 @@ Easy enough for everyday communication. Journalists need that.
         path.append(step(path, node, peers, target))
       return smallworldnet, path
 
+  def kleinbergrouting(locs, start, target, filepath=None):
+      path = [start]
+      # small world routing
+      smallworldnet = {}
+      sortedlocs = sorted(list(locs))
+      lensortedlocs = len(sortedlocs)
+      linksperhop = max(1, outdegree//3)
+      for i in sortedlocs:
+          smallworldnet[i] = []
+      # know your neighbors
+      halfnumshortlinks = max(1, linksperhop)
+      maxshortdistance = 1
+      for dist in range(halfnumshortlinks):
+        for n, i in enumerate(sortedlocs):
+          down = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+          up = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+          lower = sortedlocs[(n-down)%lensortedlocs]
+          while lower in smallworldnet[i]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = sortedlocs[(n+up)%lensortedlocs]
+          while upper in smallworldnet[i]:
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[i].append(lower)
+          smallworldnet[i].append(upper)
+      # long connections
+      numlonglinks = max(1, linksperhop/3)
+      for n, i in enumerate(sortedlocs):
+        longlinks = set()
+        longlink = random.choice(sortedlocs)
+        for l in range(numlonglinks):
+          while longlink in longlinks:
+            longlink = random.choice(sortedlocs)
+          longlinks.add(longlink)
+        smallworldnet[i].extend(list(longlinks))
+      # as many medium size links as left after substracting the long and short links
+      nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
+      maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
+      for i in range(nummediumlinks):
+        for n, i in enumerate(sortedlocs):
+          down = random.choice(range(maxmediumdistance)) + 1
+          up = random.choice(range(maxmediumdistance)) + 1
+          lower = (n-down)%lensortedlocs
+          while lower in smallworldnet[i]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = (n+up)%lensortedlocs
+          while upper in smallworldnet[i]:
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[i].append(sortedlocs[lower])
+          smallworldnet[i].append(sortedlocs[upper])
+      # show small world net
+      links = []
+      for i in smallworldnet:
+        links.append(smallworldnet[i])
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = smallworldnet[node]
+        path.append(step(path, node, peers, target))
+      return smallworldnet, path
+
   randompaths = []
   smallworldpaths = []
+  kleinbergpaths = []
   randomnets = []
   smallworldnets = []
+  kleinbergnets = []
   for i in range(10):
       target = random.choice(locs)
       start = random.choice(locs)
       randomnet, randompath = randomrouting(locs, start, target)
       smallworldnet, smallworldpath = smallworldrouting(locs, start, target)
+      kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, target)
       randompaths.append(randompath)
       smallworldpaths.append(smallworldpath)
+      kleinbergpaths.append(kleinbergpath)
       randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
+      kleinbergnets.append(kleinbergnet)
 
   randompathlens = [len(p) for p in randompaths]
   smallworldpathlens = [len(p) for p in smallworldpaths]
+  kleinbergpathlens = [len(p) for p in kleinbergpaths]
 
   print "random:", randompathlens
   print "small world:", smallworldpathlens
+  print "Kleinberg:", kleinbergpathlens
 
   import numpy
-  plotlinklengths(randomnets+smallworldnets, "Link lengths", 
+  plotlinklengths(randomnets+smallworldnets+kleinbergnets, "Link lengths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
   plotring(locs, randompaths, "random paths", 
@@ -910,12 +1007,16 @@ Easy enough for everyday communication. Journalists need that.
   plotring(locs, smallworldpaths, "small world paths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworld.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
+  plotring(locs, kleinbergpaths, "small world paths", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-kleinberg.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(kleinbergpathlens))))
 
 #+END_SRC
 
 #+RESULTS:
-: random: [215, 413, 1, 71, 33, 23, 46, 258, 5, 81]
-: small world: [10, 4, 1, 6, 4, 6, 8, 8, 9, 4]
+: random: [284, 140, 181, 23, 87, 241, 222, 157, 38, 128]
+: small world: [8, 5, 4, 12, 7, 5, 7, 3, 7, 5]
+: Kleinberg: [8, 4, 10, 7, 12, 11, 5, 5, 9, 6]
 
 
 *** Random Routing                                            :B_block:BMCOL:
