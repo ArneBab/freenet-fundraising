@@ -906,28 +906,99 @@ Easy enough for everyday communication. Journalists need that.
         path.append(step(path, node, peers, target))
       return smallworldnet, path
 
+  def kleinbergrouting(locs, start, target, filepath=None):
+      path = [start]
+      # small world routing
+      smallworldnet = {}
+      sortedlocs = sorted(list(locs))
+      lensortedlocs = len(sortedlocs)
+      linksperhop = max(1, outdegree//3)
+      for i in sortedlocs:
+          smallworldnet[i] = []
+      # know your neighbors
+      halfnumshortlinks = max(1, linksperhop) + 1
+      maxshortdistance = 1
+      for dist in range(halfnumshortlinks):
+        for n, i in enumerate(sortedlocs):
+          down = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+          up = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+          lower = sortedlocs[(n-down)%lensortedlocs]
+          while lower in smallworldnet[i]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = sortedlocs[(n+up)%lensortedlocs]
+          while upper in smallworldnet[i]:
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[i].append(lower)
+          smallworldnet[i].append(upper)
+      # long connections
+      numlonglinks = max(1, linksperhop/3)
+      for n, i in enumerate(sortedlocs):
+        longlinks = set()
+        longlink = random.choice(sortedlocs)
+        for l in range(numlonglinks):
+          while longlink in longlinks:
+            longlink = random.choice(sortedlocs)
+          longlinks.add(longlink)
+        smallworldnet[i].extend(list(longlinks))
+      # as many medium size links as left after substracting the long and short links
+      nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
+      maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
+      for i in range(nummediumlinks):
+        for n, i in enumerate(sortedlocs):
+          down = random.choice(range(maxmediumdistance)) + 1
+          up = random.choice(range(maxmediumdistance)) + 1
+          lower = (n-down)%lensortedlocs
+          while lower in smallworldnet[i]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = (n+up)%lensortedlocs
+          while upper in smallworldnet[i]:
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[i].append(sortedlocs[lower])
+          smallworldnet[i].append(sortedlocs[upper])
+      # show small world net
+      links = []
+      for i in smallworldnet:
+        links.append(smallworldnet[i])
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = smallworldnet[node]
+        path.append(step(path, node, peers, target))
+      return smallworldnet, path
+
   randompaths = []
   smallworldpaths = []
+  kleinbergpaths = []
   randomnets = []
   smallworldnets = []
+  kleinbergnets = []
   for i in range(10):
       target = random.choice(locs)
       start = random.choice(locs)
       randomnet, randompath = randomrouting(locs, start, target)
       smallworldnet, smallworldpath = smallworldrouting(locs, start, target)
+      kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, target)
       randompaths.append(randompath)
       smallworldpaths.append(smallworldpath)
+      kleinbergpaths.append(kleinbergpath)
       randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
+      kleinbergnets.append(kleinbergnet)
 
   randompathlens = [len(p) for p in randompaths]
   smallworldpathlens = [len(p) for p in smallworldpaths]
+  kleinbergpathlens = [len(p) for p in kleinbergpaths]
 
   print "random:", randompathlens
   print "small world:", smallworldpathlens
+  print "Kleinberg:", kleinbergpathlens
 
   import numpy
-  plotlinklengths(randomnets+smallworldnets, "Link lengths", 
+  plotlinklengths(randomnets+smallworldnets+kleinbergnets, "Link lengths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
   plotring(locs, randompaths, "random paths", 
@@ -936,6 +1007,9 @@ Easy enough for everyday communication. Journalists need that.
   plotring(locs, smallworldpaths, "small world paths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworld.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
+  plotring(locs, kleinbergpaths, "small world paths", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-kleinberg.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(kleinbergpathlens))))
 
 #+END_SRC
 
