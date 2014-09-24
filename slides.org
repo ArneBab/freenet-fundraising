@@ -198,6 +198,11 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
+** Current state
+
+\centering
+[[file:screenshot-feedback-so-fast.png]]
+
 ** Project Summary
 
 - Freenet provides essential features for freedom of press.
@@ -489,181 +494,6 @@ in the local timezone. To change this, edit
     :END:
 
 We try to get more focus and money.
-
-* Funding
-** Funding
-- Goal
-- What we need
-- 2 year vision
-** Goal: Journalists and Whistleblowers
-
-- maintain journalist site
-- contact a journalist via the site
-- traceless persistent pseudonym (QR or written key)
-- Freenet-stick, preseeded
-- invisible darknet (steganography)
-- grow the darknet over mobile
-
-** What we need
-
-***                                                               :B_columns:
-    :PROPERTIES:
-    :BEAMER_env: columns
-    :END:
-**** Minimal                                                  :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.3
-    :END:
-
-- 2 coders \\ one part time
-- 1 outreach
-- 1 coordinator and coder
-- 2 years
-- 620k Euro
-
-**** Good                                                     :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.3
-    :END:
-
-- 2 coders
-- 1 UX
-- 1 outreach
-- 1 coordinator
-- 3 years
-- 1.5M Euro
-
-**** Ideal                                                    :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.3
-    :END:
-
-- 3 coders
-- 2 UX
-- 2 outreach
-- 1 coordinator
-- 5 years
-- 3.8M Euro
-
-***                                                                 :B_block:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:
-
-If you are in contact with human rights groups who might want to fund us, please get in touch!
-
-** 2 year vision
-***                                                               :B_columns:
-    :PROPERTIES:
-    :BEAMER_env: columns
-    :END:
-**** Nick, Journalist                                         :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-
-- Republish on Freenet
-- Email from Janice
-- Ask to verify the leak
-- Help her keep out of trouble
-- Run the story
-
-**** Janice, Whistleblower                                    :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-
-- Use Freenet in cafés
-- Select Nick by site
-- Send leaked documents
-- Reply to questions
-- Lie Low
-- Leak again
-
-***                                                           :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.975
-    :BEAMER_env: block
-    :END:
-
-/All already possible, but not easy./
-
-** Going further
-
-***                                                               :B_columns:
-    :PROPERTIES:
-    :BEAMER_env: columns
-    :END:
-**** publication and collaboration:          :B_block:BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 0.45
-     :BEAMER_env: block
-     :END:
-
-   - platform for political bloggers
-   - social network with privacy by design
-   - programming platform
-
-**** backend for the web:                                     :B_block:BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 0.45
-     :BEAMER_env: block
-     :END:
-
-   - comment system for websites
-   - exchanging files with friends
-
-*** harder to detect and block:                               :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.975
-    :BEAMER_env: block
-    :END:
-
-  - hide data in VoIP stream
-  - hiding data in email attachments
-  - pre-filled USB-sticks to exchange with collegues and friends
-  - … and many more - see [[https://wiki.freenetproject.org/Steganography][Steganography]]
-
-** What is in it for me?
-
-***                                                               :B_columns:
-    :PROPERTIES:
-    :BEAMER_env: columns
-    :END:
-**** Secure Environment                                       :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-If it’s safe enough for whistleblowers, it’s safe enough to give you privacy.
-
-**** Hide in the Forest                                       :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.45
-    :END:
-The more people use Freenet, the safer it gets for everyone. Bigger anonymity set.
-
-*** Privacy by Default                                        :B_block:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :BEAMER_col: 0.975
-    :END:
-Easy enough for everyday communication. Journalists need that.
-
-** Funding Summary
-
-- Freenet for Journalists and Whistleblowers
-- Already possible but not easy
-- Finance a group of full time Freenet hackers
-- 3-8 people, 2-5 years
-- 620k Euro to 3.8M Euro
-
 * Tech
 ** Tech
 
@@ -1124,3 +954,177 @@ We want to raise money to make Freenet perfect for Journalists.
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
 
 /Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
+\appendix
+* Funding
+** Funding
+- Goal
+- What we need
+- 2 year vision
+** Goal: Journalists and Whistleblowers
+
+- maintain journalist site
+- contact a journalist via the site
+- traceless persistent pseudonym (QR or written key)
+- Freenet-stick, preseeded
+- invisible darknet (steganography)
+- grow the darknet over mobile
+
+** What we need
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Minimal                                                  :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.3
+    :END:
+
+- 2 coders \\ one part time
+- 1 outreach
+- 1 coordinator and coder
+- 2 years
+- 620k Euro
+
+**** Good                                                     :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.3
+    :END:
+
+- 2 coders
+- 1 UX
+- 1 outreach
+- 1 coordinator
+- 3 years
+- 1.5M Euro
+
+**** Ideal                                                    :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.3
+    :END:
+
+- 3 coders
+- 2 UX
+- 2 outreach
+- 1 coordinator
+- 5 years
+- 3.8M Euro
+
+***                                                                 :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+If you are in contact with human rights groups who might want to fund us, please get in touch!
+
+** 2 year vision
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Nick, Journalist                                         :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- Republish on Freenet
+- Email from Janice
+- Ask to verify the leak
+- Help her keep out of trouble
+- Run the story
+
+**** Janice, Whistleblower                                    :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+
+- Use Freenet in cafés
+- Select Nick by site
+- Send leaked documents
+- Reply to questions
+- Lie Low
+- Leak again
+
+***                                                           :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.975
+    :BEAMER_env: block
+    :END:
+
+/All already possible, but not easy./
+
+** Going further
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** publication and collaboration:          :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: block
+     :END:
+
+   - platform for political bloggers
+   - social network with privacy by design
+   - programming platform
+
+**** backend for the web:                                     :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: block
+     :END:
+
+   - comment system for websites
+   - exchanging files with friends
+
+*** harder to detect and block:                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.975
+    :BEAMER_env: block
+    :END:
+
+  - hide data in VoIP stream
+  - hiding data in email attachments
+  - pre-filled USB-sticks to exchange with collegues and friends
+  - … and many more - see [[https://wiki.freenetproject.org/Steganography][Steganography]]
+
+** What is in it for me?
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Secure Environment                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+If it’s safe enough for whistleblowers, it’s safe enough to give you privacy.
+
+**** Hide in the Forest                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.45
+    :END:
+The more people use Freenet, the safer it gets for everyone. Bigger anonymity set.
+
+*** Privacy by Default                                        :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.975
+    :END:
+Easy enough for everyday communication. Journalists need that.
+
+** Funding Summary
+
+- Freenet for Journalists and Whistleblowers
+- Already possible but not easy
+- Finance a group of full time Freenet hackers
+- 3-8 people, 2-5 years
+- 620k Euro to 3.8M Euro
