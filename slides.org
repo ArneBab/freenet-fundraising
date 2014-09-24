@@ -25,9 +25,10 @@ I worry about my child and the Internet all the time, even though she's too youn
 
 ** Why now? A New Old Hope
 
-#+BEGIN_QUOTE
-In 2000 we said that the internet is at a crossroad between surveillance and freedom. Freenet started to fight for ensuring freedom of the press. Then 9/11 happened. In 2013 Edward Snowden made the general public realize that we are already far past that crossroad. He gave us precious time to turn back the wheel and take the road towards freedom.
-#+END_QUOTE
+- 1995: At a Crossroad: *Surveillance or Freedom*.
+- 1999: *Freenet* starts.
+- 2001: *9/11*: The war of terror starts.
+- 2013: Snowden. Precious time to *turn back the wheel*.
 
 * About
 ** What is Freenet?
