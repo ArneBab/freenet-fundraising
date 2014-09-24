@@ -27,7 +27,7 @@ I worry about my child and the Internet all the time, even though she's too youn
 
 - 1995: At a Crossroad: *Surveillance or Freedom*.
 - 1999: *Freenet* starts.
-- 2001: *9/11*: The war of terror starts.
+- 2001: *9/11*. The war on terror starts.
 - 2013: Snowden. Precious time to *turn back the wheel*.
 
 * About
@@ -1130,3 +1130,25 @@ Easy enough for everyday communication. Journalists need that.
 - Finance a group of full time Freenet hackers
 - 3-8 people, 2-5 years
 - 620k Euro to 3.8M Euro
+** Get Freenet!
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.62
+    :END:
+
+\centering
+
+\Huge
+
+[[./logo.png]]
+
+*[[https://freenetproject.org][freenetproject.org]]*
+
+\vspace{0.4cm}
+
+\scriptsize
+
+/This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
