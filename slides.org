@@ -488,7 +488,7 @@ in the local timezone. To change this, edit
 
 /Tor is military funded. Freenet does not help hack foreign servers. Do the math :)/
 
-*** Funding                                                   :B_block:BMCOL:
+*** Fundraising                                               :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.975
     :BEAMER_env: block
@@ -1124,7 +1124,7 @@ The more people use Freenet, the safer it gets for everyone. Bigger anonymity se
     :END:
 Easy enough for everyday communication. Journalists need that.
 
-** Funding Summary
+** Fundraising Summary
 
 - Freenet for Journalists and Whistleblowers
 - Already possible but not easy
