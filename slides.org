@@ -199,10 +199,15 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+caption: Some Freenet developers at CTS4. From left to right: ArneBab, toad, leuchtkaefer and digger3.
 [[file:freenet-cts4-20130930_135137.jpg]]
 
-** Current state
+** Current State
 
 \centering
 [[file:screenshot-feedback-so-fast.png]]
+
+** Current Stats
+
+\centering
+[[./fetchpull-1293-fetchplots10.png]]
 
 ** Project Summary
 
@@ -236,31 +241,39 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 /decentralized pastebin, decentralized file hoster./
 
 ** Site Hosting
-
+\centering
+#+attr_latex: :width 0.8\textwidth
 [[./screenshot-nerdageddon.png]]
 
+#+latex: \resizebox{\textwidth}{!}{\tiny 
+[[https://d6.gnutella2.info/freenet/USK@tiYrPDh~fDeH5V7NZjpp~QuubaHwgks88iwlRXXLLWA,yboLMwX1dChz8fWKjmbdtl38HR5uiCOdIUT86ohUyRg,AQACAAE/nerdageddon/159/][USK@tiYrPDh~fDeH5V7NZjpp~QuubaHwgks88iwlRXXLLWA,yboLMwX1dChz8fWKjmbdtl38HR5uiCOdIUT86ohUyRg,AQACAAE/nerdageddon/159/]]
+#+latex: }
+
+\raggedright
 /we call them freesites./
 
 ** Site creation
 
+\hspace{0.1cm}
 [[./screenshot-publish.png]]
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.45
+    :BEAMER_col: 0.62
     :END:
 
 jSite (GUI)
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.45
+    :BEAMER_col: 0.38
     :END:
 
 [[https://github.com/freenet/lib-pyfreenet][freesitemgr (pyFreenet)]]
 
 ** Easier sites: Sharewiki
 
+\hspace{0.1cm}
 [[./screenshot-sharewiki.png]]
 
 ***                                                                   :BMCOL:
