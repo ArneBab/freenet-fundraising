@@ -910,7 +910,6 @@ We try to get more focus and money.
 - Measured fits simulated
 - It scales
 
-* Summary
 ** Summary
 
 #+BEGIN_QUOTE
