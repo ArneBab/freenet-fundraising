@@ -979,31 +979,41 @@ We want to raise money to make Freenet perfect for Journalists.
 \appendix
 * Contribute
 
-** Helping Freenet
+** Write Code
+
+- https://github.com/freenet 
+- https://freenetproject.org/developer.html
+- IRC: #freenet @ irc.freenode.net
+
+** Run a node
 
 *** Running a Node                                                  :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-
+\scriptsize
 #+BEGIN_SRC sh
-wget 'https://freenetproject.org/jnlp/freenet_installer.jar' -O new_installer.jar
-java -jar new_installer.jar -console
+wget https://freenetproject.org/jnlp/freenet_installer.jar -O installer.jar
+java -jar installer.jar -console
 # (follow the prompts)
 # info: https://freenetproject.org/download.html
 ./run.sh # { console | start | stop | restart | status | dump }
 #+END_SRC
 
-as seednode: https://piratenpad.de/p/pirates4freenet
-
-*** Code                                                            :B_block:
+*** As seednode                                                     :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
 
-- https://github.com/freenet 
-- https://freenetproject.org/developer.html
-- IRC: #freenet @ irc.freenode.net
+\centering
+
+simple howto found on 
+
+https://piratenpad.de/p/pirates4freenet
+
+** Build the Darknet
+
+[[./screenshot-add-friend.png]]
 
 * Fundraising
 ** Fundraising
