@@ -985,7 +985,7 @@ We want to raise money to make Freenet perfect for Journalists.
 
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
 
-/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
 * Appendix
 \appendix
 * Contribute
@@ -1220,4 +1220,4 @@ Easy enough for everyday communication. Journalists need that.
 
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
 
-/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
