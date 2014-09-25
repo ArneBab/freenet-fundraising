@@ -900,8 +900,11 @@ We try to get more focus and money.
 #+attr_latex: :width 0.7\textwidth
 [[./607-plot_link_length.png]]
 ** Additional notes
-
-*** Performance                                               :B_block:BMCOL:
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Performance                                              :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.45
@@ -910,9 +913,9 @@ We try to get more focus and money.
 - Upload 150 MiB in 1 day
 - Download 1 GiB in 1 day
 
-/With max bandwidth set to 80kBps and average bandwidth at 50-60kBps./
+/With max bandwidth set to 80kBps and average 50-60kBps./
 
-*** Optimizations                                             :B_block:BMCOL:
+**** Optimizations                                            :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
     :BEAMER_col: 0.45
@@ -923,6 +926,14 @@ We try to get more focus and money.
 - ...
 
 /Missing in the simulation./
+
+*** Capacity                                                  :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.97
+    :END:
+#+attr_latex: :width \textwidth
+[[./year_900x300_plot_datastore.png]]
 
 ** Tech Summary
 
@@ -1000,7 +1011,7 @@ java -jar installer.jar -console
 ./run.sh # { console | start | stop | restart | status | dump }
 #+END_SRC
 
-*** As seednode                                                     :B_block:
+*** As Seednode                                                     :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
@@ -1012,7 +1023,7 @@ simple howto found on
 https://piratenpad.de/p/pirates4freenet
 
 ** Build the Darknet
-
+#+attr_latex: :width \textwidth
 [[./screenshot-add-friend.png]]
 
 * Fundraising
