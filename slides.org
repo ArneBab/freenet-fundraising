@@ -1,5 +1,6 @@
 #+title: Freenet
 #+language: en
+#+startup: beamer
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+LATEX_HEADER:\usepackage{beamerthemefreenet}
@@ -140,6 +141,8 @@ Good, but more filesharing than publishing.
 
 Proven track record of providing censorship resistant publishing and communication since 2000.
 
+
+
 ** The TECHNICAL part?
 ***                                                               :B_columns:
     :PROPERTIES:
@@ -175,6 +178,13 @@ Privacy technology provides the background on which politics can work: Making su
 The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+END_QUOTE
 
+
+** Now Concrete
+
+[[./screenshot-fproxy-wide.png]]
+
+- 127.0.0.1:8888
+- ssh -NL 8888:localhost:8888 <host>
 
 ** Who are we?
 
@@ -235,10 +245,10 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 - Forums
 ** File Hosting
 
-#+attr_latex: :width 0.85\textwidth
+#+attr_latex: :width 0.8\textwidth
 [[./screenshot-upload-file.png]]
 
-/decentralized pastebin, decentralized file hoster./
+/pastebin, file hoster, encrypted chunks, redundancy./
 
 ** Site Hosting
 \centering
