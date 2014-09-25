@@ -299,6 +299,9 @@ jSite (GUI)
     :END:
 
 [[./screenshot-sharewiki-backup-and-restore.png]]
+** Blogging: Flog Helper
+
+[[./screenshot-floghelper.png]]
 
 ** Confidential Messaging
 
@@ -342,7 +345,6 @@ jSite (GUI)
 [[./screenshot-n2n-received.png]]
 
 \vspace{0.1cm}
-
 ** Email with hidden metadata
 
 [[./screenshot-freemail.png]]
@@ -389,11 +391,6 @@ in the local timezone. To change this, edit
 # infocalypse: freenet development over freenet
 
 # git over freenet
-
-** Blogging: Flog Helper
-
-[[./screenshot-floghelper.png]]
-
 ** Microblogging: Sone
 
 [[./screenshot-sone.png]]
