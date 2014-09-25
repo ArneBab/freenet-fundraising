@@ -990,10 +990,21 @@ We want to raise money to make Freenet perfect for Journalists.
 \appendix
 * Contribute
 ** Contribute
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
 
 - Write Code
 - Run a Node
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
 - Build the Darknet
+- Spread the Word
 
 ** Write Code
 
@@ -1031,11 +1042,34 @@ https://piratenpad.de/p/pirates4freenet
 #+attr_latex: :width \textwidth
 [[./screenshot-add-friend.png]]
 
+** Spread the Word
+
+\centering
+Because /we/ are crappy at PR.
+
+These slides: 
+
+[[http://draketo.de/proj/freenet-funding/slides.pdf][draketo.de/proj/freenet-funding/slides.pdf]]
+
+[[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]
+
 ** Summary
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
 
 - Write Code
 - Run a Node
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
 - Build the Darknet
+- Spread the Word
 
 * Fundraising
 ** Fundraising
