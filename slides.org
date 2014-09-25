@@ -980,6 +980,34 @@ We want to raise money to make Freenet perfect for Journalists.
 /Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb/
 * Appendix
 \appendix
+* Contribute
+
+** Helping Freenet
+
+*** Running a Node                                                  :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+#+BEGIN_SRC sh
+wget 'https://freenetproject.org/jnlp/freenet_installer.jar' -O new_installer.jar
+java -jar new_installer.jar -console
+# (follow the prompts)
+# info: https://freenetproject.org/download.html
+./run.sh # { console | start | stop | restart | status | dump }
+#+END_SRC
+
+as seednode: https://piratenpad.de/p/pirates4freenet
+
+*** Code                                                            :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+- https://github.com/freenet 
+- https://freenetproject.org/developer.html
+- IRC: #freenet @ irc.freenode.net
+
 * Fundraising
 ** Fundraising
 - Goal
