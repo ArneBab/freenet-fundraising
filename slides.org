@@ -136,7 +136,7 @@ Good, but more filesharing than publishing.
 ***                                                           :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :END:
 
 Proven track record of providing censorship resistant publishing and communication since 2000.
@@ -167,7 +167,7 @@ If surveillance and censorship are trivial, they will be done.
 *** Tech and Politics                                         :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :END:
 
 Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
@@ -330,7 +330,7 @@ jSite (GUI)
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :END:
 
 \vspace{0.2cm}
@@ -423,7 +423,7 @@ in the local timezone. To change this, edit
 *** Shared Properties                                         :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :END:
 
 - CAPTCHAs for introduction
@@ -510,7 +510,7 @@ in the local timezone. To change this, edit
 
 *** Fundraising                                               :B_block:BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :BEAMER_env: block
     :END:
 
@@ -957,7 +957,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
 *** Fundraising                                               :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :END:
 
 We want to raise money to make Freenet perfect for Journalists.
@@ -1123,7 +1123,7 @@ If you are in contact with human rights groups who might want to fund us, please
 
 ***                                                           :B_block:BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :BEAMER_env: block
     :END:
 
@@ -1156,7 +1156,7 @@ If you are in contact with human rights groups who might want to fund us, please
 
 *** harder to detect and block:                               :B_block:BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :BEAMER_env: block
     :END:
 
@@ -1188,7 +1188,7 @@ The more people use Freenet, the safer it gets for everyone. Bigger anonymity se
 *** Privacy by Default                                        :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_env: block
-    :BEAMER_col: 0.975
+    :BEAMER_col: 0.97
     :END:
 Easy enough for everyday communication. Journalists need that.
 
