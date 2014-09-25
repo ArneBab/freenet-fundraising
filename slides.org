@@ -1,4 +1,4 @@
-#+title: Freenet
+#+title: Freenet Project: Leap over Censorship
 #+language: en
 #+startup: beamer
 #+LaTeX_CLASS: beamer
@@ -989,6 +989,11 @@ We want to raise money to make Freenet perfect for Journalists.
 * Appendix
 \appendix
 * Contribute
+** Contribute
+
+- Write Code
+- Run a Node
+- Build the Darknet
 
 ** Write Code
 
@@ -1025,6 +1030,12 @@ https://piratenpad.de/p/pirates4freenet
 ** Build the Darknet
 #+attr_latex: :width \textwidth
 [[./screenshot-add-friend.png]]
+
+** Summary
+
+- Write Code
+- Run a Node
+- Build the Darknet
 
 * Fundraising
 ** Fundraising
