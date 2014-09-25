@@ -347,6 +347,7 @@ jSite (GUI)
 \vspace{0.1cm}
 ** Email with hidden metadata
 
+#+attr_latex: :width 0.98\textwidth
 [[./screenshot-freemail.png]]
 
 ** DVCS
