@@ -54,7 +54,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
      :BEAMER_env: block
      :END:
 
-/e.g. tor, i2p/
+/e.g. Tor, I2P/
 
 - No offline hosting
 - vulnerable to DoS
@@ -476,7 +476,7 @@ in the local timezone. To change this, edit
 
 - Join us and create it!
 
-** Why not as big as tor?
+** Why not as big as Tor?
 ***                                                               :B_columns:
     :PROPERTIES:
     :BEAMER_env: columns
