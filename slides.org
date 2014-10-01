@@ -219,6 +219,10 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 \centering
 [[./fetchpull-1293-fetchplots10.png]]
 
+** Ideal Lifetime
+
+# TODO: Add screenshot of teachers game.
+
 ** Project Summary
 
 - Freenet provides essential features for freedom of press.
