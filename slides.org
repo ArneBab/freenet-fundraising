@@ -599,6 +599,8 @@ We try to get more focus and money.
 #+BEGIN_SRC python :tangle routingsim.py :exports none :results output
   import math
   import random
+  import itertools
+  import bisect
   size = 1000
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))
@@ -739,8 +741,14 @@ We try to get more focus and money.
       maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
       for i in range(nummediumlinks):
         for n, i in enumerate(sortedlocs):
-          down = random.choice(range(maxmediumdistance)) + 1
-          up = random.choice(range(maxmediumdistance)) + 1
+          def chooselink(maxdist):
+            choices = range(1, maxmediumdistance + 1)
+            weights = [1.0/i for i in choices]
+            cumdist = list(itertools.accumulate(weights))
+            x = random.uniform(0, cumdist[-1])
+            return choices[bisect.bisect(cumdist, x)]
+          down = chooselink(maxmediumdistance)
+          up = chooselink(maxmediumdistance)
           lower = (n-down)%lensortedlocs
           while lower in smallworldnet[i]:
               down += 1
@@ -892,7 +900,6 @@ We try to get more focus and money.
 
 #+caption: 10 paths between locations on a small world network with 1000 nodes. Average path length: 5.
 [[./size-1000-peers-9-backoffpercentage-000-hash-8675903025370220578-meanlen-5-smallworld.png]]
-
 
 ** Link lengths in the Simulations
 
