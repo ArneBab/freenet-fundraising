@@ -54,7 +54,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
      :BEAMER_env: block
      :END:
 
-/e.g. tor, i2p/
+/e.g. Tor, I2P/
 
 - No offline hosting
 - vulnerable to DoS
@@ -218,6 +218,10 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 \centering
 [[./fetchpull-1293-fetchplots10.png]]
+
+** Ideal Lifetime
+
+# TODO: Add screenshot of teachers game.
 
 ** Project Summary
 
@@ -476,7 +480,7 @@ in the local timezone. To change this, edit
 
 - Join us and create it!
 
-** Why not as big as tor?
+** Why not as big as Tor?
 ***                                                               :B_columns:
     :PROPERTIES:
     :BEAMER_env: columns
@@ -595,6 +599,7 @@ We try to get more focus and money.
 #+BEGIN_SRC python :tangle routingsim.py :exports none :results output
   import math
   import random
+  import bisect
   size = 1000
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))
@@ -694,7 +699,102 @@ We try to get more focus and money.
       return randomnet, path
 
 
-  def smallworldrouting(locs, start, target, filepath=None):
+
+  def smallworldbydistance(locs, start, target, filepath=None):
+      path = [start]
+      # small world routing
+      smallworldnet = {}
+      sortedlocs = sorted(list(locs))
+      lensortedlocs = len(sortedlocs)
+      for i in sortedlocs:
+          smallworldnet[i] = []
+      nummediumlinks = outdegree
+      maxmediumdistance = lensortedlocs // 2
+      for peer in range(outdegree):
+        for n, loc in enumerate(sortedlocs):
+          def chooselink(maxdist, direction=1):
+            choices = range(1, maxmediumdistance + 1)
+            weights = [1.0/min(abs(loc - sortedlocs[(n+c*direction)%lensortedlocs]), 
+                               abs(sortedlocs[(n+c*direction)%lensortedlocs] - loc)) 
+                       for c in choices]
+            cumdist = []
+            accumulator = 0
+            for c in weights:
+                accumulator += c
+                cumdist.append(accumulator)
+            x = random.uniform(0, cumdist[-1])
+            return choices[bisect.bisect(cumdist, x)]
+          down = chooselink(maxmediumdistance, direction=-1)
+          up = chooselink(maxmediumdistance, direction=1)
+          lower = (n-down)%lensortedlocs
+          while lower in smallworldnet[loc]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = (n+up)%lensortedlocs
+          while upper in smallworldnet[loc] :
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[loc].append(sortedlocs[lower])
+          smallworldnet[loc].append(sortedlocs[upper])
+      # show small world net
+      links = []
+      for i in smallworldnet:
+        links.append(smallworldnet[i])
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = smallworldnet[node]
+        path.append(step(path, node, peers, target))
+      return smallworldnet, path
+
+
+  def smallworldbyindex(locs, start, target, filepath=None):
+      path = [start]
+      # small world routing
+      smallworldnet = {}
+      sortedlocs = sorted(list(locs))
+      lensortedlocs = len(sortedlocs)
+      for i in sortedlocs:
+          smallworldnet[i] = []
+      nummediumlinks = outdegree
+      maxmediumdistance = lensortedlocs // 2
+      for peer in range(outdegree):
+        for n, loc in enumerate(sortedlocs):
+          def chooselink(maxdist):
+            choices = range(1, maxmediumdistance + 1)
+            weights = [1.0/c for c in choices]
+            cumdist = []
+            accumulator = 0
+            for c in weights:
+                accumulator += c
+                cumdist.append(accumulator)
+            x = random.uniform(0, cumdist[-1])
+            return choices[bisect.bisect(cumdist, x)]
+          down = chooselink(maxmediumdistance)
+          up = chooselink(maxmediumdistance)
+          lower = (n-down)%lensortedlocs
+          while lower in smallworldnet[loc]:
+              down += 1
+              lower = sortedlocs[(n-down)%lensortedlocs]
+          upper = (n+up)%lensortedlocs
+          while upper in smallworldnet[loc] :
+              up += 1
+              upper = sortedlocs[(n+up)%lensortedlocs]
+          smallworldnet[loc].append(sortedlocs[lower])
+          smallworldnet[loc].append(sortedlocs[upper])
+      # show small world net
+      links = []
+      for i in smallworldnet:
+        links.append(smallworldnet[i])
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = smallworldnet[node]
+        path.append(step(path, node, peers, target))
+      return smallworldnet, path
+
+
+  def smallworldapprox(locs, start, target, filepath=None):
       path = [start]
       # small world routing
       smallworldnet = {}
@@ -735,8 +835,18 @@ We try to get more focus and money.
       maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
       for i in range(nummediumlinks):
         for n, i in enumerate(sortedlocs):
-          down = random.choice(range(maxmediumdistance)) + 1
-          up = random.choice(range(maxmediumdistance)) + 1
+          def chooselink(maxdist):
+            choices = range(1, maxmediumdistance + 1)
+            weights = [1.0/i for i in choices]
+            cumdist = []
+            accumulator = 0
+            for i in weights:
+                accumulator += i
+                cumdist.append(accumulator)
+            x = random.uniform(0, cumdist[-1])
+            return choices[bisect.bisect(cumdist, x)]
+          down = chooselink(maxmediumdistance)
+          up = chooselink(maxmediumdistance)
           lower = (n-down)%lensortedlocs
           while lower in smallworldnet[i]:
               down += 1
@@ -757,6 +867,7 @@ We try to get more focus and money.
         peers = smallworldnet[node]
         path.append(step(path, node, peers, target))
       return smallworldnet, path
+
 
   def kleinbergrouting(locs, start, target, filepath=None):
       path = [start]
@@ -822,35 +933,50 @@ We try to get more focus and money.
         path.append(step(path, node, peers, target))
       return smallworldnet, path
 
+
   randompaths = []
   smallworldpaths = []
+  smallworldpathsindex = []
+  smallworldpathsdistance = []
   kleinbergpaths = []
   randomnets = []
   smallworldnets = []
+  smallworldnetsindex = []
+  smallworldnetsdistance = []
   kleinbergnets = []
   for i in range(10):
       target = random.choice(locs)
       start = random.choice(locs)
       randomnet, randompath = randomrouting(locs, start, target)
-      smallworldnet, smallworldpath = smallworldrouting(locs, start, target)
+      smallworldnet, smallworldpath = smallworldapprox(locs, start, target)
+      smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, target)
+      smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, target)
       kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, target)
       randompaths.append(randompath)
       smallworldpaths.append(smallworldpath)
+      smallworldpathsindex.append(smallworldpathindex)
+      smallworldpathsdistance.append(smallworldpathdistance)
       kleinbergpaths.append(kleinbergpath)
       randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
+      smallworldnetsindex.append(smallworldnetindex)
+      smallworldnetsdistance.append(smallworldnetdistance)
       kleinbergnets.append(kleinbergnet)
 
   randompathlens = [len(p) for p in randompaths]
   smallworldpathlens = [len(p) for p in smallworldpaths]
+  smallworldpathlensindex = [len(p) for p in smallworldpathsindex]
+  smallworldpathlensdistance = [len(p) for p in smallworldpathsdistance]
   kleinbergpathlens = [len(p) for p in kleinbergpaths]
 
   print "random:", randompathlens
-  print "small world:", smallworldpathlens
   print "Kleinberg:", kleinbergpathlens
+  print "small world:", smallworldpathlens
+  print "small world by index:", smallworldpathlensindex
+  print "small world by distance:", smallworldpathlensdistance
 
   import numpy
-  plotlinklengths(randomnets+smallworldnets+kleinbergnets, "Link lengths", 
+  plotlinklengths(randomnets+smallworldnets+kleinbergnets+smallworldnetsindex+smallworldnetsdistance, "Link lengths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
   plotring(locs, randompaths, "random paths", 
@@ -859,6 +985,12 @@ We try to get more focus and money.
   plotring(locs, smallworldpaths, "small world paths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworld.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
+  plotring(locs, smallworldpathsindex, "small world paths by index", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbyindex.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensindex))))
+  plotring(locs, smallworldpathsdistance, "small world paths by distance", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbydistancne.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensdistance))))
   plotring(locs, kleinbergpaths, "small world paths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-kleinberg.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(kleinbergpathlens))))
@@ -888,7 +1020,6 @@ We try to get more focus and money.
 
 #+caption: 10 paths between locations on a small world network with 1000 nodes. Average path length: 5.
 [[./size-1000-peers-9-backoffpercentage-000-hash-8675903025370220578-meanlen-5-smallworld.png]]
-
 
 ** Link lengths in the Simulations
 
