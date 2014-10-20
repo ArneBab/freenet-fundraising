@@ -24,7 +24,7 @@ They are the ones who are in dire need of features like the ones provided by Fre
 
 - The whistleblower in a medium-sized state-contractor, sending documents to a journalist and being avaiable for questions to verify their origin without disclosing the whistleblower’s real identity to the journalist (or anyone else).
 
-For more information, see our [[slides.pdf][Presentation Slides]].
+For more information, see our [[./slides.pdf][Presentation Slides]].
 
 * Why we need you
 
