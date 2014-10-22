@@ -601,7 +601,7 @@ We try to get more focus and money.
   import random
   import bisect
   import json
-  size = 10000
+  size = 1000
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))
   backoffprobability = 0.0
@@ -754,7 +754,7 @@ We try to get more focus and money.
       # initial path folding with random targets
       # def rejectfun(*args):
       #     return False
-      pathfold(smallworldnet, locs, numstarts=10, numtargets=20) # , rejectfun=rejectfun)
+      pathfold(smallworldnet, locs, numstarts=10, numtargets=10) # , rejectfun=rejectfun)
       # route on small world net
       paths = []
       for target in targets:
