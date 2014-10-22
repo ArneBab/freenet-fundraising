@@ -600,63 +600,11 @@ We try to get more focus and money.
   import math
   import random
   import bisect
+  import json
   size = 100
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))*2
   backoffprobability = 0.0
-
-
-  def plotlinklengths(nets, title, filepath=None):
-    import numpy
-    import pylab
-    pylab.clf()
-    pylab.figure(figsize=(16,9))
-    for net in nets:
-        lengths = []
-        for node in net:
-          for link in net[node]:
-            lengths.append(min(abs(link - node), abs(link - node - 1), abs(link - node + 1)))
-        pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)), linewidth=4)
-    pylab.xscale("log")
-    pylab.xlabel("link length")
-    pylab.ylabel("fraction of links with this length or less")
-    pylab.title(title)
-    pylab.xlim(1./(size**2), 0.5)
-    if filepath:
-      pylab.savefig(filepath)
-    else:
-      pylab.show()
-
-
-  def plotring(locs, paths, title, filepath=None):
-    import pylab, numpy
-    pylab.clf()
-    pylab.figure(figsize=(12,9))
-    locs = numpy.array(locs)
-    ringx = numpy.sin(locs*math.pi*2)
-    ringy = numpy.cos(locs*math.pi*2)
-    pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
-    for path in paths:
-        path = numpy.array(path)
-        pathx = numpy.sin(path*math.pi*2)
-        pathy = numpy.cos(path*math.pi*2)
-        for n,x in enumerate(pathx):
-          try:
-            xp1 = pathx[n+1]
-            y = pathy[n]
-            yp1 = pathy[n+1]
-            # color = matplotlib.cm.spectral(locs[n])
-          except:
-            break
-          # pylab.plot([x, xp1], [y, yp1])# , color=color)
-        pylab.plot(pathx, pathy, linewidth=2)# , color=color)
-    pylab.title(title)
-    if filepath:
-      pylab.savefig(filepath)
-    else:
-      pylab.show()
-
-
   def step(path, node, peers, target):
     # depth first traversal
     p = set(path)
@@ -806,7 +754,7 @@ We try to get more focus and money.
       # initial path folding with random targets
       # def rejectfun(*args):
       #     return False
-      pathfold(smallworldnet, locs, numstarts=10, numtargets=100) # , rejectfun=rejectfun)
+      pathfold(smallworldnet, locs, numstarts=10, numtargets=20) # , rejectfun=rejectfun)
       # route on small world net
       paths = []
       for target in targets:
@@ -1031,31 +979,115 @@ We try to get more focus and money.
   print "small world by reject:", smallworldpathlensreject
   print "small world by distance:", smallworldpathlensdistance
 
-  import numpy
-  plotlinklengths(randomnets+smallworldnets+kleinbergnets, "Link lengths", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-kleinberg-approx.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
-  plotlinklengths(smallworldnetsindex+smallworldnetsdistance+smallworldnetsreject, "Link lengths", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-index-distance-reject.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
-  plotring(locs, randompaths, "random paths", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-random.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(randompathlens))))
-  plotring(locs, smallworldpaths, "small world paths", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworld.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlens))))
-  plotring(locs, smallworldpathsindex, "small world paths by index", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbyindex.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensindex))))
-  plotring(locs, smallworldpathsreject, "small world paths by reject", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbyreject.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensreject))))
-  plotring(locs, smallworldpathsdistance, "small world paths by distance", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbydistancne.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensdistance))))
-  plotring(locs, kleinbergpaths, "small world paths", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-kleinberg.png".format(
-             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(kleinbergpathlens))))
+  # store the result
+  result = {
+    "random": {"paths": randompaths, "nets": randomnets, "pathlengths": randompathlens},
+    "kleinberg": {"paths": kleinbergpaths, "nets": kleinbergnets, "pathlengths": kleinbergpathlens},
+    "smallworldapprox": {"paths": smallworldpaths, "nets": smallworldnets, "pathlengths": smallworldpathlens},
+    "smallworlddistance": {"paths": smallworldpathsdistance, "nets": smallworldnetsdistance, "pathlengths": smallworldpathlensdistance},
+    "smallworldindex": {"paths": smallworldpathsindex, "nets": smallworldnetsindex, "pathlengths": smallworldpathlensindex},
+    "smallworldreject": {"paths": smallworldpathsreject, "nets": smallworldnetsreject, "pathlengths": smallworldpathlensreject},
+    "_params": {
+      "outdegree": outdegree, 
+      "backoffprobability": backoffprobability,
+      "locs": locs,
+      "size": size,
+      },
+  }
+  with open("routingsim_results.json", "w") as f:
+    json.dump(result, f)
+#+end_src
+
+
+#+BEGIN_SRC python :tangle routingsim_plot.py :exports none :results output
+    import numpy
+    import pylab
+    import json
+    import math
+
+    def plotlinklengths(nets, title, size, filepath=None):
+      pylab.clf()
+      pylab.figure(figsize=(16,9))
+      for net in nets:
+          lengths = []
+          for _node in net:
+            node = float(_node)
+            for link in net[_node]:
+              lengths.append(min(abs(link - node), abs(link - node - 1), abs(link - node + 1)))
+          pylab.plot(sorted(lengths), numpy.arange(len(lengths))/float(len(lengths)), linewidth=4)
+      pylab.xscale("log")
+      pylab.xlabel("link length")
+      pylab.ylabel("fraction of links with this length or less")
+      pylab.title(title)
+      pylab.xlim(1./(size**2), 0.5)
+      if filepath:
+        pylab.savefig(filepath)
+      else:
+        pylab.show()
+
+
+    def plotring(locs, paths, title, filepath=None):
+      pylab.clf()
+      pylab.figure(figsize=(12,9))
+      locs = numpy.array(locs)
+      ringx = numpy.sin(locs*math.pi*2)
+      ringy = numpy.cos(locs*math.pi*2)
+      pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
+      for path in paths:
+          path = numpy.array(path)
+          pathx = numpy.sin(path*math.pi*2)
+          pathy = numpy.cos(path*math.pi*2)
+          for n,x in enumerate(pathx):
+            try:
+              xp1 = pathx[n+1]
+              y = pathy[n]
+              yp1 = pathy[n+1]
+              # color = matplotlib.cm.spectral(locs[n])
+            except:
+              break
+            # pylab.plot([x, xp1], [y, yp1])# , color=color)
+          pylab.plot(pathx, pathy, linewidth=2)# , color=color)
+      pylab.title(title)
+      if filepath:
+        pylab.savefig(filepath)
+      else:
+        pylab.show()
+
+    with open("routingsim_results.json") as f:
+        result = json.load(f)
+
+    plotlinklengths(result["random"]["nets"]+result["smallworldapprox"]["nets"]+result["kleinberg"]["nets"], 
+                    "Link lengths", 
+                    filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-kleinberg-approx.png".format(
+                      len(result["_params"]["locs"]), 
+                      result["_params"]["outdegree"], 
+                      int(100*result["_params"]["backoffprobability"]), 
+                      hash(tuple(result["_params"]["locs"]))),
+                    size=result["_params"]["size"])
+    plotlinklengths(result["smallworldindex"]["nets"]+result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"], 
+                    "Link lengths", 
+                    filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-index-distance-reject.png".format(
+                      len(result["_params"]["locs"]), 
+                      result["_params"]["outdegree"], 
+                      int(100*result["_params"]["backoffprobability"]), 
+                      hash(tuple(result["_params"]["locs"]))),
+                    size=result["_params"]["size"])
+    for name, title in [
+        ("random", "random paths"),
+        ("smallworldapprox", "small world paths approximated optimization"),
+        ("smallworldindex", "small world paths optimized by index"),
+        ("smallworlddistance", "small world paths optimized by distance"),
+        ("smallworldreject", "small world paths optimized by rejection"),
+        ("kleinberg", "kleinberg paths"),
+        ]:
+      plotring(result["_params"]["locs"], result[name]["paths"], "random paths", 
+               filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-{}.png".format(
+                 len(result["_params"]["locs"]), 
+                   result["_params"]["outdegree"], 
+                   int(100*result["_params"]["backoffprobability"]), 
+                   hash(tuple(result["_params"]["locs"])), 
+                   int(numpy.mean(result[name]["pathlengths"])),
+                   name))
 
 #+END_SRC
 
