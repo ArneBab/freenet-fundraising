@@ -639,9 +639,9 @@ We try to get more focus and money.
   def rejectbydistance(myloc, peerlocs, potentialpeer):
               """reject = 1 - min(1, d5 / d)
               with d as the distance and d5 as the distance of the node 1/5th in the order of peers."""
-              if not peerlocs:
-                return False # accept the first
               dist = min(abs(potentialpeer - myloc), abs(myloc - potentialpeer))
+              if not peerlocs:
+                return random.random() < 0.001/dist # want a short connection.
               pl = sorted(peerlocs)
               # the median distance
               mediandistance = pl[len(pl)//2]
