@@ -775,7 +775,11 @@ We try to get more focus and money.
       # route on small world net
       paths = []
       for target in targets:
-        paths.append(greedyrouting(smallworldnet, start, target))
+        try:
+            paths.append(greedyrouting(randomnet, start, target))
+        except ValueError as e:
+            print e
+            continue
       return smallworldnet, paths
 
 
@@ -805,7 +809,11 @@ We try to get more focus and money.
       # route on small world net
       paths = []
       for target in targets:
-        paths.append(greedyrouting(smallworldnet, start, target))
+        try:
+            paths.append(greedyrouting(randomnet, start, target))
+        except ValueError as e:
+            print e
+            continue
       return smallworldnet, paths
 
 
@@ -848,7 +856,11 @@ We try to get more focus and money.
       # route on small world net
       paths = []
       for target in targets:
-        paths.append(greedyrouting(smallworldnet, start, target))
+        try:
+            paths.append(greedyrouting(randomnet, start, target))
+        except ValueError as e:
+            print e
+            continue
       return smallworldnet, paths
 
 
@@ -919,7 +931,11 @@ We try to get more focus and money.
       # route on small world net
       paths = []
       for target in targets:
-        paths.append(greedyrouting(smallworldnet, start, target))
+        try:
+            paths.append(greedyrouting(randomnet, start, target))
+        except ValueError as e:
+            print e
+            continue
       return smallworldnet, paths
 
 
@@ -980,7 +996,11 @@ We try to get more focus and money.
       # route on small world net
       paths = []
       for target in targets:
-        paths.append(greedyrouting(smallworldnet, start, target))
+        try:
+            paths.append(greedyrouting(randomnet, start, target))
+        except ValueError as e:
+            print e
+            continue
       return smallworldnet, paths
 
 
