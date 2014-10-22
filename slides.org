@@ -602,9 +602,9 @@ We try to get more focus and money.
   import bisect
   import collections
   import json
-  size = 10000
+  size = 1000
   locs = [random.random() for i in range(size)]
-  outdegree = int(math.log(size, 2))
+  outdegree = int(math.log(size, 2))*2
   backoffprobability = 0.0 # 0.x
   def step(path, node, peers, target):
     # depth first traversal
@@ -642,7 +642,7 @@ We try to get more focus and money.
               with d as the distance and d5 as the distance of the node 1/5th in the order of peers."""
               dist = min(abs(potentialpeer - myloc), abs(myloc - potentialpeer))
               if not peerlocs:
-                return random.random() < 0.001/dist # want a short connection.
+                return random.random() < 0.0001/dist # want a short connection.
               pl = sorted(peerlocs)
               # the median distance
               mediandistance = pl[len(pl)//2]
@@ -673,7 +673,7 @@ We try to get more focus and money.
     return False
 
 
-  def pathfold(net, locs, numstarts=20, numtargets=3, rejectfun=rejectnever):
+  def pathfold(net, locs, numstarts=200, numtargets=3, rejectfun=rejectbydistance):
       """Simulate pathfolding."""
       starts = [random.choice(locs) for i in range(numstarts)]
       success = collections.Counter()
