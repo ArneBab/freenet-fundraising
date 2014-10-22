@@ -652,6 +652,10 @@ We try to get more focus and money.
               return random.random() < rejectprob
 
 
+  def rejectnever(myloc, peerloc, potentialpeer):
+    return False
+
+
   def pathfold(net, locs, numstarts=5, numtargets=5, rejectfun=rejectbydistance):
       """Simulate pathfolding."""
       starts = [random.choice(locs) for i in range(numstarts)]
