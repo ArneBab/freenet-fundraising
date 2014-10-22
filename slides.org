@@ -676,8 +676,18 @@ We try to get more focus and money.
     return best
 
 
-  def randomrouting(locs, start, target, filepath=None):
+  def greedyrouting(net, start, target)
       path = [start]
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = net[node]
+        path.append(step(path, node, peers, target))
+      return path
+
+
+
+  def randomrouting(locs, start, targets, filepath=None):
       randomnet = {}
       for i in locs:
         peers = set()
@@ -688,20 +698,13 @@ We try to get more focus and money.
           peers.add(peer)
         randomnet[i] = list(peers)
       # show random net
-      links = []
-      for i in randomnet:
-        links.append(randomnet[i])
-      # route on random net
-      while path[-1] != target:
-        node = path[-1]
-        peers = randomnet[node]
-        path.append(step(path, node, peers, target))
+      for target in targets:
+        path = greedyrouting(smallworldnet, start, target)
       return randomnet, path
 
 
 
-  def smallworldbydistance(locs, start, target, filepath=None):
-      path = [start]
+  def smallworldbydistance(locs, start, targets, filepath=None):
       # small world routing
       smallworldnet = {}
       sortedlocs = sorted(list(locs))
@@ -736,21 +739,14 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[loc].append(sortedlocs[lower])
           smallworldnet[loc].append(sortedlocs[upper])
-      # show small world net
-      links = []
-      for i in smallworldnet:
-        links.append(smallworldnet[i])
       # route on small world net
-      while path[-1] != target:
-        node = path[-1]
-        peers = smallworldnet[node]
-        path.append(step(path, node, peers, target))
+      for target in targets:
+        path = greedyrouting(smallworldnet, start, target)
       return smallworldnet, path
 
 
 
-  def smallworldbyreject(locs, start, target, filepath=None):
-      path = [start]
+  def smallworldbyreject(locs, start, targets, filepath=None):
       # small world routing
       smallworldnet = {}
       sortedlocs = sorted(list(locs))
@@ -783,21 +779,14 @@ We try to get more focus and money.
       for peer in range(outdegree):
         for n, loc in enumerate(sortedlocs):
           smallworldnet[loc].append(chooselink())
-      # show small world net
-      links = []
-      for i in smallworldnet:
-        links.append(smallworldnet[i])
       # route on small world net
-      while path[-1] != target:
-        node = path[-1]
-        peers = smallworldnet[node]
-        path.append(step(path, node, peers, target))
+      for target in targets:
+        path = greedyrouting(smallworldnet, start, target)
       return smallworldnet, path
 
 
 
-  def smallworldbyindex(locs, start, target, filepath=None):
-      path = [start]
+  def smallworldbyindex(locs, start, targets, filepath=None):
       # small world routing
       smallworldnet = {}
       sortedlocs = sorted(list(locs))
@@ -830,20 +819,13 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[loc].append(sortedlocs[lower])
           smallworldnet[loc].append(sortedlocs[upper])
-      # show small world net
-      links = []
-      for i in smallworldnet:
-        links.append(smallworldnet[i])
       # route on small world net
-      while path[-1] != target:
-        node = path[-1]
-        peers = smallworldnet[node]
-        path.append(step(path, node, peers, target))
+      for target in targets:
+        path = greedyrouting(smallworldnet, start, target)
       return smallworldnet, path
 
 
-  def smallworldapprox(locs, start, target, filepath=None):
-      path = [start]
+  def smallworldapprox(locs, start, targets, filepath=None):
       # small world routing
       smallworldnet = {}
       sortedlocs = sorted(list(locs))
@@ -905,20 +887,13 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[i].append(sortedlocs[lower])
           smallworldnet[i].append(sortedlocs[upper])
-      # show small world net
-      links = []
-      for i in smallworldnet:
-        links.append(smallworldnet[i])
       # route on small world net
-      while path[-1] != target:
-        node = path[-1]
-        peers = smallworldnet[node]
-        path.append(step(path, node, peers, target))
+      for target in targets:
+        path = greedyrouting(smallworldnet, start, target)
       return smallworldnet, path
 
 
-  def kleinbergrouting(locs, start, target, filepath=None):
-      path = [start]
+  def kleinbergrouting(locs, start, targets, filepath=None):
       # small world routing
       smallworldnet = {}
       sortedlocs = sorted(list(locs))
@@ -970,15 +945,9 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[i].append(sortedlocs[lower])
           smallworldnet[i].append(sortedlocs[upper])
-      # show small world net
-      links = []
-      for i in smallworldnet:
-        links.append(smallworldnet[i])
       # route on small world net
-      while path[-1] != target:
-        node = path[-1]
-        peers = smallworldnet[node]
-        path.append(step(path, node, peers, target))
+      for target in targets:
+        path = greedyrouting(smallworldnet, start, target)
       return smallworldnet, path
 
 
@@ -995,14 +964,14 @@ We try to get more focus and money.
   smallworldnetsdistance = []
   kleinbergnets = []
   for i in range(10):
-      target = random.choice(locs)
+      targets = [random.choice(locs) for i in range(100)]
       start = random.choice(locs)
-      randomnet, randompath = randomrouting(locs, start, target)
-      smallworldnet, smallworldpath = smallworldapprox(locs, start, target)
-      smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, target)
-      smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, target)
-      smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, target)
-      kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, target)
+      randomnet, randompath = randomrouting(locs, start, targets)
+      smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
+      smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
+      smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
+      smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
+      kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
       randompaths.append(randompath)
       smallworldpaths.append(smallworldpath)
       smallworldpathsindex.append(smallworldpathindex)
