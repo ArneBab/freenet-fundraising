@@ -988,7 +988,7 @@ We try to get more focus and money.
   for i in range(10):
       targets = [random.choice(locs) for i in range(10)]
       start = random.choice(locs)
-      if not i:
+      if i == 0:
         try:
           randomnet, randompath = randomlinks(locs, start, targets)
         except ValueError as e:
@@ -999,14 +999,14 @@ We try to get more focus and money.
       smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
       smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
       kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
-      if not i: 
+      if i == 0: 
         randompaths.extend(randompath)
       smallworldpaths.extend(smallworldpath)
       smallworldpathsindex.extend(smallworldpathindex)
       smallworldpathsreject.extend(smallworldpathreject)
       smallworldpathsdistance.extend(smallworldpathdistance)
       kleinbergpaths.extend(kleinbergpath)
-      if not i: 
+      if i == 0: 
         randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
       smallworldnetsindex.append(smallworldnetindex)
