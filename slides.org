@@ -703,7 +703,7 @@ We try to get more focus and money.
               return random.random() < rejectprob
 
 
-  def pathfold(net, locs, numstarts=5, numtargets=5):
+  def pathfold(net, locs, numstarts=5, numtargets=5, rejectfun=rejectbydistance):
       """Simulate pathfolding."""
       starts = [random.choice(locs) for i in range(numstarts)]
       for start in starts:
@@ -719,7 +719,7 @@ We try to get more focus and money.
                 peers = net[node]
                 if node == target or target in peers:
                     continue
-                if not rejectbydistance(node, peers, target):
+                if not rejectfun(node, peers, target):
                   peers[random.choice(range(len(peers)))] = target
       
 
@@ -792,7 +792,7 @@ We try to get more focus and money.
       for i in sortedlocs:
           smallworldnet[i] = []
       def chooselink():
-            for i in range(1000):
+            for i in range(2):
               potentialpeer = random.choice(sortedlocs)
               while potentialpeer in smallworldnet[loc] or potentialpeer == loc:
                 potentialpeer = random.choice(sortedlocs)
@@ -804,7 +804,9 @@ We try to get more focus and money.
         for n, loc in enumerate(sortedlocs):
           smallworldnet[loc].append(chooselink())
       # initial path folding with random targets
-      pathfold(smallworldnet, locs, numstarts=10, numtargets=100)
+      # def rejectfun(*args):
+      #     return False
+      pathfold(smallworldnet, locs, numstarts=10, numtargets=100) # , rejectfun=rejectfun)
       # route on small world net
       paths = []
       for target in targets:
