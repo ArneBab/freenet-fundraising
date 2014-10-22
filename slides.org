@@ -600,9 +600,9 @@ We try to get more focus and money.
   import math
   import random
   import bisect
-  size = 1000
+  size = 100
   locs = [random.random() for i in range(size)]
-  outdegree = int(math.log(size, 2))
+  outdegree = int(math.log(size, 2))*2
   backoffprobability = 0.0
 
 
@@ -687,6 +687,43 @@ We try to get more focus and money.
 
 
 
+  def rejectbydistance(myloc, peerlocs, potentialpeer):
+              """reject = 1 - min(1, d5 / d)
+              with d as the distance and d5 as the distance of the node 1/5th in the order of peers."""
+              if not peerlocs:
+                return False # accept the first
+              dist = min(abs(potentialpeer - myloc), abs(myloc - potentialpeer))
+              pl = sorted(peerlocs)
+              # the median distance
+              mediandistance = pl[len(pl)//2]
+              # always accept nodes which are factor 100 closer to me than the median of my connections
+              d5 = mediandistance/100
+              # rejectprob = random.random() < 1 - min(1, 0.5 + (0.5*d5 / dist))
+              rejectprob = 1 - min(1, d5 / dist)
+              return random.random() < rejectprob
+
+
+  def pathfold(net, locs, numstarts=5, numtargets=5):
+      """Simulate pathfolding."""
+      starts = [random.choice(locs) for i in range(numstarts)]
+      for start in starts:
+          targets = [random.choice(locs) for i in range(numtargets)]
+          paths = []
+          for target in targets:
+              if target == start:
+                  continue
+              path = greedyrouting(net, start, target)
+              paths.append(path)
+              # pathfolding
+              for n, node in enumerate(path):
+                peers = net[node]
+                if node == target or target in peers:
+                    continue
+                if not rejectbydistance(node, peers, target):
+                  peers[random.choice(range(len(peers)))] = target
+      
+
+
   def randomlinks(locs, start, targets, filepath=None):
       randomnet = {}
       for i in locs:
@@ -747,7 +784,6 @@ We try to get more focus and money.
       return smallworldnet, paths
 
 
-
   def smallworldbyreject(locs, start, targets, filepath=None):
       # small world routing
       smallworldnet = {}
@@ -755,32 +791,20 @@ We try to get more focus and money.
       lensortedlocs = len(sortedlocs)
       for i in sortedlocs:
           smallworldnet[i] = []
-      def reject(peerlocs, dist):
-              """reject = 1 - min(1, d5 / d)
-              with d as the distance and d5 as the distance of the node 1/5th in the order of peers."""
-              if not peerlocs:
-                return random.choice(sortedlocs)
-              pl = sorted(peerlocs)
-              # the median distance
-              mediandistance = pl[len(pl)//2]
-              # always accept nodes which are factor 100 closer to me than the median of my connections
-              d5 = mediandistance/100
-              # rejectprob = random.random() < 1 - min(1, 0.5 + (0.5*d5 / dist))
-              rejectprob = 1 - min(1, d5 / dist)
-              return random.random() < rejectprob
       def chooselink():
-            for i in range(100):
+            for i in range(1000):
               potentialpeer = random.choice(sortedlocs)
               while potentialpeer in smallworldnet[loc] or potentialpeer == loc:
                 potentialpeer = random.choice(sortedlocs)
-              d = min(abs(potentialpeer - loc), abs(loc - potentialpeer))
-              if not reject(smallworldnet[loc], d):
+              if not rejectbydistance(loc, smallworldnet[loc], potentialpeer):
                 return potentialpeer
             # give up after 100 tries.
             return potentialpeer
       for peer in range(outdegree):
         for n, loc in enumerate(sortedlocs):
           smallworldnet[loc].append(chooselink())
+      # initial path folding with random targets
+      pathfold(smallworldnet, locs, numstarts=10, numtargets=100)
       # route on small world net
       paths = []
       for target in targets:
@@ -1006,8 +1030,11 @@ We try to get more focus and money.
   print "small world by distance:", smallworldpathlensdistance
 
   import numpy
-  plotlinklengths(randomnets+smallworldnets+kleinbergnets+smallworldnetsindex+smallworldnetsreject+smallworldnetsdistance, "Link lengths", 
-           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
+  plotlinklengths(randomnets+smallworldnets+kleinbergnets, "Link lengths", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-kleinberg-approx.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
+  plotlinklengths(smallworldnetsindex+smallworldnetsdistance+smallworldnetsreject, "Link lengths", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-index-distance-reject.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
   plotring(locs, randompaths, "random paths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-random.png".format(
