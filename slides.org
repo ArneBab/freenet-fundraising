@@ -606,7 +606,10 @@ We try to get more focus and money.
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))*2
   backoffprobability = 0.0 # 0.x
-  def step(path, node, peers, target):
+  def step(path, node, peers, target, maxhtl=100):
+    if path[maxhtl:]:
+         raise ValueError("Reached the limit of {} steps with path {}.".format(maxhtl, path))
+
     # depth first traversal
     p = set(path)
     untested = [peer for peer in list(peers)
@@ -688,7 +691,11 @@ We try to get more focus and money.
           for target in targets:
               if target == start:
                   continue
-              path = greedyrouting(net, start, target)
+              try:
+                  path = greedyrouting(net, start, target)
+              except ValueError as e:
+                  print e
+                  continue
               paths.append(path)
               # pathfolding
               for n, node in enumerate(path):
@@ -719,7 +726,11 @@ We try to get more focus and money.
       # route to each target
       paths = []
       for target in targets:
-        paths.append(greedyrouting(randomnet, start, target))
+        try:
+            paths.append(greedyrouting(randomnet, start, target))
+        except ValueError as e:
+            print e
+            continue
       return randomnet, paths
 
 
@@ -988,26 +999,19 @@ We try to get more focus and money.
   for i in range(10):
       targets = [random.choice(locs) for i in range(10)]
       start = random.choice(locs)
-      if i == 0:
-        try:
-          randomnet, randompath = randomlinks(locs, start, targets)
-        except ValueError as e:
-          print e
-          randomnet, randompath = {}, [[]]
+      randomnet, randompath = randomlinks(locs, start, targets)
       smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
       smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
       smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
       smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
       kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
-      if i == 0: 
-        randompaths.extend(randompath)
+      randompaths.extend(randompath)
       smallworldpaths.extend(smallworldpath)
       smallworldpathsindex.extend(smallworldpathindex)
       smallworldpathsreject.extend(smallworldpathreject)
       smallworldpathsdistance.extend(smallworldpathdistance)
       kleinbergpaths.extend(kleinbergpath)
-      if i == 0: 
-        randomnets.append(randomnet)
+      randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
       smallworldnetsindex.append(smallworldnetindex)
       smallworldnetsreject.append(smallworldnetreject)
