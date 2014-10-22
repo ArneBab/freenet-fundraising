@@ -1065,17 +1065,17 @@ We try to get more focus and money.
         result = json.load(f)
 
     params = result["_params"]
-    plotlinklengths(result["random"]["nets"]+result["smallworldapprox"]["nets"]+result["kleinberg"]["nets"], 
+    plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["kleinberg"]["nets"], 
                     "Link lengths", 
-                    filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-kleinberg-approx.png".format(
+                    filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-index-kleinberg-approx.png".format(
                       len(params["locs"]), 
                       params["outdegree"], 
                       int(100*params["backoffprobability"]), 
                       hash(tuple(params["locs"]))),
                     size=params["size"])
-    plotlinklengths(result["smallworldindex"]["nets"]+result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"], 
+    plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"], 
                     "Link lengths", 
-                    filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-index-distance-reject.png".format(
+                    filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-distance-reject.png".format(
                       len(params["locs"]), 
                       params["outdegree"], 
                       int(100*params["backoffprobability"]), 
