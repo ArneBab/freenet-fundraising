@@ -991,7 +991,8 @@ We try to get more focus and money.
       if not i:
         try:
           randomnet, randompath = randomlinks(locs, start, targets)
-        except ValueError:
+        except ValueError as e:
+          print e
           randomnet, randompath = {}, [[]]
       smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
       smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
