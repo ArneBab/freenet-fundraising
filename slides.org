@@ -604,7 +604,7 @@ We try to get more focus and money.
   size = 10000
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))
-  backoffprobability = 0.3 # 0.x
+  backoffprobability = 0.0 # 0.x
   def step(path, node, peers, target):
     # depth first traversal
     p = set(path)
@@ -656,7 +656,7 @@ We try to get more focus and money.
     return False
 
 
-  def pathfold(net, locs, numstarts=5, numtargets=5, rejectfun=rejectbydistance):
+  def pathfold(net, locs, numstarts=20, numtargets=3, rejectfun=rejectnever):
       """Simulate pathfolding."""
       starts = [random.choice(locs) for i in range(numstarts)]
       for start in starts:
@@ -687,6 +687,8 @@ We try to get more focus and money.
               peer = random.choice(locs)
           peers.add(peer)
         randomnet[i] = list(peers)
+      # add pathfolding for optimization
+      pathfold(randomnet, locs)
       # route to each target
       paths = []
       for target in targets:
@@ -730,6 +732,8 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[loc].append(sortedlocs[lower])
           smallworldnet[loc].append(sortedlocs[upper])
+      # add pathfolding for optimization
+      pathfold(smallworldnet, locs)
       # route on small world net
       paths = []
       for target in targets:
@@ -745,7 +749,7 @@ We try to get more focus and money.
       for i in sortedlocs:
           smallworldnet[i] = []
       def chooselink():
-            for i in range(100):
+            for i in range(1000):
               potentialpeer = random.choice(sortedlocs)
               while potentialpeer in smallworldnet[loc] or potentialpeer == loc:
                 potentialpeer = random.choice(sortedlocs)
@@ -759,7 +763,7 @@ We try to get more focus and money.
       # initial path folding with random targets
       # def rejectfun(*args):
       #     return False
-      pathfold(smallworldnet, locs, numstarts=10, numtargets=20) # , rejectfun=rejectfun)
+      pathfold(smallworldnet, locs) # , rejectfun=rejectfun)
       # route on small world net
       paths = []
       for target in targets:
@@ -801,6 +805,8 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[loc].append(sortedlocs[lower])
           smallworldnet[loc].append(sortedlocs[upper])
+      # add pathfolding for optimization
+      pathfold(smallworldnet, locs)
       # route on small world net
       paths = []
       for target in targets:
@@ -870,6 +876,8 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[i].append(sortedlocs[lower])
           smallworldnet[i].append(sortedlocs[upper])
+      # add pathfolding for optimization
+      pathfold(smallworldnet, locs)
       # route on small world net
       paths = []
       for target in targets:
@@ -929,6 +937,8 @@ We try to get more focus and money.
               upper = sortedlocs[(n+up)%lensortedlocs]
           smallworldnet[i].append(sortedlocs[lower])
           smallworldnet[i].append(sortedlocs[upper])
+      # add pathfolding for optimization
+      pathfold(smallworldnet, locs)
       # route on small world net
       paths = []
       for target in targets:
