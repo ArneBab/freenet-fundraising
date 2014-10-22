@@ -601,10 +601,10 @@ We try to get more focus and money.
   import random
   import bisect
   import json
-  size = 1000
+  size = 10000
   locs = [random.random() for i in range(size)]
   outdegree = int(math.log(size, 2))
-  backoffprobability = 0.0
+  backoffprobability = 0.3 # 0.x
   def step(path, node, peers, target):
     # depth first traversal
     p = set(path)
@@ -616,7 +616,8 @@ We try to get more focus and money.
          raise ValueError("No nodes to test and cannot step back: Cannot find a route to the target in this network.")
       # step back
       return path[-2]
-    best = sorted(untested, key=lambda peer: abs(peer - target))[0]
+    options = sorted(untested, key=lambda peer: abs(peer - target))
+    best = options[0]
     if best == node:
       if not path[:-1]:
          raise ValueError("Cannot find a route to the target in this network.")
@@ -754,7 +755,7 @@ We try to get more focus and money.
       # initial path folding with random targets
       # def rejectfun(*args):
       #     return False
-      pathfold(smallworldnet, locs, numstarts=10, numtargets=10) # , rejectfun=rejectfun)
+      pathfold(smallworldnet, locs, numstarts=10, numtargets=20) # , rejectfun=rejectfun)
       # route on small world net
       paths = []
       for target in targets:
@@ -946,7 +947,10 @@ We try to get more focus and money.
   for i in range(10):
       targets = [random.choice(locs) for i in range(10)]
       start = random.choice(locs)
-      randomnet, randompath = randomlinks(locs, start, targets)
+      try:
+        randomnet, randompath = randomlinks(locs, start, targets)
+      except ValueError:
+        randomnet, randompath = {}, [[]]
       smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
       smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
       smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
