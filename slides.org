@@ -601,9 +601,9 @@ We try to get more focus and money.
   import random
   import bisect
   import json
-  size = 100
+  size = 10000
   locs = [random.random() for i in range(size)]
-  outdegree = int(math.log(size, 2))*2
+  outdegree = int(math.log(size, 2))
   backoffprobability = 0.0
   def step(path, node, peers, target):
     # depth first traversal
@@ -740,7 +740,7 @@ We try to get more focus and money.
       for i in sortedlocs:
           smallworldnet[i] = []
       def chooselink():
-            for i in range(2):
+            for i in range(100):
               potentialpeer = random.choice(sortedlocs)
               while potentialpeer in smallworldnet[loc] or potentialpeer == loc:
                 potentialpeer = random.choice(sortedlocs)
