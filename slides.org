@@ -600,6 +600,7 @@ We try to get more focus and money.
   import math
   import random
   import bisect
+  import collections
   import json
   size = 10000
   locs = [random.random() for i in range(size)]
@@ -659,6 +660,7 @@ We try to get more focus and money.
   def pathfold(net, locs, numstarts=20, numtargets=3, rejectfun=rejectnever):
       """Simulate pathfolding."""
       starts = [random.choice(locs) for i in range(numstarts)]
+      success = collections.Counter()
       for start in starts:
           targets = [random.choice(locs) for i in range(numtargets)]
           paths = []
@@ -669,11 +671,15 @@ We try to get more focus and money.
               paths.append(path)
               # pathfolding
               for n, node in enumerate(path):
+                if n > 0:
+                    success[(path[n-1], node)] += 1
                 peers = net[node]
                 if node == target or target in peers:
                     continue
                 if not rejectfun(node, peers, target):
-                  peers[random.choice(range(len(peers)))] = target
+                  worstpeerindex = sorted([(success[node, peers[n]], n) for n in range(len(peers))])[0][1]
+                  success[node, peers[n]] = 0
+                  peers[worstpeerindex] = target
       
 
 
