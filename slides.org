@@ -748,6 +748,54 @@ We try to get more focus and money.
       return smallworldnet, path
 
 
+
+  def smallworldbyreject(locs, start, target, filepath=None):
+      path = [start]
+      # small world routing
+      smallworldnet = {}
+      sortedlocs = sorted(list(locs))
+      lensortedlocs = len(sortedlocs)
+      for i in sortedlocs:
+          smallworldnet[i] = []
+      def reject(peerlocs, dist):
+              """reject = 1 - min(1, d5 / d)
+              with d as the distance and d5 as the distance of the node 1/5th in the order of peers."""
+              if not peerlocs:
+                return random.choice(sortedlocs)
+              pl = sorted(peerlocs)
+              # the median distance
+              mediandistance = pl[len(pl)//2]
+              # always accept nodes which are factor 100 closer to me than the median of my connections
+              d5 = mediandistance/100
+              # rejectprob = random.random() < 1 - min(1, 0.5 + (0.5*d5 / dist))
+              rejectprob = 1 - min(1, d5 / dist)
+              return random.random() < rejectprob
+      def chooselink():
+            for i in range(100):
+              potentialpeer = random.choice(sortedlocs)
+              while potentialpeer in smallworldnet[loc] or potentialpeer == loc:
+                potentialpeer = random.choice(sortedlocs)
+              d = min(abs(potentialpeer - loc), abs(loc - potentialpeer))
+              if not reject(smallworldnet[loc], d):
+                return potentialpeer
+            # give up after 100 tries.
+            return potentialpeer
+      for peer in range(outdegree):
+        for n, loc in enumerate(sortedlocs):
+          smallworldnet[loc].append(chooselink())
+      # show small world net
+      links = []
+      for i in smallworldnet:
+        links.append(smallworldnet[i])
+      # route on small world net
+      while path[-1] != target:
+        node = path[-1]
+        peers = smallworldnet[node]
+        path.append(step(path, node, peers, target))
+      return smallworldnet, path
+
+
+
   def smallworldbyindex(locs, start, target, filepath=None):
       path = [start]
       # small world routing
@@ -937,11 +985,13 @@ We try to get more focus and money.
   randompaths = []
   smallworldpaths = []
   smallworldpathsindex = []
+  smallworldpathsreject = []
   smallworldpathsdistance = []
   kleinbergpaths = []
   randomnets = []
   smallworldnets = []
   smallworldnetsindex = []
+  smallworldnetsreject = []
   smallworldnetsdistance = []
   kleinbergnets = []
   for i in range(10):
@@ -950,22 +1000,26 @@ We try to get more focus and money.
       randomnet, randompath = randomrouting(locs, start, target)
       smallworldnet, smallworldpath = smallworldapprox(locs, start, target)
       smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, target)
+      smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, target)
       smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, target)
       kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, target)
       randompaths.append(randompath)
       smallworldpaths.append(smallworldpath)
       smallworldpathsindex.append(smallworldpathindex)
+      smallworldpathsreject.append(smallworldpathreject)
       smallworldpathsdistance.append(smallworldpathdistance)
       kleinbergpaths.append(kleinbergpath)
       randomnets.append(randomnet)
       smallworldnets.append(smallworldnet)
       smallworldnetsindex.append(smallworldnetindex)
+      smallworldnetsreject.append(smallworldnetreject)
       smallworldnetsdistance.append(smallworldnetdistance)
       kleinbergnets.append(kleinbergnet)
 
   randompathlens = [len(p) for p in randompaths]
   smallworldpathlens = [len(p) for p in smallworldpaths]
   smallworldpathlensindex = [len(p) for p in smallworldpathsindex]
+  smallworldpathlensreject = [len(p) for p in smallworldpathsreject]
   smallworldpathlensdistance = [len(p) for p in smallworldpathsdistance]
   kleinbergpathlens = [len(p) for p in kleinbergpaths]
 
@@ -973,10 +1027,11 @@ We try to get more focus and money.
   print "Kleinberg:", kleinbergpathlens
   print "small world:", smallworldpathlens
   print "small world by index:", smallworldpathlensindex
+  print "small world by reject:", smallworldpathlensreject
   print "small world by distance:", smallworldpathlensdistance
 
   import numpy
-  plotlinklengths(randomnets+smallworldnets+kleinbergnets+smallworldnetsindex+smallworldnetsdistance, "Link lengths", 
+  plotlinklengths(randomnets+smallworldnets+kleinbergnets+smallworldnetsindex+smallworldnetsreject+smallworldnetsdistance, "Link lengths", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs))))
   plotring(locs, randompaths, "random paths", 
@@ -988,6 +1043,9 @@ We try to get more focus and money.
   plotring(locs, smallworldpathsindex, "small world paths by index", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbyindex.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensindex))))
+  plotring(locs, smallworldpathsreject, "small world paths by reject", 
+           filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbyreject.png".format(
+             len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensreject))))
   plotring(locs, smallworldpathsdistance, "small world paths by distance", 
            filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-smallworldbydistancne.png".format(
              len(locs), outdegree, int(100*backoffprobability), hash(tuple(locs)), int(numpy.mean(smallworldpathlensdistance))))
