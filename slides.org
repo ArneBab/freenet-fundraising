@@ -608,7 +608,7 @@ We try to get more focus and money.
   backoffprobability = 0.0 # 0.x
   def step(path, node, peers, target, maxhtl=100):
     if path[maxhtl:]:
-         raise ValueError("Reached the limit of {} steps with path {} to {}.".format(maxhtl, path, target))
+         raise ValueError("Reached the limit of {} steps with path path to {}: {}.".format(maxhtl, target, path))
 
     # depth first traversal
     p = set(path)
