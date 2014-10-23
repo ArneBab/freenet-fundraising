@@ -677,7 +677,7 @@ We try to get more focus and money.
     return False
 
 
-  def pathfold(net, locs, numstarts=20, numtargets=3, rejectfun=rejectbydistance):
+  def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectbydistance):
       """Simulate pathfolding."""
       starts = [random.choice(locs) for i in range(numstarts)]
       success = collections.Counter()
