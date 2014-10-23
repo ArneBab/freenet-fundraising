@@ -747,7 +747,7 @@ We try to get more focus and money.
       for peer in range(outdegree):
         for n, loc in enumerate(sortedlocs):
           def chooselink(maxdist, direction=1):
-            choices = range(1, maxmediumdistance + 1)
+            choices = range(1, maxdist + 1)
             weights = [1.0/min(abs(loc - sortedlocs[(n+c*direction)%lensortedlocs]), 
                                abs(sortedlocs[(n+c*direction)%lensortedlocs] - loc)) 
                        for c in choices]
@@ -830,7 +830,7 @@ We try to get more focus and money.
       for peer in range(outdegree):
         for n, loc in enumerate(sortedlocs):
           def chooselink(maxdist):
-            choices = range(1, maxmediumdistance + 1)
+            choices = range(1, maxdist + 1)
             weights = [1.0/c for c in choices]
             cumdist = []
             accumulator = 0
@@ -905,7 +905,7 @@ We try to get more focus and money.
       for i in range(nummediumlinks):
         for n, i in enumerate(sortedlocs):
           def chooselink(maxdist):
-            choices = range(1, maxmediumdistance + 1)
+            choices = range(1, maxdist + 1)
             weights = [1.0/i for i in choices]
             cumdist = []
             accumulator = 0
