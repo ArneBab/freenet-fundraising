@@ -14,7 +14,7 @@
 
 * What Freenet can do
 
-Freenet provides email without exposing metadata. It enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. It provides anonymity with reliable pseudonyms and decentralized publishing without single points of of failure, as well as a darknet-mode with secure connections between friends.
+Freenet provides email without exposing metadata. It enables secure peer-to-peer communication and censorship-resistant publishing in partially hostile environments. It provides anonymity with reliable pseudonyms and decentralized publishing without single points of failure, as well as a darknet-mode with secure connections between friends.
 
 To achieve this functionality, the Freenet team solved numerous technical challenges, including global connectivity over restricted routes using a small-world structur and spam resistance in anonymous networks. The next step for the Freenet project is polishing it for specific workflows to make it the tool of choice for people who can benefit strongly from using it - starting with journalists and whistleblowers.
 
