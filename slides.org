@@ -680,7 +680,7 @@ We try to get more focus and money.
   def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectbydistance):
       """Simulate pathfolding: Nodes in the path to a target connect directly to that target.
 
-The default number of path foldings NUMSTARTS is the size of the network x NUMTARGETS. This creates a cost for the network which scales with the pathlength (likely O(log(N)))."""
+    The default number of path foldings NUMSTARTS is the size of the network x NUMTARGETS. This creates a cost for the network which scales with the pathlength (likely O(log(N)))."""
       starts = [random.choice(locs) for i in range(numstarts)]
       success = collections.Counter()
       for n, start in enumerate(starts):
