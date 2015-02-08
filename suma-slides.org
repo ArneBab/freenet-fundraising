@@ -1,0 +1,209 @@
+#+title: Freenet Project: Leap over Censorship
+#+language: en
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+LATEX_HEADER:\usepackage{beamerthemefreenet}
+#+options: H:2 ^:nil
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
+#+latex_header: \subtitle[The technical part of the solution for freedom of the press in the internet]{The technical part of the solution for freedom of the press in the internet}
+
+* Warum?
+
+** 
+
+#+BEGIN_QUOTE
+I worry about my child and the Internet all the time, even though she's too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?'
+--Mike Godwin, Electronic Frontier Foundation, [[https://w2.eff.org/Misc/EFF/quotes.eff.txt][“Fear of Freedom” (1995)]]
+#+END_QUOTE
+
+** Analoge Kommunikation
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :BEAMER_act: <4-4>
+    :END:
+****                                                          :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.3
+     :BEAMER_act: <4-4>
+     :BEAMER_env: block
+     :END:
+
+Im Überwachten Netz
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Pseudonym                                                :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <1-3>
+    :END:
+[[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
+
+------
+
+Stetig auf der Hut
+**** Maske                                                    :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <2-4>
+    :END:
+
+[[file:angela_merkel-eppofficial-european_peoples_party-cc_by-13564824463_ec3499360d_o.jpg]]
+
+------
+
+Selbstverleugnung
+
+**** Privat                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <3-3>
+    :END:
+
+[[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
+
+------
+
+Nicht öffentlich
+** Why now? Dark Times
+
+#+BEGIN_QUOTE
+“There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
+#+END_QUOTE
+
+** Why now? A New Old Hope
+
+- 1995: At a Crossroad: *Surveillance or Freedom*.
+- 1999: *Freenet* starts.
+- 2001: *9/11*. The war on terror starts.
+- 2013: Snowden. Precious time to *turn back the wheel*.
+
+** Summary
+
+#+BEGIN_QUOTE
+Freenet is the technical part of the solution for freedom of the press in the internet.
+#+END_QUOTE
+
+- Decentral, anonymous datastore.
+- Many applications.
+- Started in 2000.
+- Scales.
+
+\vspace{0.5cm}
+
+** Get Freenet!
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.62
+    :END:
+
+\centering
+
+\Huge
+
+[[./logo.png]]
+
+*[[https://freenetproject.org][freenetproject.org]]*
+
+\vspace{0.4cm}
+
+\scriptsize
+
+/This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
+* Appendix
+\appendix
+* Contribute
+** Contribute
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- Write Code
+- Run a Node
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- Build the Darknet
+- Spread the Word
+
+** Write Code
+
+- https://github.com/freenet 
+- https://freenetproject.org/developer.html
+- IRC: #freenet @ irc.freenode.net
+
+** Run a node
+
+*** Running a Node                                                  :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+\scriptsize
+#+BEGIN_SRC sh
+wget https://freenetproject.org/jnlp/freenet_installer.jar -O installer.jar
+java -jar installer.jar -console
+# (follow the prompts)
+# info: https://freenetproject.org/download.html
+./run.sh # { console | start | stop | restart | status | dump }
+#+END_SRC
+
+*** As Seednode                                                     :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+\centering
+
+simple howto found on 
+
+https://piratenpad.de/p/pirates4freenet
+
+** Build the Darknet
+#+attr_latex: :width \textwidth
+[[./screenshot-add-friend.png]]
+
+** Spread the Word
+
+\centering
+Because /we/ are crappy at PR.
+
+These slides: 
+
+[[http://draketo.de/proj/freenet-funding/slides.pdf][draketo.de/proj/freenet-funding/slides.pdf]]
+
+[[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]
+
+** Summary
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- Write Code
+- Run a Node
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- Build the Darknet
+- Spread the Word
+
