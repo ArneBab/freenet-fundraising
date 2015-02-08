@@ -67,7 +67,7 @@ Quellenschutz!
 
 Selbstverleugnung
 
-Berufs-Selbst
+Berufs-Persona
 **** Privat                                                   :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
