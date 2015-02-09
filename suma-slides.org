@@ -67,7 +67,7 @@ Persönliche Kommunikation
 
 Selbstzensur
 
-Berufs-Persona
+Abhängig oder Teuer
 **** Pseudonym                                                :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
