@@ -53,7 +53,7 @@ Im Überwachten Netz
 Im kleinen Rahmen
 
 Persönliche Kommunikation
-**** Maske                                                    :B_block:BMCOL:
+**** Offiziell                                                :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
     :BEAMER_env: block
@@ -65,7 +65,7 @@ Persönliche Kommunikation
 
 ------
 
-Selbstverleugnung
+Selbstzensur
 
 Berufs-Persona
 **** Pseudonym                                                :B_block:BMCOL:
