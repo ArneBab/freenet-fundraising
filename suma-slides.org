@@ -52,7 +52,7 @@ Im Überwachten Netz
 
 Im kleinen Rahmen
 
-Persönliche Kommunikation
+# TODO: ???
 **** Offiziell                                                :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
