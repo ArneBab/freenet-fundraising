@@ -38,7 +38,7 @@ Im Überwachten Netz
     :PROPERTIES:
     :BEAMER_env: columns
     :END:
-**** Pseudonym                                                :B_block:BMCOL:
+**** Vertraulich                                              :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
     :BEAMER_env: block
@@ -46,13 +46,13 @@ Im Überwachten Netz
     :END:
 
 #+attr_latex: :width 1.0\textwidth
-[[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
+[[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
 
 ------
 
-Stetig auf der Hut
+Im kleinen Rahmen
 
-Quellenschutz!
+Persönliche Kommunikation
 **** Maske                                                    :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
@@ -68,7 +68,7 @@ Quellenschutz!
 Selbstverleugnung
 
 Berufs-Persona
-**** Privat                                                   :B_block:BMCOL:
+**** Pseudonym                                                :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
     :BEAMER_env: block
@@ -76,18 +76,81 @@ Berufs-Persona
     :END:
 
 #+attr_latex: :width 1.0\textwidth
-[[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
+[[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
 
 ------
 
-Nicht öffentlich
+Stetig auf der Hut
 
-Vertrauen
+Quellenschutz!
 ** Dunkle Zeiten
 
 #+BEGIN_QUOTE
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
+
+* Lösungen
+
+** Vertrauliche Kommunikation in Freenet 
+
+*** Vertraulich                                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <1-3>
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
+
+*** Darknet Nachrichten                                       :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_act: <2-3>
+    :BEAMER_env: block
+    :END:
+
+- Kern des Darknet Routing
+- Nur mit Bekannten
+
+*** Freemail                                                  :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <3-3>
+    :END:
+
+- 
+- Web of Trust
+
+** Pseudonyme Kommunikation in Freenet 
+*** „Sozial“                                                  :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <3-3>
+    :END:
+
+- Sone
+- FMS
+*** Klassisch                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <2-3>
+    :END:
+
+- Webseiten
+- Dateien
+*** Pseudonym                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :BEAMER_act: <1-3>
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
 
 ** Why now? A New Old Hope
 
@@ -131,6 +194,10 @@ Freenet is the technical part of the solution for freedom of the press in the in
 /This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
 
 /Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
+* Ausblick
+
+/wohin wir kommen wollen./
+
 * Appendix
 \appendix
 * Contribute
