@@ -107,7 +107,7 @@ Abhängig oder Teuer
 Stetig auf der Hut
 
 Quellenschutz!
-** Dunkle Zeiten
+** Weckruf
 
 #+BEGIN_QUOTE
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
