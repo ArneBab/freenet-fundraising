@@ -622,7 +622,7 @@ Stabile Grundlage
      :BEAMER_env: alertblock
      :END:
 
-- nicht nachweisbare Pseudonyme
+- Nicht nachweisbare Pseudonyme
 - Whistleblower und Journalisten
 - Normale Menschen
 - Technisch mit Freenet möglich -- wir wollen es einfach machen
