@@ -1,4 +1,4 @@
-#+title: Freenet Project: Leap over Censorship
+#+title: Freenet Nutzen
 #+language: en
 #+startup: beamer
 #+LaTeX_CLASS: beamer
@@ -8,7 +8,7 @@
 #+options: H:2 ^:nil
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
-#+latex_header: \subtitle[The technical part of the solution for freedom of the press in the internet]{The technical part of the solution for freedom of the press in the internet}
+#+latex_header: \subtitle[Technische Mittel für freie Kommunikation im Internet]{Technische Mittel für freie Kommunikation im Internet}
 
 * Warum?
 
@@ -90,10 +90,10 @@ Quellenschutz!
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
 
-** A new old hope
+** Eine alte Hoffnung
 - 1995: Scheideweg: *Überwachung oder Freiheit*.
 - 1999: *Freenet* gestartet.
-- 2001: *9/11*. War on Terror
+- 2001: *9/11*. War on Terror.
 - 2013: Snowden. Kostbare Zeit, um *das Rad zurück zu drehen*.
 * Lösungen
 ** Vertrauliche Kommunikation in Freenet
@@ -114,7 +114,8 @@ Quellenschutz!
     :BEAMER_env: block
     :END:
 
-- Kern des Routing
+- Infrastruktur
+- Unsichtbar
 - Mit Bekannten
 
 *** Freemail                                                  :B_block:BMCOL:
@@ -134,8 +135,9 @@ Quellenschutz!
     :BEAMER_act: <3-3>
     :END:
 
-- Sone
-- FMS
+- Foren
+- Microblog
+- Programmieren
 *** Klassisch                                                 :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
@@ -146,6 +148,7 @@ Quellenschutz!
 - Webseiten
 - Dateien
 - E-Mail
+- Blogs
 *** Pseudonym                                                 :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
@@ -155,10 +158,149 @@ Quellenschutz!
 
 #+attr_latex: :width 1.0\textwidth
     [[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
-** Summary
+
+* Anwendungen
+
+** Darknet Nachrichten
+
+#+attr_latex: :height 0.36\textwidth
+[[./screenshot-n2n-list-all-peers.png]]
+\hspace{0.1cm}
+#+attr_latex: :height 0.36\textwidth
+[[./screenshot-n2n-to-multiple-peers.png]]
+\hspace{0.1cm}
+#+attr_latex: :height 0.36\textwidth
+[[./screenshot-n2n-received.png]]
+
+** Freemail
+
+#+attr_latex: :width 0.98\textwidth
+[[./screenshot-freemail.png]]
+** Web of Trust
+
+[[./screenshot-wot.png]]
+
+\vspace{1cm}
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+
+[[./screenshot-wot-create-or-restore.png]]
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.35
+    :END:
+
+[[./screenshot-wot-summary.png]]
+
+** Webseiten
+
+\centering
+#+attr_latex: :width 0.8\textwidth
+[[./screenshot-nerdageddon.png]]
+
+** Foren: FMS
+
+#+attr_latex: :width 0.95\textwidth
+[[./screenshot-fms.png]]
+
+** Microblog: Sone
+
+#+attr_latex: :width 0.95\textwidth
+[[./screenshot-sone.png]]
+
+** Programmieren: Infocalypse
+
+#+latex: \scriptsize
+#+BEGIN_EXAMPLE
+$ hg clone freenet://USK@j2Mfv0b81MNSslh3Qg9gs1vgQj36whsuosP8ydZq158,\
+Xb~vh8XEXmdwGFca4HAx-ILOZD6AWPVuRzIuLerl4PU,AQACAAE/infocalypse-repo.R1/17
+...
+As basic protection, infocalypse automatically set the username
+'anonymous' for commits in this repo...
+
+$ hg fn-pull-request
+...
+$ hg fn-check-notifications
+...
+#+END_EXAMPLE
+
+** Zusammenfassung
+
+
+*** Vertraulich                                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
+
+\vspace{1cm}
+
+#+latex: \centering
+#+attr_latex: :width 0.2\textwidth
+[[file:logo.png]]
+
+*** Offiziell                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:angela_merkel-eppofficial-european_peoples_party-cc_by-13564824463_ec3499360d_o.jpg]]
+
+\vspace{1cm}
+
+#+latex: \centering
+#+attr_latex: :width 0.2\textwidth
+[[file:logo.png]]
+
+*** Pseudonym                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
+
+\vspace{1cm}
+
+#+latex: \centering
+#+attr_latex: :width 0.2\textwidth
+[[file:logo.png]]
+
+** Zusammenfassung                                                 :noexport:
+
+# foundation = Grundlage
 
 #+BEGIN_QUOTE
-Freenet is the technical part of the solution for freedom of the press in the internet.
+Freenet bietet die grundlegenden Anwendungen für freie Kommunikation im Internet.
+#+END_QUOTE
+
+- Webseiten
+- Dateien
+- Spam-Schutz
+- E-Mail
+- Foren
+- Microblogging
+- Programmieren
+
+* Technik
+** 
+** TODO Technik + Politik
+** TODO Zusammenfassung
+
+# foundation = Grundlage
+
+#+BEGIN_QUOTE
+Freenet bietet eine technische Grundlage für freie Kommunikation im Internet.
 #+END_QUOTE
 
 - Decentral, anonymous datastore.
@@ -167,32 +309,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
 - Scales.
 
 \vspace{0.5cm}
-
-** Get Freenet!
-
-***                                                                   :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.62
-    :END:
-
-\centering
-
-\Huge
-
-[[./logo.png]]
-
-*[[https://freenetproject.org][freenetproject.org]]*
-
-\vspace{0.4cm}
-
-\scriptsize
-
-/This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
-
-/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
-* Technik
-** 
-* Ausblick
+* Vision
 ** 
 
 
@@ -216,10 +333,38 @@ Freenet is the technical part of the solution for freedom of the press in the in
 
 # #+latex: \usebackgroundtemplate{\includegraphics[width=\paperwidth]{cafe_life_in_istanbul-amitd-amitd-cc_by-4693814169_8a0349d79d_o.jpg}}
 
+
+
+\hspace{0.1cm}
+[[./screenshot-publish.png]]
+
+
 ** 
 
 /wohin wir kommen wollen./
 
+** Get Freenet!
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.62
+    :END:
+
+\centering
+
+\Huge
+
+[[./logo.png]]
+
+*[[https://freenetproject.org][freenetproject.org]]*
+
+\vspace{0.4cm}
+
+\scriptsize
+
+/This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+/Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
 * Appendix
 \appendix
 * Contribute
