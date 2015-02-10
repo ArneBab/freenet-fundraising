@@ -84,7 +84,7 @@ Abhängig oder Teuer
 Stetig auf der Hut
 
 Quellenschutz!
-** Dunkle Zeit
+** Dunkle Zeiten
 
 #+BEGIN_QUOTE
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
@@ -145,8 +145,8 @@ Quellenschutz!
     :BEAMER_act: <2-3>
     :END:
 
+- Dateien/Ordner
 - Webseiten
-- Dateien
 - E-Mail
 - Blogs
 *** Pseudonym                                                 :B_block:BMCOL:
@@ -158,6 +158,54 @@ Quellenschutz!
 
 #+attr_latex: :width 1.0\textwidth
     [[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
+
+** Zusammenfassung
+
+
+*** Vertraulich                                               :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
+
+\vspace{0.3cm}
+
+#+latex: \centering
+#+attr_latex: :width 0.3\textwidth
+[[file:logo.png]]
+
+*** Offiziell                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:angela_merkel-eppofficial-european_peoples_party-cc_by-13564824463_ec3499360d_o.jpg]]
+
+\vspace{0.3cm}
+
+#+latex: \centering
+#+attr_latex: :width 0.3\textwidth
+[[file:logo.png]]
+
+*** Pseudonym                                                 :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+
+#+attr_latex: :width 1.0\textwidth
+[[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
+
+\vspace{0.3cm}
+
+#+latex: \centering
+#+attr_latex: :width 0.3\textwidth
+[[file:logo.png]]
 
 ** Darknet Nachrichten
 
@@ -198,7 +246,7 @@ Quellenschutz!
 
 \centering
 #+attr_latex: :width 0.8\textwidth
-[[./screenshot-nerdageddon.png]]
+[[./screenshot-sharewiki.png]]
 
 ** Foren: FMS
 
@@ -283,7 +331,7 @@ Freenet bietet die grundlegenden Anwendungen für freie Kommunikation im Interne
 #+END_QUOTE
 
 - Webseiten
-- Dateien
+- Dateien/Ordner
 - Spam-Schutz
 - E-Mail
 - Foren
@@ -294,16 +342,21 @@ Freenet bietet die grundlegenden Anwendungen für freie Kommunikation im Interne
 
 ** Alleinstellungsmerkmale
 
-- Freund-zu-Freund Darknet (mit optionalem Opennet)
-- Nutzungsabhängige Lebenszeit
+- Freund-zu-Freund Darknet (plus Opennet)
+- Nutzungsabhängige Lebenszeit (anonym)
 - Dezentrale Spamresistenz (erprobt)
-- Stabile Pseudonyme
-- Hosting ohne Server
+- Stabile Pseudonyme (privater Schlüssel)
+- Hosting ohne Server (hochladen und verschwinden)
 
-** Nutzermeinung
+** Nutzermeinungen
 
 #+BEGIN_QUOTE
-/The practical cool result now, is that the Mempo repository can not be censored, DDoSed or taken offline, despite having just 1 tiny server (or no server at all)/ — rfreeman in the article apt-get over Freenet.
+/The practical cool result now, is that the Mempo repository can not be censored, 
+DDoSed or taken offline, despite having just 1 tiny server (or no server at all)/ \\ — rfreeman im Artikel „apt-get over Freenet“.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+“After running the Tor services for years it was a big relief to just shut down the services for good and say 'fuck it'. I never again had to worry no more about security. With Freenet I am Free, it suites the name pretty well if you ask me.” \\ — Unkwon
 #+END_QUOTE
 
 ** Weitere Technische Grundlagen
@@ -352,6 +405,35 @@ Privacy technology provides the background on which politics can work: Making su
 The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+END_QUOTE
 
+** Skalierbar?
+
+/Was steht noch, wenn morgen 10 Millionen Menschen Freenet installieren?/
+
+*** Einfach                                                  :B_column:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: column
+    :BEAMER_col: 0.5
+    :END:
+
+- Darknet Nachrichten
+- Dateien/Ordner
+- Webseiten
+- Programmieren
+
+/Über Darknet Routing/
+
+*** Mit Aufwand                                                       :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+
+- Opennet (mehr seednodes)
+- Foren (fragmentiert)
+
+- Spam-Schutz mit Web of Trust (keine globalen Daten - [[https://bugs.freenetproject.org/view.php?id=6228][bug #6228]])
+  - E-Mail
+  - Blogging
+  - Microblogs
 
 ** TODO Zusammenfassung
 
@@ -401,7 +483,8 @@ Freenet bietet eine technische Grundlage für freie Kommunikation im Internet.
 
 /wohin wir kommen wollen./
 
-** Get Freenet!
+* Leute
+** Nutzt Freenet!
 
 ***                                                                   :BMCOL:
     :PROPERTIES:
