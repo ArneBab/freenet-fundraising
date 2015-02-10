@@ -30,7 +30,7 @@
 
 **** Technik
 
-**** Vision
+**** Eine Vision
 
 
 * Warum?
@@ -113,11 +113,6 @@ Quellenschutz!
 “There is now no shield from forced exposure…The foundation of Groklaw is over…the Internet is over” --Groklaw, [[http://www.groklaw.net/article.php?story=20130818120421175][Forced Exposure (2013-08-20)]]
 #+END_QUOTE
 
-** Eine alte Hoffnung
-- 1995: Scheideweg: *Überwachung oder Freiheit*.
-- 1999: *Freenet* gestartet.
-- 2001: *9/11*. War on Terror.
-- 2013: Snowden. Kostbare Zeit, um *das Rad zurück zu drehen*.
 ** Zusammenfassung
 
 ***                                                               :B_columns:
@@ -161,7 +156,7 @@ Quellenschutz!
      :BEAMER_env: block
      :END:
 
-**** Vision                                                   :B_block:BMCOL:
+**** Eine Vision                                              :B_block:BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.475
      :BEAMER_env: block
@@ -354,26 +349,6 @@ praktisch genutzt
 #+attr_latex: :width 0.95\textwidth
 [[./screenshot-sone.png]]
 
-** Programmieren: Infocalypse
-
-#+latex: \scriptsize
-#+BEGIN_EXAMPLE
-$ hg clone freenet://USK@j2Mfv0b81MNSslh3Qg9gs1vgQj36whsuosP8ydZq158,\
-Xb~vh8XEXmdwGFca4HAx-ILOZD6AWPVuRzIuLerl4PU,AQACAAE/infocalypse-repo.R1/17
-...
-As basic protection, infocalypse automatically set the username
-'anonymous' for commits in this repo...
-
-$ hg fn-pull-request
-...
-$ hg fn-check-notifications
-...
-#+END_EXAMPLE
-
-- clone / fork
-- pull
-- pull-request
-
 ** Zusammenfassung
 
 ***                                                               :B_columns:
@@ -454,7 +429,7 @@ Freie Kommunikation im Internet
      :BEAMER_col: 0.475
      :END:
 
-**** Vision                                                   :B_block:BMCOL:
+**** Eine Vision                                              :B_block:BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.475
      :BEAMER_env: block
@@ -470,29 +445,6 @@ Freie Kommunikation im Internet
 - Stabile Pseudonyme (privater Schlüssel)
 - Dezentrale Spamresistenz (erprobt)
 - Nutzungsabhängige Lebenszeit (anonym)
-
-** Weitere Technische Grundlagen
-
-- Unveränderlicher Datenspeicher
-- Aktualisierbar durch Versionierung
-- Hochladen mit
-  - Passwort (KSK — CAPTCHAs)
-  - Pseudonym (SSK/USK — Webseiten)
-  - Inhalt (CHK — erneut hochladen)
-
-** Nutzermeinungen
-
-*** 
-#+BEGIN_QUOTE
-/The practical cool result now, is that the Mempo repository can not be censored, 
-DDoSed or taken offline, despite having just 1 tiny server (or no server at all)/ \\ — rfreeman im Artikel „apt-get over Freenet“.
-#+END_QUOTE
-
-
-*** 
-#+BEGIN_QUOTE
-“After running the Tor services for years it was a big relief to just shut down the services for good and say 'fuck it'. I never again had to worry no more about security. With Freenet I am Free, it suites the name pretty well if you ask me.” \\ — Unkwon
-#+END_QUOTE
 
 ** Technik und Politik
 
@@ -529,43 +481,6 @@ Technologie liefert die Grundlage, auf der Politik arbeiten kann: Überwachung u
 #+BEGIN_QUOTE
 The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+END_QUOTE
-
-** Skaliert schon?
-
-/Was steht noch, wenn morgen 10 mio Menschen Freenet installieren?/
-
-*** Einfach                                                  :B_column:BMCOL:
-    :PROPERTIES:
-    :BEAMER_env: column
-    :BEAMER_col: 0.5
-    :END:
-
-- Darknet Nachrichten
-- Dateien/Ordner
-- Webseiten
-- Programmieren
-
-\vspace{1em}
-
-/Mit Darknet Routing./
-
-*** Mit Aufwand                                                       :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.5
-    :END:
-
-- Opennet (mehr seednodes)
-- Foren (fragmentiert)
-- Index-Seiten (aufteilen)
-
-- Spam-Schutz mit Web of Trust
-  - E-Mail
-  - Blogs
-  - Microblogs
-
-\vspace{1em}
-
-/Fix WoT: kein globales Wissen: \\ [[https://bugs.freenetproject.org/view.php?id=6228][bug #6228]] und [[https://bugs.freenetproject.org/view.php?id=5524#c9431][bug 5524]]./
 
 ** Zusammenfassung
 
@@ -605,7 +520,7 @@ Stabile Grundlage:
 - Fokus auf wirklicher Pressefreiheit
 - Grundlage für politisches Handeln
 
-**** Vision                                                   :B_block:BMCOL:
+**** Eine Vision                                              :B_block:BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.5
      :BEAMER_env: block
@@ -701,16 +616,16 @@ Freie Kommunikation
 
 Stabile Grundlage
 
-**** Vision                                              :B_alertblock:BMCOL:
+**** Eine Vision                                         :B_alertblock:BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.5
      :BEAMER_env: alertblock
      :END:
 
-- Persistente Pseudonyme als QR-code oder Merksatz
+- nicht nachweisbare, persistente Pseudonyme
 - Sicher und einfach für Whistleblower und Journalisten
 - Sichere Kommunikation für normale Menschen
-- Technisch mit Freenet bereits möglich -- aber nicht einfach
+- Technisch mit Freenet bereits möglich -- wir wollen es einfach machen!
 
 ** Nutzt Freenet!
 
@@ -756,88 +671,6 @@ Außerdem (diese Woche aktiv):
 
 \appendix
 
-** Contribute
-***                                                                   :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.45
-    :END:
-
-- Write Code
-- Run a Node
-
-***                                                                   :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.45
-    :END:
-
-- Build the Darknet
-- Spread the Word
-
-** Write Code
-
-- https://github.com/freenet 
-- https://freenetproject.org/developer.html
-- IRC: #freenet @ irc.freenode.net
-
-** Run a node
-
-*** Running a Node                                                  :B_block:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:
-\scriptsize
-#+BEGIN_SRC sh
-wget https://freenetproject.org/jnlp/freenet_installer.jar -O installer.jar
-java -jar installer.jar -console
-# (follow the prompts)
-# info: https://freenetproject.org/download.html
-./run.sh # { console | start | stop | restart | status | dump }
-#+END_SRC
-
-*** As Seednode                                                     :B_block:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:
-
-\centering
-
-simple howto found on 
-
-https://piratenpad.de/p/pirates4freenet
-
-** Build the Darknet
-#+attr_latex: :width \textwidth
-[[./screenshot-add-friend.png]]
-
-** Spread the Word
-
-\centering
-Because /we/ are crappy at PR.
-
-These slides: 
-
-[[http://draketo.de/proj/freenet-funding/slides.pdf][draketo.de/proj/freenet-funding/slides.pdf]]
-
-[[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]
-
-** Summary
-
-***                                                                   :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.45
-    :END:
-
-- Write Code
-- Run a Node
-
-***                                                                   :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.45
-    :END:
-
-- Build the Darknet
-- Spread the Word
-
 ** Quellen
 - presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
 - https://www.flickr.com/photos/anonymous-munich/3282278914
@@ -852,3 +685,89 @@ These slides:
 - https://www.flickr.com/photos/digitpedia/4709307610
 - http://commons.wikimedia.org/wiki/File:International_newspaper,_Rome_May_2005.jpg#metadata
 - http://commons.wikimedia.org/wiki/File:Edward_Snowden_2013-10-9_%281%29_%28cropped%29.jpg
+* Anhang
+** Eine alte Hoffnung
+- 1995: Scheideweg: *Überwachung oder Freiheit*.
+- 1999: *Freenet* gestartet.
+- 2001: *9/11*. War on Terror.
+- 2013: Snowden. Kostbare Zeit, um *das Rad zurück zu drehen*.
+** Programmieren: Infocalypse
+
+#+latex: \scriptsize
+#+BEGIN_EXAMPLE
+$ hg clone freenet://USK@j2Mfv0b81MNSslh3Qg9gs1vgQj36whsuosP8ydZq158,\
+Xb~vh8XEXmdwGFca4HAx-ILOZD6AWPVuRzIuLerl4PU,AQACAAE/infocalypse-repo.R1/17
+...
+As basic protection, infocalypse automatically set the username
+'anonymous' for commits in this repo...
+
+$ hg fn-pull-request
+...
+$ hg fn-check-notifications
+...
+#+END_EXAMPLE
+
+- clone / fork
+- pull
+- pull-request
+
+** Weitere Technische Grundlagen
+
+- Unveränderlicher Datenspeicher
+- Aktualisierbar durch Versionierung
+- Hochladen mit
+  - Passwort (KSK — CAPTCHAs)
+  - Pseudonym (SSK/USK — Webseiten)
+  - Inhalt (CHK — erneut hochladen)
+
+** Nutzermeinungen
+
+*** 
+#+BEGIN_QUOTE
+/The practical cool result now, is that the Mempo repository can not be censored, 
+DDoSed or taken offline, despite having just 1 tiny server (or no server at all)/ \\ — rfreeman im Artikel „apt-get over Freenet“.
+#+END_QUOTE
+
+
+*** 
+#+BEGIN_QUOTE
+“After running the Tor services for years it was a big relief to just shut down the services for good and say 'fuck it'. I never again had to worry no more about security. With Freenet I am Free, it suites the name pretty well if you ask me.” \\ — Unkwon
+#+END_QUOTE
+
+** Skaliert schon?
+
+/Was steht noch, wenn morgen 10 mio Menschen Freenet installieren?/
+
+*** Einfach                                                  :B_column:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: column
+    :BEAMER_col: 0.5
+    :END:
+
+- Darknet Nachrichten
+- Dateien/Ordner
+- Webseiten
+- Programmieren
+
+\vspace{1em}
+
+/Mit Darknet Routing./
+
+*** Mit Aufwand                                                       :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+
+- Opennet (mehr seednodes)
+- Foren (fragmentiert)
+- Index-Seiten (aufteilen)
+
+- Spam-Schutz mit Web of Trust
+  - E-Mail
+  - Blogs
+  - Microblogs
+
+\vspace{1em}
+
+/Fix WoT: kein globales Wissen: \\ [[https://bugs.freenetproject.org/view.php?id=6228][bug #6228]] und [[https://bugs.freenetproject.org/view.php?id=5524#c9431][bug 5524]]./
+
