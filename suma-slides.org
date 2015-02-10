@@ -11,7 +11,7 @@
 #+latex_header: \subtitle[Technische Lösungen für freie Kommunikation im Internet]{Technische Lösungen für freie Kommunikation im Internet}
 
 # FIXME: Setting the number of frames by hand.
-#+latex: \renewcommand{\insertpresentationendpage}{30}
+#+latex: \renewcommand{\insertpresentationendpage}{25}
 
 ** Inhalt
 
@@ -622,10 +622,10 @@ Stabile Grundlage
      :BEAMER_env: alertblock
      :END:
 
-- nicht nachweisbare, persistente Pseudonyme
-- Sicher und einfach für Whistleblower und Journalisten
-- Sichere Kommunikation für normale Menschen
-- Technisch mit Freenet bereits möglich -- wir wollen es einfach machen!
+- nicht nachweisbare Pseudonyme
+- Whistleblower und Journalisten
+- Normale Menschen
+- Technisch mit Freenet möglich -- wir wollen es einfach machen
 
 ** Nutzt Freenet!
 
