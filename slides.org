@@ -101,7 +101,7 @@ Freenet is the technical part of the solution for freedom of the press in the in
 - DoS-able
 - Timing attacks (correlation)
 
-***** GNUnet?                                                       :B_block:
+***** GNUnet? Retroshare?                                            :B_block:
      :PROPERTIES:
      :BEAMER_env: block
      :END:
