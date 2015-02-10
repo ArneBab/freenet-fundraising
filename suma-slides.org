@@ -350,11 +350,14 @@ Freenet bietet die grundlegenden Anwendungen für freie Kommunikation im Interne
 
 ** Nutzermeinungen
 
+*** 
 #+BEGIN_QUOTE
 /The practical cool result now, is that the Mempo repository can not be censored, 
 DDoSed or taken offline, despite having just 1 tiny server (or no server at all)/ \\ — rfreeman im Artikel „apt-get over Freenet“.
 #+END_QUOTE
 
+
+*** 
 #+BEGIN_QUOTE
 “After running the Tor services for years it was a big relief to just shut down the services for good and say 'fuck it'. I never again had to worry no more about security. With Freenet I am Free, it suites the name pretty well if you ask me.” \\ — Unkwon
 #+END_QUOTE
@@ -365,11 +368,11 @@ DDoSed or taken offline, despite having just 1 tiny server (or no server at all)
 - Unveränderlicher Datenspeicher
 - Aktualisierbar durch Versionierung
 - Hochladen mit
-  - Passwort (KSK)
-  - Pseudonym (USK)
-  - Inhalt (CHK)
+  - Passwort (KSK — CAPTCHAs)
+  - Pseudonym (SSK/USK — Webseiten)
+  - Inhalt (CHK — erneut hochladen)
 
-** TODO Technik + Politik
+** Technik und Politik
 
 ***                                                               :B_columns:
     :PROPERTIES:
@@ -381,7 +384,7 @@ DDoSed or taken offline, despite having just 1 tiny server (or no server at all)
     :BEAMER_env: block
     :END:
 
-Complete blocking and surveillance is possible.
+Totale Überwachung und Kontrolle sind möglich.
 
 **** Politik alleine reicht nicht                             :B_block:BMCOL:
      :PROPERTIES:
@@ -389,7 +392,7 @@ Complete blocking and surveillance is possible.
      :BEAMER_env: block
      :END:
 
-If surveillance and censorship are trivial, they will be done.
+Wenn Überwachung und Zensur trivial sind, werden sie genutzt.
 
 *** Tech und Politik                                          :B_block:BMCOL:
     :PROPERTIES:
@@ -397,7 +400,7 @@ If surveillance and censorship are trivial, they will be done.
     :BEAMER_col: 0.97
     :END:
 
-Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
+Technologie liefert die Grundlage, auf der Politik arbeiten kann: Überwachung und Zensur so aufwändig und teuer machen, dass wir den politischen Kampf gewinnen können.
 
 \vspace{0.2cm}
 
@@ -405,7 +408,7 @@ Privacy technology provides the background on which politics can work: Making su
 The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 #+END_QUOTE
 
-** Skalierbar?
+** Skaliert schon?
 
 /Was steht noch, wenn morgen 10 Millionen Menschen Freenet installieren?/
 
