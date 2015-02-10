@@ -159,8 +159,6 @@ Quellenschutz!
 #+attr_latex: :width 1.0\textwidth
     [[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
 
-* Anwendungen
-
 ** Darknet Nachrichten
 
 #+attr_latex: :height 0.36\textwidth
@@ -240,10 +238,10 @@ $ hg fn-check-notifications
 #+attr_latex: :width 1.0\textwidth
 [[file:gruene_jugend_ffm-stammtisch-cc_by-6272541036_17d2251176_o.jpg]]
 
-\vspace{1cm}
+\vspace{0.3cm}
 
 #+latex: \centering
-#+attr_latex: :width 0.2\textwidth
+#+attr_latex: :width 0.3\textwidth
 [[file:logo.png]]
 
 *** Offiziell                                                 :B_block:BMCOL:
@@ -255,10 +253,10 @@ $ hg fn-check-notifications
 #+attr_latex: :width 1.0\textwidth
 [[file:angela_merkel-eppofficial-european_peoples_party-cc_by-13564824463_ec3499360d_o.jpg]]
 
-\vspace{1cm}
+\vspace{0.3cm}
 
 #+latex: \centering
-#+attr_latex: :width 0.2\textwidth
+#+attr_latex: :width 0.3\textwidth
 [[file:logo.png]]
 
 *** Pseudonym                                                 :B_block:BMCOL:
@@ -270,10 +268,10 @@ $ hg fn-check-notifications
 #+attr_latex: :width 1.0\textwidth
 [[file:anonymous_munich-feb_14-cc_by-3282278914_d686734ef2_o.jpg]]
 
-\vspace{1cm}
+\vspace{0.3cm}
 
 #+latex: \centering
-#+attr_latex: :width 0.2\textwidth
+#+attr_latex: :width 0.3\textwidth
 [[file:logo.png]]
 
 ** Zusammenfassung                                                 :noexport:
@@ -293,8 +291,68 @@ Freenet bietet die grundlegenden Anwendungen für freie Kommunikation im Interne
 - Programmieren
 
 * Technik
-** 
+
+** Alleinstellungsmerkmale
+
+- Freund-zu-Freund Darknet (mit optionalem Opennet)
+- Nutzungsabhängige Lebenszeit
+- Dezentrale Spamresistenz (erprobt)
+- Stabile Pseudonyme
+- Hosting ohne Server
+
+** Nutzermeinung
+
+#+BEGIN_QUOTE
+/The practical cool result now, is that the Mempo repository can not be censored, DDoSed or taken offline, despite having just 1 tiny server (or no server at all)/ — rfreeman in the article apt-get over Freenet.
+#+END_QUOTE
+
+** Weitere Technische Grundlagen
+
+- Anonymer Zugriff
+- Unveränderlicher Datenspeicher
+- Aktualisierbar durch Versionierung
+- Hochladen mit
+  - Passwort (KSK)
+  - Pseudonym (USK)
+  - Inhalt (CHK)
+
 ** TODO Technik + Politik
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Tech alleine reicht nicht                                :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+Complete blocking and surveillance is possible.
+
+**** Politik alleine reicht nicht                             :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: block
+     :END:
+
+If surveillance and censorship are trivial, they will be done.
+
+*** Tech und Politik                                          :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.97
+    :END:
+
+Privacy technology provides the background on which politics can work: Making surveillance and censorship expensive and hard enough that we can win the political battle.
+
+\vspace{0.2cm}
+
+#+BEGIN_QUOTE
+The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
+#+END_QUOTE
+
+
 ** TODO Zusammenfassung
 
 # foundation = Grundlage
