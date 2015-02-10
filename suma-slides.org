@@ -1,14 +1,37 @@
 #+title: Freenet Nutzen
-#+language: en
+#+language: de
 #+startup: beamer
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+LATEX_HEADER:\usepackage{beamerthemefreenet}
 #+LATEX_HEADER:\usepackage[absolute]{textpos}
-#+options: H:2 ^:nil
+#+options: H:2 ^:nil toc:nil
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.0 :ETC
-#+latex_header: \subtitle[Technische Mittel für freie Kommunikation im Internet]{Technische Mittel für freie Kommunikation im Internet}
+#+latex_header: \subtitle[Technische Lösungen für freie Kommunikation im Internet]{Technische Lösungen für freie Kommunikation im Internet}
+
+# FIXME: Setting the number of frames by hand.
+#+latex: \renewcommand{\insertpresentationendpage}{30}
+
+** Inhalt
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+**** Warum?
+
+**** Lösungen
+
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :END:
+
+**** Technik
+
+**** Vision
+
 
 * Warum?
 
@@ -95,6 +118,56 @@ Quellenschutz!
 - 1999: *Freenet* gestartet.
 - 2001: *9/11*. War on Terror.
 - 2013: Snowden. Kostbare Zeit, um *das Rad zurück zu drehen*.
+** Zusammenfassung
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Warum?                                              :B_alertblock:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.65
+    :BEAMER_env: alertblock
+    :END:
+- Im Überwachten Netz wird Selbstzensur zur Pflicht.
+- Zweite Chance dank Snowden.
+**** Lösungen                                                 :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.3
+     :BEAMER_env: block
+     :END:
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+#+attr_latex: :height 0.3\textheight
+[[file:Edward_Snowden_2013-10-9-McZusatz-Wikileaks-cc_by.jpg]]
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+
+**** Technik                                                  :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.475
+     :BEAMER_env: block
+     :END:
+
+**** Vision                                                   :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.475
+     :BEAMER_env: block
+     :END:
+
+
 * Lösungen
 ** Vertrauliche Kommunikation in Freenet
 *** Vertraulich                                               :B_block:BMCOL:
@@ -258,7 +331,14 @@ praktisch genutzt
 
 [[./screenshot-wot-summary.png]]
 
-** Webseiten
+** Webseiten lesen
+
+\centering
+#+attr_latex: :width 0.8\textwidth
+[[./screenshot-nerdageddon.png]]
+
+
+** Webseiten schreiben
 
 \centering
 #+attr_latex: :width 0.8\textwidth
@@ -290,10 +370,34 @@ $ hg fn-check-notifications
 ...
 #+END_EXAMPLE
 
+- clone / fork
+- pull
+- pull-request
+
 ** Zusammenfassung
 
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Warum?                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.3
+    :BEAMER_env: block
+    :END:
+Selbstzensur im Netz
+**** Lösungen                                            :B_alertblock:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.65
+     :BEAMER_env: alertblock
+     :END:
+Freie Kommunikation im Internet
 
-*** Vertraulich                                               :B_block:BMCOL:
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Vertraulich                                              :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
     :BEAMER_env: block
@@ -308,7 +412,7 @@ $ hg fn-check-notifications
 #+attr_latex: :width 0.3\textwidth
 [[file:logo.png]]
 
-*** Offiziell                                                 :B_block:BMCOL:
+**** Offiziell                                                :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.3
     :BEAMER_env: block
@@ -323,10 +427,10 @@ $ hg fn-check-notifications
 #+attr_latex: :width 0.3\textwidth
 [[file:logo.png]]
 
-*** Pseudonym                                                 :B_block:BMCOL:
+**** Pseudonym                                                :B_block:BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.3
     :BEAMER_env: block
+    :BEAMER_col: 0.3
     :END:
 
 #+attr_latex: :width 1.0\textwidth
@@ -338,21 +442,24 @@ $ hg fn-check-notifications
 #+attr_latex: :width 0.3\textwidth
 [[file:logo.png]]
 
-** Zusammenfassung                                                 :noexport:
 
-# foundation = Grundlage
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
 
-#+BEGIN_QUOTE
-Freenet bietet die grundlegenden Anwendungen für freie Kommunikation im Internet.
-#+END_QUOTE
+**** Technik                                                  :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_env: block
+     :BEAMER_col: 0.475
+     :END:
 
-- Webseiten
-- Dateien/Ordner
-- Spam-Schutz
-- E-Mail
-- Foren
-- Microblogging
-- Programmieren
+**** Vision                                                   :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.475
+     :BEAMER_env: block
+     :END:
+
 
 * Technik
 
@@ -460,20 +567,50 @@ The NSA surveillance doesn’t scale. \\ -- Constanze Kurz (EuroPython 2014)
 
 /Fix WoT: kein globales Wissen: \\ [[https://bugs.freenetproject.org/view.php?id=6228][bug #6228]] und [[https://bugs.freenetproject.org/view.php?id=5524#c9431][bug 5524]]./
 
-** TODO Zusammenfassung
+** Zusammenfassung
 
-# foundation = Grundlage
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Warum?                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :BEAMER_env: block
+    :END:
+Selbstzensur im Netz
+**** Lösungen                                                 :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :BEAMER_env: block
+     :END:
+Freie Kommunikation
 
-#+BEGIN_QUOTE
-Freenet bietet eine technische Grundlage für freie Kommunikation im Internet.
-#+END_QUOTE
 
-- Decentral, anonymous datastore.
-- Many applications.
-- Started in 2000.
-- Scales.
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
 
-\vspace{0.5cm}
+**** Technik                                             :B_alertblock:BMCOL:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :BEAMER_col: 0.5
+     :END:
+
+Stabile Grundlage:
+
+- Skaliert
+- Pseudonyme
+- Fokus auf wirklicher Pressefreiheit
+- Grundlage für politisches Handeln
+
+**** Vision                                                   :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :BEAMER_env: block
+     :END:
+
 * Vision
 ** 
 
@@ -485,30 +622,96 @@ Freenet bietet eine technische Grundlage für freie Kommunikation im Internet.
 \end{picture}
 #+END_LaTeX
 
+** 
 
-# #+latex: \only<2>{\centering
-# #+attr_latex: :width 0.5\textwidth
-# [[file:silver_usb_memory_drive_pico_mini_4gb-digitpedia-digitpedia_com-cc_by-4709307610_28a16f6282_o.png]]
-# #+latex: }
+#+BEGIN_LaTeX
+\begin{picture}(320,240)
+\put(0,20){\includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{doma_cafe_gallery-focusc-chun_hung_eric_cheng-cc_by-4758319160_036dfbdb5d_o.jpg}
+}
+\put(15,130){
+\includegraphics<2-5>[width=.3\paperwidth,height=.3\paperheight,keepaspectratio]{powered_by_linux-okubax-okubax-cc_by-14248440483_e9511ae2c7_o.png}
+}
+\put(200,130){
+\includegraphics<3-5>[width=.3\paperwidth,height=.3\paperheight,keepaspectratio]{screenshot-fproxy.png}
+}
+\put(200,30){
+\includegraphics<4-5>[width=.3\paperwidth,height=.3\paperheight,keepaspectratio]{screenshot-freemail-cropped.png}
+}
+\put(15,30){
+\includegraphics<5-5>[width=.2\paperwidth,height=.3\paperheight,keepaspectratio]{qr-code-freenetproject.png} \includegraphics<5-5>[width=.2\paperwidth,height=.3\paperheight,keepaspectratio]{kde_plasma_5-okubax-okubax-cc_by-15812839470_481c50d57e_o-nur-handy.png}
+}
+\end{picture}
+#+END_LaTeX
 
-# #+latex: \usebackgroundtemplate{\includegraphics[width=\paperwidth]{doma_cafe_gallery-focusc-chun_hung_eric_cheng-cc_by-4758319160_036dfbdb5d_o.jpg}}
+
+
 
 
 ** 
 
-# #+latex: \usebackgroundtemplate{\includegraphics[width=\paperwidth]{cafe_life_in_istanbul-amitd-amitd-cc_by-4693814169_8a0349d79d_o.jpg}}
+#+BEGIN_LaTeX
+\begin{picture}(320,240)
+\put(0,0){\includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{cafe_life_in_istanbul-amitd-amitd-cc_by-4693814169_8a0349d79d_o.jpg}}
+\put(15,130){
+\includegraphics<2-5>[width=.2\paperwidth,height=.3\paperheight,keepaspectratio]{qr-code-freenetproject.png}
+}
+\put(200,130){
+\includegraphics<3-5>[width=.3\paperwidth,height=.3\paperheight,keepaspectratio]{screenshot-freemail-cropped.png}
+}
+\put(200,30){
+\includegraphics<4-5>[width=.3\paperwidth,height=.3\paperheight,keepaspectratio]{International_newspaper_Rome_May_2005-wikimedia-stefano_corso-pensiero.jpg}
+}
+
+\put(15,30){
+\includegraphics<5-5>[width=.3\paperwidth,height=.3\paperheight,keepaspectratio]{sleepy_scout_on_saturday-chrisandbabs-chris_baranski-cc_by-5520686152_1009c4f9b5_o_d.jpg}
+}
+\end{picture}
+#+END_LaTeX
+
+** Zusammenfassung
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+**** Warum?                                                   :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.5
+    :BEAMER_env: block
+    :END:
+Selbstzensur im Netz
+**** Lösungen                                                 :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :BEAMER_env: block
+     :END:
+Freie Kommunikation
 
 
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
 
-\hspace{0.1cm}
-[[./screenshot-publish.png]]
+**** Technik                                                  :B_block:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :BEAMER_env: block
+     :END:
 
+Stabile Grundlage
 
-** 
+**** Vision                                              :B_alertblock:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :BEAMER_env: alertblock
+     :END:
 
-/wohin wir kommen wollen./
+- Persistente Pseudonyme als QR-code oder Merksatz
+- Sicher und einfach für Whistleblower und Journalisten
+- Sichere Kommunikation für normale Menschen
+- Technisch mit Freenet bereits möglich -- aber nicht einfach
 
-* Leute
 ** Nutzt Freenet!
 
 ***                                                                   :BMCOL:
@@ -528,12 +731,31 @@ Freenet bietet eine technische Grundlage für freie Kommunikation im Internet.
 
 \scriptsize
 
-/This presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
-
 /Donate: [[https://freenetproject.org/donate.html][freenetproject.org/donate.html]] \\ Bitcoin: \href{bitcoin:1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}{1966U1pjj15tLxPXZ19U48c99EJDkdXeqb}/
 
+*** Leute                                                             :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.38
+    :END:
+
+#+caption: \scriptsize Freenet Entwickler auf CTS4. Von Links: ArneBab, toad, leuchtkaefer und digger3.
+[[file:freenet-cts4-20130930_135137.jpg]]
+
+\scriptsize
+
+Außerdem (diese Woche aktiv):
+
+- operhiem1: Projektverwaltung
+- xor: WoT, bezahlt
+- nextgens: Sicherheit
+- Bombe: Sone
+- TheSeeker: Bleeding Edge
+- SomeDude: FMS (anonym)
+- Eleriseth: Kern (anonym)
+- ... (etwa ein Dutzend weitere)
+
 \appendix
-* Mitmachen
+
 ** Contribute
 ***                                                                   :BMCOL:
     :PROPERTIES:
@@ -616,7 +838,8 @@ These slides:
 - Build the Darknet
 - Spread the Word
 
-* Quellen
+** Quellen
+- presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
 - https://www.flickr.com/photos/anonymous-munich/3282278914
 - https://www.flickr.com/photos/gruenejugendffm/6272541036
 - https://www.flickr.com/photos/eppofficial/13564824463
@@ -627,4 +850,5 @@ These slides:
 - https://www.flickr.com/photos/okubax/14248440483
 - https://www.flickr.com/photos/okubax/15812839470
 - https://www.flickr.com/photos/digitpedia/4709307610
-
+- http://commons.wikimedia.org/wiki/File:International_newspaper,_Rome_May_2005.jpg#metadata
+- http://commons.wikimedia.org/wiki/File:Edward_Snowden_2013-10-9_%281%29_%28cropped%29.jpg
