@@ -104,7 +104,7 @@ Our ideal group would be a team of 8 people funded for 5 years (so people can la
 
 ** The minimal group
 
-The minimal group with which we could finish the basic functionality would be a team of 3 full-time and one part-time developers funded for 2 years:
+The minimal group with which we could finish the basic functionality would be a team of 3 people full-time and one part-time, funded for 2 years:
 
 - Two programmers, one for the core, one for plugins and usability, one of them part-time.
 
@@ -163,13 +163,13 @@ One week ago she talked to a friend about this, and the friend passed her Nick's
 
 Janice now goes to a bar with internet access, puts the USB stick into her laptop and starts it. A browser starts and shows a list of anonymous websites within Freenet, including the site from Nick. After she is certain that Nick is the right person to contact, she clicks on his contact address.
 
-The address brings her to a screen where she can compose a message and then send it anonymously to Nick. Freenet shows her the confirmation “message saved. Do you have an existing pseudonym you want to use or do you want to create a new one?” Janice clicks on "select new pseudonym”. Freenet prints the message “Your new pseudonym is Koyah_McLaughlin (randomly generated). Please write down the following key (cryptographically secure code) or take a photo of its QR image. You can use that key to connect with your pseudonym from any computer that has access to Freenet.” Janice takes a photo of the black-and-white QR image on her screen in order to reuse the pseudonym at a later time.
+The address brings her to a screen where she can compose a message and then send it anonymously to Nick. Freenet shows her the confirmation “message saved. Do you have an existing pseudonym you want to use or do you want to create a new one?” Janice clicks on "select new pseudonym”. Freenet prints the message “Your new pseudonym is Koyah_McLaughlin (randomly generated). Please save its key (cryptographically secure code) by writing down the following list of words or taking a photo of its QR image. You can use that to connect with your pseudonym from any computer that has access to Freenet.” Janice takes a photo of the black-and-white QR image on her screen in order to reuse the pseudonym at a later time.
 
 Then she orders a coffee and reads on: “Your message is being delivered. Please give Freenet a few minutes to upload it.” Then she watches a progressbar fill up. Just as she finishes her coffee, Freenet shows her that the message is delivered. Janice shuts down her laptop, pays in cash and leaves the bar. Since she only ran a Live Linux, nothing was written to her notebook and all traces of her actions disappear when it powers down.
 
 The next day Nick comes home and checks his messages. He instantly sees the new message sent via Freenet from Janice, identified as Koyah_McLaughlin, the pseudonym Janice used. While reading the information from Janice he feels a familiar jolt of excitement. This could be big. He crosschecks what he can, then sends a reply to Janice via Freenet. Her pseudonym allows Nick to answer her and shows him that he is communicating with the same person over time instead of several different anonymous people.
 
-The next week, Janice goes into another bar with internet access. She orders a coffee and plugs in the USB stick. In the browser she clicks on “read messages”. Freenet asks her to type the key for her pseudonym into a text field or show its image to the webcam. Janice holds the photo of her key in front of her webcam. Freenet confirms the key and asks her to wait a few minutes while her pseudonym is being restored. Just as she finishes her coffee, she sees the new email in her inbox: Nick answered.
+The next week, Janice goes into another bar with internet access. She orders a coffee and plugs in the USB stick. In the browser she clicks on “read messages”. Freenet asks her to type the list of words for her pseudonym into a text field or show its image to the webcam. Janice holds the photo of her key in front of her webcam. Freenet confirms the key and asks her to wait a few minutes while her pseudonym is being restored. Just as she finishes her coffee, she sees the new email in her inbox: Nick answered.
 
 Over the next few weeks Nick and Janice keep in contact. Their messages are stored on hundreds of places within Freenet at once, making it impossible to delete them or to trace who sent or received them. Nick gives Janice advice on how she can keep a low profile, then he runs his story.
 

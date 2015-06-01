@@ -672,20 +672,47 @@ Außerdem (diese Woche aktiv):
 \appendix
 
 ** Quellen
-- presentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+*** 
+Diese Präsentation: [[https://github.com/ArneBab/freenet-fundraising][github.com/ArneBab/freenet-fundraising]]/
+
+Bilder: Hase unter GPL, alle weiteren cc by.
+
+***                                                               :B_columns:
+    :PROPERTIES:
+    :BEAMER_env: columns
+    :END:
+
+
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
 - https://www.flickr.com/photos/anonymous-munich/3282278914
 - https://www.flickr.com/photos/gruenejugendffm/6272541036
 - https://www.flickr.com/photos/eppofficial/13564824463
 - https://www.flickr.com/photos/maguide/6092244239
-- https://www.flickr.com/photos/focusc/4758319160
-- https://www.flickr.com/photos/amitd/4693814169
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
 - https://www.flickr.com/photos/okubax/15814107199
 - https://www.flickr.com/photos/okubax/14248440483
 - https://www.flickr.com/photos/okubax/15812839470
 - https://www.flickr.com/photos/digitpedia/4709307610
+
+** Quellen2
+
+- https://www.flickr.com/photos/focusc/4758319160
+- https://www.flickr.com/photos/amitd/4693814169
 - http://commons.wikimedia.org/wiki/File:International_newspaper,_Rome_May_2005.jpg#metadata
 - http://commons.wikimedia.org/wiki/File:Edward_Snowden_2013-10-9_%281%29_%28cropped%29.jpg
-* Anhang
+
+
 ** Eine alte Hoffnung
 - 1995: Scheideweg: *Überwachung oder Freiheit*.
 - 1999: *Freenet* gestartet.
