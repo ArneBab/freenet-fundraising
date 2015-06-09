@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 
 import numpy
 import pylab
@@ -64,9 +66,9 @@ plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+resul
                   int(100*params["backoffprobability"]), 
                   hash(tuple(params["locs"]))),
                 size=params["size"])
-plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"], 
+plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"]+result["smallworlddistancenonuniform"]["nets"], 
                 "Link lengths", 
-                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-distance-reject.png".format(
+                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-distance-distancenonuniform-reject.png".format(
                   len(params["locs"]), 
                   params["outdegree"], 
                   int(100*params["backoffprobability"]), 
@@ -76,12 +78,13 @@ for name, title in [
     ("smallworldapprox", "small world paths approximated optimization"),
     ("smallworldindex", "small world paths optimized by index"),
     ("smallworlddistance", "small world paths optimized by distance"),
+    ("smallworlddistancenonuniform", "small world paths optimized by distance, nonuniform"),
     ("smallworldreject", "small world paths optimized by rejection"),
     ("kleinberg", "kleinberg paths"),
     ("random", "random paths"),
     ]:
   if result[name]["paths"]:
-    plotring(params["locs"], result[name]["paths"], "random paths", 
+    plotring(params["locs"], result[name]["paths"], title, 
              filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-{}.png".format(
                len(params["locs"]), 
                params["outdegree"], 

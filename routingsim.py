@@ -1,12 +1,15 @@
+#!/usr/bin/env python
+# encoding: utf-8
 
 import math
 import random
 import bisect
 import collections
 import json
-size = 10000
+size = 5000
 locs = [random.random() for i in range(size)]
-outdegree = int(math.log(size, 2))*2
+
+outdegree = 10 # int(math.log(size, 2))*2
 backoffprobability = 0.0 # 0.x
 def step(path, node, peers, target, maxhtl=500):
   if path[maxhtl:]:
@@ -148,6 +151,58 @@ def smallworldbydistance(locs, start, targets, filepath=None):
     maxmediumdistance = lensortedlocs // 2
     for peer in range(outdegree):
       for n, loc in enumerate(sortedlocs):
+        def chooselink(maxdist, direction=1):
+          choices = range(1, maxmediumdistance + 1)
+          weights = [1.0/min(abs(loc - sortedlocs[(n+c*direction)%lensortedlocs]), 
+                             abs(sortedlocs[(n+c*direction)%lensortedlocs] - loc)) 
+                     for c in choices]
+          cumdist = []
+          accumulator = 0
+          for c in weights:
+              accumulator += c
+              cumdist.append(accumulator)
+          x = random.uniform(0, cumdist[-1])
+          return choices[bisect.bisect(cumdist, x)]
+        down = chooselink(maxmediumdistance, direction=-1)
+        up = chooselink(maxmediumdistance, direction=1)
+        lower = (n-down)%lensortedlocs
+        while lower in smallworldnet[loc]:
+            down += 1
+            lower = sortedlocs[(n-down)%lensortedlocs]
+        upper = (n+up)%lensortedlocs
+        while upper in smallworldnet[loc] :
+            up += 1
+            upper = sortedlocs[(n+up)%lensortedlocs]
+        smallworldnet[loc].append(sortedlocs[lower])
+        smallworldnet[loc].append(sortedlocs[upper])
+    # add pathfolding for optimization
+    pathfold(smallworldnet, locs)
+    # route on small world net
+    paths = []
+    for target in targets:
+      try:
+          paths.append(greedyrouting(smallworldnet, start, target))
+      except ValueError as e:
+          print e
+          continue
+    return smallworldnet, paths
+
+
+
+def smallworldbydistancenonuniform(locs, start, targets, filepath=None):
+    # small world routing, but with non-uniform number of links
+    def numpeers(outdegree):
+      """Get the target number of peers for a given node."""
+      return int(max(3, random.random() * outdegree * 10)) # range up to outdegree x 10
+    smallworldnet = {}
+    sortedlocs = sorted(list(locs))
+    lensortedlocs = len(sortedlocs)
+    for i in sortedlocs:
+        smallworldnet[i] = []
+    nummediumlinks = outdegree
+    maxmediumdistance = lensortedlocs // 2
+    for n, loc in enumerate(sortedlocs):
+      for peer in range(numpeers(outdegree)):
         def chooselink(maxdist, direction=1):
           choices = range(1, maxmediumdistance + 1)
           weights = [1.0/min(abs(loc - sortedlocs[(n+c*direction)%lensortedlocs]), 
@@ -486,12 +541,14 @@ smallworldpaths = []
 smallworldpathsindex = []
 smallworldpathsreject = []
 smallworldpathsdistance = []
+smallworldpathsdistancenonuniform = []
 kleinbergpaths = []
 randomnets = []
 smallworldnets = []
 smallworldnetsindex = []
 smallworldnetsreject = []
 smallworldnetsdistance = []
+smallworldnetsdistancenonuniform = []
 kleinbergnets = []
 for i in range(10):
     targets = [random.choice(locs) for i in range(10)]
@@ -501,18 +558,21 @@ for i in range(10):
     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
+    smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
     kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
     randompaths.extend(randompath)
     smallworldpaths.extend(smallworldpath)
     smallworldpathsindex.extend(smallworldpathindex)
     smallworldpathsreject.extend(smallworldpathreject)
     smallworldpathsdistance.extend(smallworldpathdistance)
+    smallworldpathsdistancenonuniform.extend(smallworldpathdistancenonuniform)
     kleinbergpaths.extend(kleinbergpath)
     randomnets.append(randomnet)
     smallworldnets.append(smallworldnet)
     smallworldnetsindex.append(smallworldnetindex)
     smallworldnetsreject.append(smallworldnetreject)
     smallworldnetsdistance.append(smallworldnetdistance)
+    smallworldnetsdistancenonuniform.append(smallworldnetdistancenonuniform)
     kleinbergnets.append(kleinbergnet)
 
 randompathlens = [len(p) for p in randompaths]
@@ -520,6 +580,7 @@ smallworldpathlens = [len(p) for p in smallworldpaths]
 smallworldpathlensindex = [len(p) for p in smallworldpathsindex]
 smallworldpathlensreject = [len(p) for p in smallworldpathsreject]
 smallworldpathlensdistance = [len(p) for p in smallworldpathsdistance]
+smallworldpathlensdistancenonuniform = [len(p) for p in smallworldpathsdistancenonuniform]
 kleinbergpathlens = [len(p) for p in kleinbergpaths]
 
 print "random:", randompathlens
@@ -528,6 +589,7 @@ print "small world:", smallworldpathlens
 print "small world by index:", smallworldpathlensindex
 print "small world by reject:", smallworldpathlensreject
 print "small world by distance:", smallworldpathlensdistance
+print "small world by distancenonuniform:", smallworldpathlensdistancenonuniform
 
 # store the result
 result = {
@@ -535,6 +597,7 @@ result = {
   "kleinberg": {"paths": kleinbergpaths, "nets": kleinbergnets, "pathlengths": kleinbergpathlens},
   "smallworldapprox": {"paths": smallworldpaths, "nets": smallworldnets, "pathlengths": smallworldpathlens},
   "smallworlddistance": {"paths": smallworldpathsdistance, "nets": smallworldnetsdistance, "pathlengths": smallworldpathlensdistance},
+  "smallworlddistancenonuniform": {"paths": smallworldpathsdistancenonuniform, "nets": smallworldnetsdistancenonuniform, "pathlengths": smallworldpathlensdistancenonuniform},
   "smallworldindex": {"paths": smallworldpathsindex, "nets": smallworldnetsindex, "pathlengths": smallworldpathlensindex},
   "smallworldreject": {"paths": smallworldpathsreject, "nets": smallworldnetsreject, "pathlengths": smallworldpathlensreject},
   "_params": {
