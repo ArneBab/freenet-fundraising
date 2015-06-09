@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pypy
 # encoding: utf-8
 
 import math
@@ -589,7 +589,7 @@ print "small world:", smallworldpathlens
 print "small world by index:", smallworldpathlensindex
 print "small world by reject:", smallworldpathlensreject
 print "small world by distance:", smallworldpathlensdistance
-print "small world by distancenonuniform:", smallworldpathlensdistancenonuniform
+print "small world by distance nonuniform:", smallworldpathlensdistancenonuniform
 
 # store the result
 result = {
