@@ -6,11 +6,11 @@ import random
 import bisect
 import collections
 import json
-size = 5000
+size = 50000
 locs = [random.random() for i in range(size)]
 
 outdegree = 10 # int(math.log(size, 2))*2
-backoffprobability = 0.0 # 0.x
+backoffprobability = 0.3 # 0.x
 def step(path, node, peers, target, maxhtl=500):
   if path[maxhtl:]:
        raise ValueError("Reached the limit of {} steps with path to {}: {}.".format(maxhtl, target, path))
