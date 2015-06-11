@@ -396,6 +396,85 @@ def smallworldapprox(locs, start, targets, filepath=None):
     return smallworldnet, paths
 
 
+def smallworldapproxnonuniform(locs, start, targets, filepath=None):
+    # small world routing
+    def numpeers(outdegree):
+      """Get the target number of peers for a given node."""
+      return int(max(1, random.random() * outdegree * 10)) # range up to outdegree x 10
+
+    smallworldnet = {}
+    sortedlocs = sorted(list(locs))
+    lensortedlocs = len(sortedlocs)
+    linksperhop = max(1, outdegree//3)
+    for i in sortedlocs:
+        smallworldnet[i] = []
+    # know your neighbors
+    halfnumshortlinks = max(1, linksperhop/2) + 1
+    maxshortdistance = outdegree/2
+    for n, i in enumerate(sortedlocs):
+      for dist in range(numpeers(halfnumshortlinks)):
+        down = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+        up = min([random.choice(range(maxshortdistance)) for trias in range(3)]) + 1
+        lower = sortedlocs[(n-down)%lensortedlocs]
+        while lower in smallworldnet[i]:
+            down += 1
+            lower = sortedlocs[(n-down)%lensortedlocs]
+        upper = sortedlocs[(n+up)%lensortedlocs]
+        while upper in smallworldnet[i]:
+            up += 1
+            upper = sortedlocs[(n+up)%lensortedlocs]
+        smallworldnet[i].append(lower)
+        smallworldnet[i].append(upper)
+    # long connections
+    numlonglinks = linksperhop
+    for n, i in enumerate(sortedlocs):
+      longlinks = set()
+      longlink = random.choice(sortedlocs)
+      for l in range(numpeers(numlonglinks)):
+        while longlink in longlinks:
+          longlink = random.choice(sortedlocs)
+        longlinks.add(longlink)
+      smallworldnet[i].extend(list(longlinks))
+    # as many medium size links as left after substracting the long and short links
+    nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
+    maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
+    for n, i in enumerate(sortedlocs):
+      for i in range(numpeers(nummediumlinks)):
+        def chooselink(maxdist):
+          choices = range(1, maxdist + 1)
+          weights = [1.0/i for i in choices]
+          cumdist = []
+          accumulator = 0
+          for i in weights:
+              accumulator += i
+              cumdist.append(accumulator)
+          x = random.uniform(0, cumdist[-1])
+          return choices[bisect.bisect(cumdist, x)]
+        down = chooselink(maxmediumdistance)
+        up = chooselink(maxmediumdistance)
+        lower = (n-down)%lensortedlocs
+        while lower in smallworldnet[i]:
+            down += 1
+            lower = sortedlocs[(n-down)%lensortedlocs]
+        upper = (n+up)%lensortedlocs
+        while upper in smallworldnet[i]:
+            up += 1
+            upper = sortedlocs[(n+up)%lensortedlocs]
+        smallworldnet[i].append(sortedlocs[lower])
+        smallworldnet[i].append(sortedlocs[upper])
+    # add pathfolding for optimization
+    pathfold(smallworldnet, locs)
+    # route on small world net
+    paths = []
+    for target in targets:
+      try:
+          paths.append(greedyrouting(smallworldnet, start, target))
+      except ValueError as e:
+          print e
+          continue
+    return smallworldnet, paths
+
+
 def smallworldapproxreject(locs, start, targets, filepath=None):
     # small world routing
     smallworldnet = {}
@@ -538,6 +617,7 @@ def kleinbergrouting(locs, start, targets, filepath=None):
 
 randompaths = []
 smallworldpaths = []
+smallworldpathsnonuniform = []
 smallworldpathsindex = []
 smallworldpathsreject = []
 smallworldpathsdistance = []
@@ -545,6 +625,7 @@ smallworldpathsdistancenonuniform = []
 kleinbergpaths = []
 randomnets = []
 smallworldnets = []
+smallworldnetsnonuniform = []
 smallworldnetsindex = []
 smallworldnetsreject = []
 smallworldnetsdistance = []
@@ -555,6 +636,7 @@ for i in range(10):
     start = random.choice(locs)
     randomnet, randompath = randomlinks(locs, start, targets)
     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
+    smallworldnetnonuniform, smallworldpathnonuniform = smallworldapprox(locs, start, targets)
     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
@@ -577,6 +659,7 @@ for i in range(10):
 
 randompathlens = [len(p) for p in randompaths]
 smallworldpathlens = [len(p) for p in smallworldpaths]
+smallworldpathlensnonuniform = [len(p) for p in smallworldpathsnonuniform]
 smallworldpathlensindex = [len(p) for p in smallworldpathsindex]
 smallworldpathlensreject = [len(p) for p in smallworldpathsreject]
 smallworldpathlensdistance = [len(p) for p in smallworldpathsdistance]
@@ -586,6 +669,7 @@ kleinbergpathlens = [len(p) for p in kleinbergpaths]
 print "random:", randompathlens
 print "Kleinberg:", kleinbergpathlens
 print "small world:", smallworldpathlens
+print "small world nonuniform:", smallworldpathlensnonuniform
 print "small world by index:", smallworldpathlensindex
 print "small world by reject:", smallworldpathlensreject
 print "small world by distance:", smallworldpathlensdistance
@@ -595,7 +679,8 @@ print "small world by distance nonuniform:", smallworldpathlensdistancenonunifor
 result = {
   "random": {"paths": randompaths, "nets": randomnets, "pathlengths": randompathlens},
   "kleinberg": {"paths": kleinbergpaths, "nets": kleinbergnets, "pathlengths": kleinbergpathlens},
-  "smallworldapprox": {"paths": smallworldpaths, "nets": smallworldnets, "pathlengths": smallworldpathlens},
+  "smallworldapprox": {"paths": smallworldpathsnonuniform, "nets": smallworldnetsnonuniform, "pathlengths": smallworldpathlensnonuniform},
+  "smallworldapproxnonuniform": {"paths": smallworldpaths, "nets": smallworldnets, "pathlengths": smallworldpathlens},
   "smallworlddistance": {"paths": smallworldpathsdistance, "nets": smallworldnetsdistance, "pathlengths": smallworldpathlensdistance},
   "smallworlddistancenonuniform": {"paths": smallworldpathsdistancenonuniform, "nets": smallworldnetsdistancenonuniform, "pathlengths": smallworldpathlensdistancenonuniform},
   "smallworldindex": {"paths": smallworldpathsindex, "nets": smallworldnetsindex, "pathlengths": smallworldpathlensindex},

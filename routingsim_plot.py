@@ -58,9 +58,9 @@ with open("routingsim_results.json") as f:
     result = json.load(f)
 
 params = result["_params"]
-plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["kleinberg"]["nets"], 
+plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["smallworldapproxnonuniform"]["nets"]+result["kleinberg"]["nets"], 
                 "Link lengths", 
-                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-index-kleinberg-approx.png".format(
+                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-index-kleinberg-approx-nonuniform.png".format(
                   len(params["locs"]), 
                   params["outdegree"], 
                   int(100*params["backoffprobability"]), 
@@ -76,6 +76,7 @@ plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"][
                 size=params["size"])
 for name, title in [
     ("smallworldapprox", "small world paths approximated optimization"),
+    ("smallworldapproxnonuniform", "small world paths approximated optimization, nonuniform"),
     ("smallworldindex", "small world paths optimized by index"),
     ("smallworlddistance", "small world paths optimized by distance"),
     ("smallworlddistancenonuniform", "small world paths optimized by distance, nonuniform"),
