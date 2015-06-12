@@ -68,23 +68,9 @@ def plotring(locs, paths, title, filepath=None):
 with open("routingsim_results.json") as f:
     result = json.load(f)
 
+# print ("finished loading json data")
+
 params = result["_params"]
-plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["smallworldapproxnonuniform"]["nets"]+result["kleinberg"]["nets"], 
-                "Link lengths", 
-                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-index-kleinberg-approx-nonuniform.png".format(
-                  len(params["locs"]), 
-                  params["outdegree"], 
-                  int(100*params["backoffprobability"]), 
-                  hash(tuple(params["locs"]))),
-                size=params["size"])
-plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"]+result["smallworlddistancenonuniform"]["nets"], 
-                "Link lengths", 
-                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-distance-distancenonuniform-reject.png".format(
-                  len(params["locs"]), 
-                  params["outdegree"], 
-                  int(100*params["backoffprobability"]), 
-                  hash(tuple(params["locs"]))),
-                size=params["size"])
 for name, title in [
     ("smallworldapprox", "small world paths approximated optimization"),
     ("smallworldapproxnonuniform", "small world paths approximated optimization, nonuniform"),
@@ -104,3 +90,21 @@ for name, title in [
                hash(tuple(params["locs"])), 
                int(numpy.mean(result[name]["pathlengths"])),
                name))
+
+plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["smallworldapproxnonuniform"]["nets"]+result["kleinberg"]["nets"], 
+                "Link lengths", 
+                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-index-kleinberg-approx-nonuniform.png".format(
+                  len(params["locs"]), 
+                  params["outdegree"], 
+                  int(100*params["backoffprobability"]), 
+                  hash(tuple(params["locs"]))),
+                size=params["size"])
+
+plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"]+result["smallworlddistancenonuniform"]["nets"], 
+                "Link lengths", 
+                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-distance-distancenonuniform-reject.png".format(
+                  len(params["locs"]), 
+                  params["outdegree"], 
+                  int(100*params["backoffprobability"]), 
+                  hash(tuple(params["locs"]))),
+                size=params["size"])
