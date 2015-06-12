@@ -634,13 +634,21 @@ kleinbergnets = []
 for i in range(4):
     targets = [random.choice(locs) for i in range(4)]
     start = random.choice(locs)
+    print "random"
     randomnet, randompath = randomlinks(locs, start, targets)
+    print "approx"
     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
+    print "approx nonuniform"
     smallworldnetnonuniform, smallworldpathnonuniform = smallworldapproxnonuniform(locs, start, targets)
+    print "index"
     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
+    print "reject"
     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
+    print "distance"
     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
+    print "distance nonuniform"
     smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
+    print "kleinberg"
     kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
     randompaths.extend(randompath)
     smallworldpaths.extend(smallworldpath)
