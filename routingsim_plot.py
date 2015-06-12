@@ -34,6 +34,7 @@ def plotring(locs, paths, title, filepath=None):
   ringx = numpy.sin(locs*math.pi*2)
   ringy = numpy.cos(locs*math.pi*2)
   pylab.scatter(ringx, ringy)# , color=matplotlib.cm.spectral(locs))
+  maxpathlen = max([len(path) for path in paths])
   for path in paths:
       path = numpy.array(path)
       pathx = numpy.sin(path*math.pi*2)
@@ -43,7 +44,7 @@ def plotring(locs, paths, title, filepath=None):
           xp1 = pathx[n+1]
           y = pathy[n]
           yp1 = pathy[n+1]
-          # color = matplotlib.cm.spectral(locs[n])
+          color = matplotlib.cm.spectral(float(len(path)) / maxpathlen)
         except:
           break
         # pylab.plot([x, xp1], [y, yp1])# , color=color)
