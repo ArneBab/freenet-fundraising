@@ -636,7 +636,7 @@ for i in range(4):
     start = random.choice(locs)
     randomnet, randompath = randomlinks(locs, start, targets)
     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
-    smallworldnetnonuniform, smallworldpathnonuniform = smallworldapprox(locs, start, targets)
+    smallworldnetnonuniform, smallworldpathnonuniform = smallworldapproxnonuniform(locs, start, targets)
     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
