@@ -631,8 +631,8 @@ smallworldnetsreject = []
 smallworldnetsdistance = []
 smallworldnetsdistancenonuniform = []
 kleinbergnets = []
-for i in range(10):
-    targets = [random.choice(locs) for i in range(10)]
+for i in range(5):
+    targets = [random.choice(locs) for i in range(5)]
     start = random.choice(locs)
     randomnet, randompath = randomlinks(locs, start, targets)
     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
