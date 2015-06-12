@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+# without X11 use Agg as matplotlib backend.
+from subprocess import call
+def hasWorkingX11():
+    return not call(["python", "-c", "import pylab as pl; pl.ion(); pl.plot((0,0))"])
+if not "DISPLAY" in os.environ or not hasWorkingX11(): 
+    import matplotlib
+    matplotlib.use("Agg")
+
 import numpy
 import pylab
 import json
