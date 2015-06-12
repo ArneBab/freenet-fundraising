@@ -11,7 +11,7 @@ locs = [random.random() for i in range(size)]
 
 outdegree = 10 # int(math.log(size, 2))*2
 backoffprobability = 0.3 # 0.x
-def step(path, node, peers, target, maxhtl=50):
+def step(path, node, peers, target, maxhtl=20):
   if path[maxhtl:]:
        raise ValueError("Reached the limit of {} steps with path to {}. Last 5 steps: {}.".format(maxhtl, target, path[-5:]))
 
