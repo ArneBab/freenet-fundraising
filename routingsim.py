@@ -439,7 +439,7 @@ def smallworldapproxnonuniform(locs, start, targets, filepath=None):
     nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
     maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
     for n, i in enumerate(sortedlocs):
-      for i in range(numpeers(nummediumlinks)):
+      for l in range(numpeers(nummediumlinks)):
         def chooselink(maxdist):
           choices = range(1, maxdist + 1)
           weights = [1.0/i for i in choices]
