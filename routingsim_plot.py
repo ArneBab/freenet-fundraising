@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import os
+
 # without X11 use Agg as matplotlib backend.
 from subprocess import call
 def hasWorkingX11():
