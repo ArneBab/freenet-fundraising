@@ -640,7 +640,7 @@ smallworldnetsdistance = []
 smallworldnetsdistancenonuniform = []
 kleinbergnets = []
 for i in range(2):
-    targets = [random.choice(locs) for i in range(10)]
+    targets = [random.choice(locs) for i in range(100)]
     start = random.choice(locs)
 #     print "random"
 #     randomnet, randompath = randomlinks(locs, start, targets)
