@@ -634,36 +634,36 @@ kleinbergnets = []
 for i in range(4):
     targets = [random.choice(locs) for i in range(10)]
     start = random.choice(locs)
-    print "random"
-    randomnet, randompath = randomlinks(locs, start, targets)
+#     print "random"
+#     randomnet, randompath = randomlinks(locs, start, targets)
     print "approx"
     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
     print "approx nonuniform"
     smallworldnetnonuniform, smallworldpathnonuniform = smallworldapproxnonuniform(locs, start, targets)
-    print "index"
-    smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
-    print "reject"
-    smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
+#     print "index"
+#     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
+#     print "reject"
+#     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
     print "distance"
     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
     print "distance nonuniform"
     smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
-    print "kleinberg"
-    kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
-    randompaths.extend(randompath)
+#     print "kleinberg"
+#     kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
+#     randompaths.extend(randompath)
     smallworldpaths.extend(smallworldpath)
-    smallworldpathsindex.extend(smallworldpathindex)
-    smallworldpathsreject.extend(smallworldpathreject)
+#     smallworldpathsindex.extend(smallworldpathindex)
+#     smallworldpathsreject.extend(smallworldpathreject)
     smallworldpathsdistance.extend(smallworldpathdistance)
     smallworldpathsdistancenonuniform.extend(smallworldpathdistancenonuniform)
-    kleinbergpaths.extend(kleinbergpath)
-    randomnets.append(randomnet)
+#     kleinbergpaths.extend(kleinbergpath)
+#     randomnets.append(randomnet)
     smallworldnets.append(smallworldnet)
-    smallworldnetsindex.append(smallworldnetindex)
-    smallworldnetsreject.append(smallworldnetreject)
+#     smallworldnetsindex.append(smallworldnetindex)
+#     smallworldnetsreject.append(smallworldnetreject)
     smallworldnetsdistance.append(smallworldnetdistance)
     smallworldnetsdistancenonuniform.append(smallworldnetdistancenonuniform)
-    kleinbergnets.append(kleinbergnet)
+#     kleinbergnets.append(kleinbergnet)
 
 randompathlens = [len(p) for p in randompaths]
 smallworldpathlens = [len(p) for p in smallworldpaths]
