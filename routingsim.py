@@ -6,7 +6,7 @@ import random
 import bisect
 import collections
 import json
-size = 10000
+size = 100000
 locs = [random.random() for i in range(size)]
 
 outdegree = 10 # int(math.log(size, 2))*2
@@ -184,7 +184,7 @@ def smallworldbydistance(locs, start, targets, filepath=None):
         smallworldnet[loc].append(sortedlocs[lower])
         smallworldnet[loc].append(sortedlocs[upper])
     # add pathfolding for optimization
-    pathfold(smallworldnet, locs)
+    # pathfold(smallworldnet, locs)
     # route on small world net
     paths = []
     for target in targets:
@@ -646,14 +646,14 @@ for i in range(3):
 #     randomnet, randompath = randomlinks(locs, start, targets)
 #     print "approx"
 #     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
-#     print "approx nonuniform"
+    print "approx nonuniform"
     smallworldnetnonuniform, smallworldpathnonuniform = smallworldapproxnonuniform(locs, start, targets)
 #     print "index"
 #     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
 #     print "reject"
 #     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
-#     print "distance"
-#     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
+    print "distance"
+    smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
 #     print "distance nonuniform"
 #     smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
 #     print "kleinberg"
@@ -663,7 +663,7 @@ for i in range(3):
     smallworldpathsnonuniform.extend(smallworldpathnonuniform)
 #     smallworldpathsindex.extend(smallworldpathindex)
 #     smallworldpathsreject.extend(smallworldpathreject)
-#     smallworldpathsdistance.extend(smallworldpathdistance)
+    smallworldpathsdistance.extend(smallworldpathdistance)
 #     smallworldpathsdistancenonuniform.extend(smallworldpathdistancenonuniform)
 #     kleinbergpaths.extend(kleinbergpath)
 #     randomnets.append(randomnet)
@@ -671,7 +671,7 @@ for i in range(3):
     smallworldnetsnonuniform.append(smallworldnetnonuniform)
 #     smallworldnetsindex.append(smallworldnetindex)
 #     smallworldnetsreject.append(smallworldnetreject)
-#     smallworldnetsdistance.append(smallworldnetdistance)
+    smallworldnetsdistance.append(smallworldnetdistance)
 #     smallworldnetsdistancenonuniform.append(smallworldnetdistancenonuniform)
 #     kleinbergnets.append(kleinbergnet)
 
