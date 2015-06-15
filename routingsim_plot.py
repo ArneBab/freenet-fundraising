@@ -83,10 +83,11 @@ for name, title in [
     ]:
   if result[name]["paths"]:
     plotring(params["locs"], result[name]["paths"], title, 
-             filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-meanlen-{}-{}.png".format(
+             filepath="size-{}-peers-{}-backoffpercentage-{:03}_{}-hash-{}-meanlen-{}-{}.png".format(
                len(params["locs"]), 
                params["outdegree"], 
                int(100*params["backoffprobability"]), 
+               params["backoffstyle"], 
                hash(tuple(params["locs"])), 
                int(numpy.mean(result[name]["pathlengths"])),
                name))
