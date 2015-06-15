@@ -652,10 +652,10 @@ for i in range(3):
 #     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
 #     print "reject"
 #     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
-    print "distance"
-    smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
-#     print "distance nonuniform"
-#     smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
+#     print "distance"
+#     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
+    print "distance nonuniform"
+    smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
 #     print "kleinberg"
 #     kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
 #     randompaths.extend(randompath)
