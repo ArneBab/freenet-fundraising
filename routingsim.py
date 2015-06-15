@@ -6,7 +6,7 @@ import random
 import bisect
 import collections
 import json
-size = 100000
+size = 300000
 locs = [random.random() for i in range(size)]
 
 outdegree = 10 # int(math.log(size, 2))*2
@@ -639,7 +639,7 @@ smallworldnetsreject = []
 smallworldnetsdistance = []
 smallworldnetsdistancenonuniform = []
 kleinbergnets = []
-for i in range(3):
+for i in range(2):
     targets = [random.choice(locs) for i in range(10)]
     start = random.choice(locs)
 #     print "random"
