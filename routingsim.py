@@ -124,7 +124,7 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
     
 
 
-def randomlinks(locs, start, targets, filepath=None):
+def randomlinks(locs, starts, targets, filepath=None):
     randomnet = {}
     for i in locs:
       peers = set()
@@ -148,7 +148,7 @@ def randomlinks(locs, start, targets, filepath=None):
 
 
 
-def smallworldbydistance(locs, start, targets, filepath=None):
+def smallworldbydistance(locs, starts, targets, filepath=None):
     # small world routing
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
@@ -188,16 +188,17 @@ def smallworldbydistance(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
 
-def smallworldbydistancenonuniform(locs, start, targets, filepath=None):
+def smallworldbydistancenonuniform(locs, starts, targets, filepath=None):
     # small world routing, but with non-uniform number of links
     def numpeers(outdegree):
       """Get the target number of peers for a given node."""
@@ -240,15 +241,16 @@ def smallworldbydistancenonuniform(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
-def smallworldbyreject(locs, start, targets, filepath=None):
+def smallworldbyreject(locs, starts, targets, filepath=None):
     # small world routing
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
@@ -274,16 +276,17 @@ def smallworldbyreject(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
 
-def smallworldbyindex(locs, start, targets, filepath=None):
+def smallworldbyindex(locs, starts, targets, filepath=None):
     # small world routing
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
@@ -321,15 +324,16 @@ def smallworldbyindex(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
-def smallworldapprox(locs, start, targets, filepath=None):
+def smallworldapprox(locs, starts, targets, filepath=None):
     # small world routing
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
@@ -396,15 +400,16 @@ def smallworldapprox(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
-def smallworldapproxnonuniform(locs, start, targets, filepath=None):
+def smallworldapproxnonuniform(locs, starts, targets, filepath=None):
     # small world routing
     def numpeers(outdegree):
       """Get the target number of peers for a given node."""
@@ -475,15 +480,16 @@ def smallworldapproxnonuniform(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
-def smallworldapproxreject(locs, start, targets, filepath=None):
+def smallworldapproxreject(locs, starts, targets, filepath=None):
     # small world routing
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
@@ -550,15 +556,16 @@ def smallworldapproxreject(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
-def kleinbergrouting(locs, start, targets, filepath=None):
+def kleinbergrouting(locs, starts, targets, filepath=None):
     # small world routing
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
@@ -615,11 +622,12 @@ def kleinbergrouting(locs, start, targets, filepath=None):
     # route on small world net
     paths = []
     for target in targets:
-      try:
+      for start in starts:
+        try:
           paths.append(greedyrouting(smallworldnet, start, target))
-      except ValueError as e:
+        except ValueError as e:
           print e
-          continue
+        continue
     return smallworldnet, paths
 
 
@@ -640,24 +648,24 @@ smallworldnetsdistance = []
 smallworldnetsdistancenonuniform = []
 kleinbergnets = []
 for i in range(2):
-    targets = [random.choice(locs) for i in range(100)]
-    start = random.choice(locs)
+    targets = [random.choice(locs) for i in range(10)]
+    starts = [random.choice(locs) for i in range(10)]
 #     print "random"
-#     randomnet, randompath = randomlinks(locs, start, targets)
+#     randomnet, randompath = randomlinks(locs, starts, targets)
 #     print "approx"
-#     smallworldnet, smallworldpath = smallworldapprox(locs, start, targets)
+#     smallworldnet, smallworldpath = smallworldapprox(locs, starts, targets)
     print "approx nonuniform"
-    smallworldnetnonuniform, smallworldpathnonuniform = smallworldapproxnonuniform(locs, start, targets)
+    smallworldnetnonuniform, smallworldpathnonuniform = smallworldapproxnonuniform(locs, starts, targets)
 #     print "index"
-#     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, start, targets)
+#     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, starts, targets)
 #     print "reject"
-#     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, start, targets)
+#     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, starts, targets)
 #     print "distance"
-#     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, start, targets)
+#     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, starts, targets)
     print "distance nonuniform"
-    smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, start, targets)
+    smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, starts, targets)
 #     print "kleinberg"
-#     kleinbergnet, kleinbergpath = kleinbergrouting(locs, start, targets)
+#     kleinbergnet, kleinbergpath = kleinbergrouting(locs, starts, targets)
 #     randompaths.extend(randompath)
 #     smallworldpaths.extend(smallworldpath)
     smallworldpathsnonuniform.extend(smallworldpathnonuniform)
