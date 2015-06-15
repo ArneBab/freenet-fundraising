@@ -15,6 +15,7 @@ import numpy
 import pylab
 import json
 import math
+import matplotlib
 
 def plotlinklengths(nets, title, size, filepath=None):
   pylab.clf()
@@ -54,11 +55,11 @@ def plotring(locs, paths, title, filepath=None):
           xp1 = pathx[n+1]
           y = pathy[n]
           yp1 = pathy[n+1]
-          color = matplotlib.cm.spectral(float(len(path)) / maxpathlen)
         except:
           break
         # pylab.plot([x, xp1], [y, yp1])# , color=color)
-      pylab.plot(pathx, pathy, linewidth=2)# , color=color)
+      color = matplotlib.cm.RdYlBu_r(float(len(path)) / maxpathlen)
+      pylab.plot(pathx, pathy, linewidth=2, color=color, alpha=0.7)
   pylab.title(title)
   if filepath:
     pylab.savefig(filepath)
