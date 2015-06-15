@@ -400,7 +400,7 @@ def smallworldapproxnonuniform(locs, start, targets, filepath=None):
     # small world routing
     def numpeers(outdegree):
       """Get the target number of peers for a given node."""
-      return int(max(1, random.random() * outdegree * 10)) # range up to outdegree x 10
+      return int(max(3, random.random() * outdegree * 10)) # range up to outdegree x 10
 
     smallworldnet = {}
     sortedlocs = sorted(list(locs))
