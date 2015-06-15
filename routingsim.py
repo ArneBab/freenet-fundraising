@@ -100,7 +100,7 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
           sys.stderr.write(".")
           sys.stderr.flush()
         targets = [random.choice(locs) for i in range(numtargets)]
-        paths = []
+        # paths = []
         for target in targets:
             if target == start:
                 continue
@@ -109,7 +109,7 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
             except ValueError as e:
                 print e
                 continue
-            paths.append(path)
+            # paths.append(path)
             # pathfolding
             for n, node in enumerate(path):
               if n > 0:
