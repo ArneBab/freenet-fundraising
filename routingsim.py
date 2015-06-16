@@ -540,7 +540,7 @@ def kleinbergrouting(locs, starts, targets, filepath=None):
     nummediumlinks = outdegree - (halfnumshortlinks*2) - numlonglinks
     maxmediumdistance = max(lensortedlocs/(outdegree*2), outdegree)
     for n, i in enumerate(sortedlocs):
-      for i in range(numpeers(nummediumlinks)):
+      for l in range(numpeers(nummediumlinks)):
         down = random.choice(range(maxmediumdistance)) + 1
         up = random.choice(range(maxmediumdistance)) + 1
         lower = (n-down)%lensortedlocs
