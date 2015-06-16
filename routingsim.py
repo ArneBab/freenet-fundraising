@@ -102,7 +102,7 @@ def rejectnever(myloc, peerloc, potentialpeer):
   return False
 
 
-def pathfold(net, locs, numstarts=size*100, numtargets=3, rejectfun=rejectnever, minhops=0):
+def pathfold(net, locs, numstarts=size*10, numtargets=3, rejectfun=rejectnever, minhops=1):
     """Simulate pathfolding.
     
     :param net: The network: {node: [peer, ...]}
