@@ -16,7 +16,7 @@ import random
 import bisect
 import collections
 import json
-size = 300
+size = 30000
 locs = [random.random() for i in range(size)]
 
 outdegree = 10 # int(math.log(size, 2))*2
@@ -248,6 +248,7 @@ def smallworldbydistancenonuniform(locs, starts, targets, filepath=None):
     maxmediumdistance = lensortedlocs // 2
     for n, loc in enumerate(sortedlocs):
       for peer in range(numpeers(outdegree)):
+        # FIXME: This is horribly slow.
         def chooselink(maxdist, direction=1):
           choices = range(1, maxmediumdistance + 1)
           weights = [1.0/min(abs(loc - sortedlocs[(n+c*direction)%lensortedlocs]), 
