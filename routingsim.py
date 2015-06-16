@@ -106,6 +106,8 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
     """Simulate pathfolding."""
     starts = [random.choice(locs) for i in range(numstarts)]
     success = collections.Counter()
+    graceperiod = collections.Counter() # new links should only be replaced after a a given number of routing tries (equivalent to waiting some time).
+    graceperiod_init = 100
     for n, start in enumerate(starts):
         import sys
         if not n%100:
@@ -116,6 +118,12 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
         for target in targets:
             if target == start:
                 continue
+            # reduce the grace period for all links
+            graceperiod.subtract(graceperiod.keys())
+            # purge all non-positive values
+            for k,v in graceperiod.items():
+              if v <= 0:
+                del graceperiod[k]
             try:
                 path = greedyrouting(net, start, target)
             except ValueError as e:
@@ -131,9 +139,12 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
               if node == target or target in peers:
                   continue
               if not rejectfun(node, peers, target):
-                worstpeerindex = sorted([(success[node, peers[n]], n) for n in range(len(peers))])[0][1]
-                success[node, peers[n]] = 0
+                worstpeerindex = sorted([(success[node, peers[n]], n)
+                                         for n in range(len(peers))
+                                         if not graceperiod[(node, peers[n])]])[0][1]
+                success[node, peers[worstpeerindex]] = 0
                 peers[worstpeerindex] = target
+                graceperiod[(node, target)] = graceperiod_init
     
 
 
