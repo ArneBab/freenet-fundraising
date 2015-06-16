@@ -687,7 +687,7 @@ for i in range(2):
     targets = [random.choice(locs) for i in range(10)]
     starts = [random.choice(locs) for i in range(10)]
 #     print "random"
-    randomnet, randompath = randomlinks(locs, starts, targets)
+#     randomnet, randompath = randomlinks(locs, starts, targets)
 #     print "approx"
 #     smallworldnet, smallworldpath = smallworldapprox(locs, starts, targets)
     print "approx nonuniform"
@@ -702,7 +702,7 @@ for i in range(2):
     smallworldnetdistancenonuniform, smallworldpathdistancenonuniform = smallworldbydistancenonuniform(locs, starts, targets)
 #     print "kleinberg"
 #     kleinbergnet, kleinbergpath = kleinbergrouting(locs, starts, targets)
-    randompaths.extend(randompath)
+#     randompaths.extend(randompath)
 #     smallworldpaths.extend(smallworldpath)
     smallworldpathsnonuniform.extend(smallworldpathnonuniform)
 #     smallworldpathsindex.extend(smallworldpathindex)
@@ -710,7 +710,7 @@ for i in range(2):
 #     smallworldpathsdistance.extend(smallworldpathsdistance)
     smallworldpathsdistancenonuniform.extend(smallworldpathdistancenonuniform)
 #     kleinbergpaths.extend(kleinbergpath)
-    randomnets.append(randomnet)
+#     randomnets.append(randomnet)
 #     smallworldnets.append(smallworldnet)
     smallworldnetsnonuniform.append(smallworldnetnonuniform)
 #     smallworldnetsindex.append(smallworldnetindex)
