@@ -60,7 +60,7 @@ def greedyrouting(net, start, target):
         if not node in backedoff:
           backedoff[node] = set([p for p in peers if random.random() < backoffprobability])
         else:
-          peers = [p for p in peers is not p in backedoff[node]]
+          peers = [p for p in peers if not p in backedoff[node]]
       path.append(step(path, node, peers, target))
     return path
 
