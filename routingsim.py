@@ -16,7 +16,7 @@ import random
 import bisect
 import collections
 import json
-size = 30000
+size = 300
 locs = [random.random() for i in range(size)]
 
 outdegree = 10 # int(math.log(size, 2))*2
