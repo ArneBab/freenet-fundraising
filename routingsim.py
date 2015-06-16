@@ -102,7 +102,7 @@ def rejectnever(myloc, peerloc, potentialpeer):
   return False
 
 
-def pathfold(net, locs, numstarts=size*100, numtargets=3, rejectfun=rejectnever, minhops=2):
+def pathfold(net, locs, numstarts=size*100, numtargets=3, rejectfun=rejectnever, minhops=0):
     """Simulate pathfolding.
     
     :param net: The network: {node: [peer, ...]}
@@ -148,12 +148,14 @@ def pathfold(net, locs, numstarts=size*100, numtargets=3, rejectfun=rejectnever,
               if node == target or target in peers:
                   continue # already connected
               if not rejectfun(node, peers, target):
-                worstpeerindex = sorted([(success[node, peers[n]], n)
-                                         for n in range(len(peers))
-                                         if not graceperiod[(node, peers[n])]])[0][1]
-                success[node, peers[worstpeerindex]] = 0
-                peers[worstpeerindex] = target
-                graceperiod[(node, target)] = graceperiod_init
+                bysuccesses = sorted([(success[node, peers[n]], n)
+                                      for n in range(len(peers))
+                                      if not graceperiod[(node, peers[n])]])
+                if bysuccesses:
+                  worstpeerindex = bysuccesses[0][1]
+                  success[node, peers[worstpeerindex]] = 0
+                  peers[worstpeerindex] = target
+                  graceperiod[(node, target)] = graceperiod_init
     
 
 
