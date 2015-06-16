@@ -14,7 +14,9 @@ backoffprobability = 0.3 # 0.x
 backoffstyle = "persistent" #: How backoff is generated. "persistent" or "probabilistic"
 def step(path, node, peers, target, maxhtl=20):
   if path[maxhtl:]:
-       raise ValueError("Reached the limit of {} steps with path to {}. Last 5 steps: {}.".format(maxhtl, target, path[-5:]))
+       e = ValueError("Reached the limit of {} steps with path to {}. Last 5 steps: {}.".format(maxhtl, target, path[-5:]))
+       e.path = path
+       raise e
 
   # depth first traversal
   p = set(path)
