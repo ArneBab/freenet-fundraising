@@ -24,7 +24,7 @@ outdegreemax = 30 # the real outdegree is a range between min and max, excluding
 backoffprobability = 0.3 # 0.x
 backoffstyle = "persistent" #: How backoff is generated. "persistent" or "probabilistic"
 pathfoldpernode = 10
-foafrouting = False
+foafrouting = True
 pathfoldminhops = 1
 
 locs = [random.random() for i in range(size)]
@@ -582,30 +582,30 @@ kleinbergnets = []
 for i in range(2):
     targets = [random.choice(locs) for i in range(10)]
     starts = [random.choice(locs) for i in range(10)]
-#     print "random"
-#     randomnet, randompath = randomlinks(locs, starts, targets)
-#     randompaths.extend(randompath)
-#     randomnets.append(randomnet)
+    print "random"
+    randomnet, randompath = randomlinks(locs, starts, targets)
+    randompaths.extend(randompath)
+    randomnets.append(randomnet)
     print "approx"
     smallworldnet, smallworldpath = smallworldapprox(locs, starts, targets)
     smallworldpaths.extend(smallworldpath)
     smallworldnets.append(smallworldnet)
-#     print "index"
-#     smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, starts, targets)
-#     smallworldpathsindex.extend(smallworldpathindex)
-#     smallworldnetsindex.append(smallworldnetindex)
-#     print "reject"
-#     smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, starts, targets)
-#     smallworldpathsreject.extend(smallworldpathreject)
-#     smallworldnetsreject.append(smallworldnetreject)
+    print "index"
+    smallworldnetindex, smallworldpathindex = smallworldbyindex(locs, starts, targets)
+    smallworldpathsindex.extend(smallworldpathindex)
+    smallworldnetsindex.append(smallworldnetindex)
+    print "reject"
+    smallworldnetreject, smallworldpathreject = smallworldbyreject(locs, starts, targets)
+    smallworldpathsreject.extend(smallworldpathreject)
+    smallworldnetsreject.append(smallworldnetreject)
     print "distance"
     smallworldnetdistance, smallworldpathdistance = smallworldbydistance(locs, starts, targets)
     smallworldpathsdistance.extend(smallworldpathdistance)
     smallworldnetsdistance.append(smallworldnetdistance)
-#     print "kleinberg"
-#     kleinbergnet, kleinbergpath = kleinbergrouting(locs, starts, targets)
-#     kleinbergpaths.extend(kleinbergpath)
-#     kleinbergnets.append(kleinbergnet)
+    print "kleinberg"
+    kleinbergnet, kleinbergpath = kleinbergrouting(locs, starts, targets)
+    kleinbergpaths.extend(kleinbergpath)
+    kleinbergnets.append(kleinbergnet)
 
 randompathlens = [len(p) for p in randompaths]
 smallworldpathlens = [len(p) for p in smallworldpaths]
