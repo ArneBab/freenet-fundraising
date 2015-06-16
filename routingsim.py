@@ -1,7 +1,17 @@
 #!/usr/bin/env pypy
 # encoding: utf-8
 
-import math
+# TODO: Simulate the effect of announcement:
+# https://wiki.freenetproject.org/Announcement It works like path
+# folding, but since there should not be connections to the ID
+# to-be-anonunced yet, it goes the full ~18 HTL.
+
+# Path folding only works on success, so it adds a success metric to
+# the optimization. In theory it should pull the network towards a
+# small world structure, but that only works when random routing is
+# infeasible due to a low enough outdegree (compared with the size).
+
+# import math
 import random
 import bisect
 import collections
@@ -114,6 +124,7 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
             # paths.append(path)
             # pathfolding
             for n, node in enumerate(path):
+              # count successes
               if n > 0:
                   success[(path[n-1], node)] += 1
               peers = net[node]
