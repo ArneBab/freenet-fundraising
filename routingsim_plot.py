@@ -72,7 +72,7 @@ with open("routingsim_results.json") as f:
 # print ("finished loading json data")
 
 def filenamefragment(params):
-    "size-{}-peers-{}_{}-backoffpercentage-{:03}_{}-pathfoldpernode-{}-pathfoldminhops-{}-foaf-{}-hash-{}".format(
+    return "size-{}-peers-{}_{}-backoffpercentage-{:03}_{}-pathfoldpernode-{}-pathfoldminhops-{}-foaf-{}-hash-{}".format(
         len(params["locs"]), 
         params["outdegree"], 
         params["outdegreemax"], 

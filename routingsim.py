@@ -18,9 +18,9 @@ import collections
 import json
 
 # network definitions
-size = 100
-outdegree = 3 # int(math.log(size, 2))*2
-outdegreemax = 6 # the real outdegree is a range between min and max, excluding max
+size = 5000
+outdegree = 10 # int(math.log(size, 2))*2
+outdegreemax = 30 # the real outdegree is a range between min and max, excluding max
 backoffprobability = 0.3 # 0.x
 backoffstyle = "persistent" #: How backoff is generated. "persistent" or "probabilistic"
 pathfoldpernode = 10
