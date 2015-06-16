@@ -78,10 +78,11 @@ def filenamefragment(params):
         params["outdegreemax"], 
         int(100*params["backoffprobability"]), 
         params["backoffstyle"], 
-        hash(tuple(params["locs"])), 
-        params["foafrouting"],
         params["pathfoldpernode"],
-        params["pathfoldminhops"])
+        params["pathfoldminhops"],
+        params["foafrouting"],
+        hash(tuple(params["locs"])), 
+    )
 
 
 params = result["_params"]
