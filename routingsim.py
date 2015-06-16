@@ -102,8 +102,16 @@ def rejectnever(myloc, peerloc, potentialpeer):
   return False
 
 
-def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
-    """Simulate pathfolding."""
+def pathfold(net, locs, numstarts=size*100, numtargets=3, rejectfun=rejectnever, minhops=2):
+    """Simulate pathfolding.
+    
+    :param net: The network: {node: [peer, ...]}
+    :param locs: All nodes [node, ...]
+    :param numstarts: The number of times a random should be selected for path folding.
+    :param numtargets: The number of targets each node which folds should use for folding. The total number of path folding tries is numstarts*numtargets.
+    :param rejectfun: A function f(node, peers, target) which returns True if the folding should be rejected (not done).
+    :param minhops: The minimum number of hops required to fold. Implements no-close-folding.
+    """
     starts = [random.choice(locs) for i in range(numstarts)]
     success = collections.Counter()
     graceperiod = collections.Counter() # new links should only be replaced after a a given number of routing tries (equivalent to waiting some time).
@@ -131,13 +139,14 @@ def pathfold(net, locs, numstarts=size, numtargets=3, rejectfun=rejectnever):
                 continue
             # paths.append(path)
             # pathfolding
-            for n, node in enumerate(path):
+            tofold = path[minhops:]
+            for n, node in enumerate(tofold):
               # count successes
               if n > 0:
-                  success[(path[n-1], node)] += 1
+                  success[(tofold[n-1], node)] += 1
               peers = net[node]
               if node == target or target in peers:
-                  continue
+                  continue # already connected
               if not rejectfun(node, peers, target):
                 worstpeerindex = sorted([(success[node, peers[n]], n)
                                          for n in range(len(peers))
