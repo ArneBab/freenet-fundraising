@@ -71,42 +71,43 @@ with open("routingsim_results.json") as f:
 
 # print ("finished loading json data")
 
+def filenamefragment(params):
+    "size-{}-peers-{}_{}-backoffpercentage-{:03}_{}-pathfoldpernode-{}-pathfoldminhops-{}-foaf-{}-hash-{}".format(
+        len(params["locs"]), 
+        params["outdegree"], 
+        params["outdegreemax"], 
+        int(100*params["backoffprobability"]), 
+        params["backoffstyle"], 
+        hash(tuple(params["locs"])), 
+        params["foafrouting"],
+        params["pathfoldpernode"],
+        params["pathfoldminhops"])
+
+
 params = result["_params"]
 for name, title in [
     ("smallworldapprox", "small world paths approximated optimization"),
-    ("smallworldapproxnonuniform", "small world paths approximated optimization, nonuniform"),
     ("smallworldindex", "small world paths optimized by index"),
     ("smallworlddistance", "small world paths optimized by distance"),
-    ("smallworlddistancenonuniform", "small world paths optimized by distance, nonuniform"),
     ("smallworldreject", "small world paths optimized by rejection"),
     ("kleinberg", "kleinberg paths"),
     ("random", "random paths"),
     ]:
   if result[name]["paths"]:
     plotring(params["locs"], result[name]["paths"], title, 
-             filepath="size-{}-peers-{}-backoffpercentage-{:03}_{}-hash-{}-meanlen-{}-{}.png".format(
-               len(params["locs"]), 
-               params["outdegree"], 
-               int(100*params["backoffprobability"]), 
-               params["backoffstyle"], 
-               hash(tuple(params["locs"])), 
-               int(numpy.mean(result[name]["pathlengths"])),
-               name))
+             filepath="{}-meanlen-{}-{}.png".format(
+                 filenamefragment(params),
+                 int(numpy.mean(result[name]["pathlengths"])),
+                 name))
 
-plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["smallworldapproxnonuniform"]["nets"]+result["kleinberg"]["nets"], 
+plotlinklengths(result["random"]["nets"]+result["smallworldindex"]["nets"]+result["smallworldapprox"]["nets"]+result["kleinberg"]["nets"], 
                 "Link lengths", 
-                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-random-index-kleinberg-approx-nonuniform.png".format(
-                  len(params["locs"]), 
-                  params["outdegree"], 
-                  int(100*params["backoffprobability"]), 
-                  hash(tuple(params["locs"]))),
+                filepath="{}-linklengths-random-index-kleinberg-approx.png".format(
+                    filenamefragment(params)),
                 size=params["size"])
 
-plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"]+result["smallworlddistancenonuniform"]["nets"], 
+plotlinklengths(result["smallworlddistance"]["nets"]+result["smallworldreject"]["nets"], 
                 "Link lengths", 
-                filepath="size-{}-peers-{}-backoffpercentage-{:03}-hash-{}-linklengths-distance-distancenonuniform-reject.png".format(
-                  len(params["locs"]), 
-                  params["outdegree"], 
-                  int(100*params["backoffprobability"]), 
-                  hash(tuple(params["locs"]))),
+                filepath="{}-linklengths-distance-reject.png".format(
+                    filenamefragment(params)),
                 size=params["size"])
